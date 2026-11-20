@@ -23,7 +23,7 @@ button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}
 <details style="margin-bottom:6px"><summary style="cursor:pointer;font-size:12px;opacity:.75">Alamat undangan: <span id="bshow"></span> (ubah)</summary>
 <input id="base" inputmode="url" autocomplete="off" style="margin-top:8px"></details>
 <label for="nama">Kirim ke siapa?</label>
-<input id="nama" placeholder="Contoh: Ais &amp; Keluarga" autocomplete="off">
+<input id="nama" placeholder="Contoh: Ais &amp; Keluarga (atau tempel link …?to=Nama)" autocomplete="off">
 <label for="msg">Isi pesan</label>
 <textarea id="msg">Assalamu'alaikum Wr. Wb.
 
@@ -72,6 +72,9 @@ function copy(t,label){
 $('wa').addEventListener('click',function(e){if(!get().link){e.preventDefault();$('st').textContent='Isi nama tamu dulu.'}});
 $('cp').onclick=function(){copy(get().teks,'Pesan + link')};
 $('cl').onclick=function(){copy(get().link,'Link')};
-['base','nama','msg'].forEach(function(i){$(i).addEventListener('input',draw)});
+/* tempel link lengkap (…/?to=Nama) di kolom mana pun: alamat & nama terisi otomatis */
+function pecah(el){var v=el.value.trim(),m=v.match(/^(https?:\/\/[^?#]+)\?(?:[^#]*&)?to=([^&#]*)/i);
+  if(m){$('base').value=m[1];try{$('nama').value=decodeURIComponent(m[2].replace(/\+/g,' '))}catch(e){$('nama').value=m[2]}}}
+['base','nama','msg'].forEach(function(i){$(i).addEventListener('input',function(){if(i!=='msg')pecah($(i));draw()})});
 $('base').value=ls('vl_base')||DEFAULT_BASE;if(ls('vl_msg'))$('msg').value=ls('vl_msg');draw();
 </script></body></html>
