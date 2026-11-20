@@ -1,0 +1,140 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+{{OG}}
+<meta name="robots" content="noindex,nofollow">
+<link href="{{FONT_LINK}}" rel="stylesheet">
+<style>
+/* === EDIT DI SINI: data acara === */
+:root{--hf:Fredoka,sans-serif;--df:Mali,cursive;--bf:Poppins,sans-serif;--ink:#6B5560;--gold:#C9A27A;--rose:#A9706A;--ivory:#FFF9F2;--sky:#DCEBF5;--blush:#FBE6E2;--butter:#FFF1CC;--txt:#4A3C42}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:var(--bf);color:var(--txt);background:#f3ece4;font-weight:300}
+.wrap{max-width:480px;margin:0 auto;background:linear-gradient(#FFF9F2,#FDEFE9 40%,#EEF5FA 75%,#FFF6DE);position:relative;min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.15);overflow:hidden}
+h1,h2,h3,.serif{font-family:var(--hf);font-weight:500}
+section{padding:56px 28px;text-align:center;position:relative}
+.eyebrow{letter-spacing:.3em;font-size:11px;text-transform:uppercase;color:var(--gold)}
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(180deg,rgba(255,236,226,.85),rgba(222,236,247,.75) 60%,rgba(255,249,242,.6));color:var(--ink);padding:40px 28px;z-index:1}
+.arch{width:230px;height:300px;border-radius:115px 115px 14px 14px;overflow:hidden;border:3px solid var(--gold);outline:1px solid var(--gold);outline-offset:6px;margin:26px 0;box-shadow:0 14px 34px rgba(169,112,106,.35)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.cover h1{font-size:40px;line-height:1.05;color:var(--ink)}.cover h1 em{color:var(--rose);font-style:italic}
+.guest{margin:18px 0 22px;font-size:13px}.guest b{display:block;font-family:var(--hf);font-size:26px;font-weight:600;margin-top:4px}
+.btn{display:inline-block;padding:13px 30px;border-radius:999px;background:var(--rose);color:#fff;text-decoration:none;font-size:13px;letter-spacing:.12em;border:0;cursor:pointer;font-family:inherit}
+.btn.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}
+#isi{display:none}#isi.on{display:block}
+h2{font-size:38px;color:var(--ink);margin:8px 0 14px}p{line-height:1.8;font-size:14px}
+.doa{font-family:var(--df);font-style:normal;font-size:18px;line-height:1.7;color:var(--ink)}
+.soft{background:rgba(220,235,245,.55)}.soft2{background:rgba(251,230,226,.6)}section{z-index:1}
+.hero{width:100%;max-width:300px;aspect-ratio:4/5;margin:22px auto;border-radius:150px 150px 16px 16px;overflow:hidden;box-shadow:0 14px 34px rgba(107,85,96,.25)}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.card{background:#fff;border-radius:14px;padding:22px;margin:16px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.card h3{font-size:26px;color:var(--ink)}.card .big{font-size:20px;margin:6px 0;font-family:var(--hf);font-weight:600}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.gal figure{border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#ddd}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.count{display:flex;gap:8px;justify-content:center;margin:18px 0}.count div{background:#fff;border-radius:10px;padding:10px 0;width:64px}.count b{display:block;font-family:var(--hf);font-size:28px;color:var(--ink)}.count small{font-size:10px;letter-spacing:.1em}
+.vw-i{display:block;width:100%;margin:0 0 10px;padding:13px 15px;font:inherit;font-size:14px;border:1px solid #d9d2c3;border-radius:10px;background:#fff}
+.dv{display:flex;align-items:center;gap:10px;margin:14px 0;font-weight:500}.dv:before,.dv:after{content:"";flex:1;border-top:1px solid #d9d2c3}
+.rd{display:flex;gap:10px;margin-bottom:12px}.rd label{flex:1}.rd input{position:absolute;opacity:0}
+.rd span{display:block;padding:11px;border:2px solid var(--ink);border-radius:10px;outline:1px solid var(--ink);outline-offset:-6px;cursor:pointer;font-size:14px}
+.rd input:checked+span{background:var(--ink);color:#fff}
+.k{width:100%}.wl{margin-top:16px;text-align:left}.wc{background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:10px}.wc b{color:var(--ink);font-family:var(--hf);font-size:18px}.wc small{opacity:.6;margin-left:6px}.wc p{margin:2px 0 0}
+footer{padding:30px;text-align:center;font-size:12px;background:var(--ink);color:#fff}footer b{color:var(--gold);font-family:var(--hf);font-size:18px}
+.fade{opacity:0;transform:translateY(18px);transition:.8s}.fade.in{opacity:1;transform:none}
+#mus{position:fixed;right:14px;bottom:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:18px;display:none;z-index:9}
+.bg{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:100vh;pointer-events:none;overflow:hidden;z-index:0}
+.bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1}.hasv .cl,.hasv .st,.hasv .bb{display:none}
+.cl{position:absolute;width:150px;height:46px;background:#fff;border-radius:50px;opacity:.85;filter:blur(1px);animation:dr linear infinite}
+.cl:before,.cl:after{content:"";position:absolute;background:#fff;border-radius:50%}.cl:before{width:62px;height:62px;top:-30px;left:22px}.cl:after{width:80px;height:80px;top:-40px;left:62px}
+.c1{top:10%;animation-duration:60s}.c2{top:42%;transform:scale(.7);animation-duration:80s;animation-delay:-30s}.c3{top:72%;transform:scale(.9);animation-duration:70s;animation-delay:-50s}
+@keyframes dr{from{left:-200px}to{left:110%}}
+.st{position:absolute;width:12px;height:12px;background:var(--gold);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:tw 3.5s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+.bb{position:absolute;bottom:-60px;width:var(--s);height:calc(var(--s)*1.2);border-radius:50% 50% 50% 50%/45% 45% 55% 55%;opacity:.7;animation:up var(--d) ease-in infinite}
+@keyframes up{to{transform:translateY(-115vh) translateX(26px)}}
+@media(prefers-reduced-motion:reduce){.bg *{animation:none!important}}
+.lahir{margin-top:6px;font-family:var(--df);font-size:15px;color:var(--rose)}{{THEME_CSS}}</style></head><body><div class="wrap">
+<div class="bg" aria-hidden="true">{{BGV}}
+ <i class="cl c1"></i><i class="cl c2"></i><i class="cl c3"></i>
+ <i class="st" style="left:12%;top:14%"></i><i class="st" style="left:82%;top:22%;animation-delay:.8s"></i><i class="st" style="left:30%;top:60%;animation-delay:1.6s"></i><i class="st" style="left:70%;top:75%;animation-delay:.4s"></i><i class="st" style="left:50%;top:38%;animation-delay:2s"></i>
+ <b class="bb" style="left:8%;--d:16s;--s:30px;background:#F6C9C4"></b><b class="bb" style="left:24%;--d:21s;--s:20px;background:#CFE3F2;animation-delay:-6s"></b><b class="bb" style="left:60%;--d:18s;--s:26px;background:#FFE7A8;animation-delay:-3s"></b><b class="bb" style="left:80%;--d:24s;--s:34px;background:#E3D4F0;animation-delay:-11s"></b><b class="bb" style="left:44%;--d:20s;--s:18px;background:#F6C9C4;animation-delay:-14s"></b>
+</div>
+
+<section class="cover" id="cover">
+ <div class="eyebrow">{{EVENT_NAME}}</div>
+ {{COVER_BLOCK}}
+ <h1>{{NAME_HTML}}</h1>
+ {{LAHIR_BLOCK}}
+ <div class="guest">Kepada Yth. Bapak/Ibu/Saudara/i<b id="tamu">Tamu Undangan</b></div>
+ <button class="btn" onclick="buka()">Buka Undangan</button>
+</section>
+
+<div id="isi">
+<section class="soft fade">
+ <div class="eyebrow">Bismillahirrahmanirrahim</div>
+ <h2>Dengan Rasa Syukur</h2>
+ <p>{{PENGANTAR}}</p>
+ {{HERO_BLOCK}}
+ <h2 style="font-size:34px">{{NAMA_PENUH}}</h2>
+ <p class="doa">“Setiap anak tergadai dengan aqiqahnya.”</p>
+ <p style="font-size:12px;opacity:.7">(HR. Abu Dawud, At-Tirmidzi, dan lainnya)</p>
+</section>
+
+<section class="fade">
+ <div class="eyebrow">Orang Tua</div>
+ <h2>{{ORTU_TITLE}}</h2>
+ <p>{{ORTU_NAMES}}</p>
+</section>
+
+<section class="soft2 fade">
+ <div class="eyebrow">Hari Bahagia</div><h2>Waktu &amp; Tempat</h2>
+ <div class="count" id="cd"></div>
+ <div class="card"><h3>Acara {{EVENT_SHORT}}</h3><div class="big">{{DATE_TEXT}}</div><p>{{TIME_TEXT}}<br>{{TEMPAT}}</p><br><a class="btn o" href="{{MAPS_URL}}" target="_blank" rel="noopener">Buka Peta</a></div>
+</section>
+
+{{GAL_SECTION}}
+<section class="soft fade">
+ <h2>Ucapan</h2><p>Berikan doa dan ucapan terbaik untuk {{PANGGILAN}}.</p><br>
+ <form id="f"><input class="vw-i" id="n" placeholder="Nama" maxlength="60"><textarea class="vw-i" id="m" rows="3" placeholder="Ucapan" maxlength="500"></textarea>
+ <div class="dv">Konfirmasi Kehadiran</div>
+ <div class="rd"><label><input type="radio" name="h" value="Hadir"><span>✓ Hadir</span></label><label><input type="radio" name="h" value="Tidak Hadir"><span>✕ Tidak Hadir</span></label></div>
+ <button class="btn k">Kirim</button></form><div class="wl" id="wl"></div>
+</section>
+
+<footer class="vf">
+ <div class="vf-t">Terima kasih atas doa dan kehadiran Anda.</div>
+ <a class="vf-l" href="https://velora.id" target="_blank" rel="noopener"><img src="img/velora-logo-white.svg" alt="Velora" height="40"></a>
+ <div class="vf-s">Undangan digital oleh <b>Velora Digital Invitation</b><br><i>Kabar Bahagia, Terukir Indah</i></div>{{CREDIT}}
+ <a class="vf-c" href="https://velora.id" target="_blank" rel="noopener">Buat undangan Anda di Velora</a>
+</footer>
+<style>.vf{position:relative;z-index:2;padding:34px 24px 40px;text-align:center;background:var(--vf-bg,#6B5560);color:#e8eeea;font-size:12px;line-height:1.7}.vf-t{font-family:var(--hf);font-size:20px;color:#fff;margin-bottom:14px}.vf-l img{display:block;margin:0 auto 10px}.vf b{color:#C9A27A;font-weight:500}.vf i{opacity:.75}.vf-c{display:inline-block;margin-top:14px;padding:9px 20px;border:1px solid #C9A27A;border-radius:999px;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.06em}</style>
+</div>
+<button id="mus" onclick="tg()">♪</button>
+</div>
+<script>
+var q=new URLSearchParams(location.search),to=q.get('to')||q.get('dear')||q.get('kepada');
+if(to)document.getElementById('tamu').textContent=to; // textContent: aman dari XSS
+
+var LAGU_YOUTUBE={{LAGU_YOUTUBE}};
+var LAGU_MULAI={{LAGU_MULAI}};
+var yt=null;
+function ytId(u){var m=u.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);return m?m[1]:''}
+function mulaiLagu(){var id=ytId(LAGU_YOUTUBE);
+ if(id){yt=document.createElement('iframe');yt.allow='autoplay';yt.style.cssText='position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;border:0';yt.src='https://www.youtube.com/embed/'+id+'?autoplay=1&loop=1&playlist='+id+'&controls=0';document.body.appendChild(yt);document.getElementById('mus').style.display='block';return}
+ var a=document.getElementById('au');if(a){var go=function(){try{a.currentTime=LAGU_MULAI}catch(e){}a.volume=0;a.play().then(function(){var v=0,t=setInterval(function(){v=Math.min(1,v+.05);a.volume=v;if(v>=1)clearInterval(t)},120)}).catch(function(){})};if(a.readyState>0)go();else a.addEventListener('loadedmetadata',go,{once:true});a.load&&a.readyState==0&&a.load();document.getElementById('mus').style.display='block'}}
+function buka(){document.getElementById('isi').classList.add('on');document.getElementById('cover').style.minHeight='auto';document.getElementById('isi').scrollIntoView({behavior:'smooth'});obs();mulaiLagu()}
+function tg(){if(yt){yt.remove();yt=null;document.getElementById('mus').style.opacity=.5;return}var a=document.getElementById('au');if(a){a.paused?a.play():a.pause()}}
+function obs(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.15});document.querySelectorAll('.fade').forEach(function(s){o.observe(s)})}
+// Hitung mundur — ubah tanggal acara:
+var T=new Date({{EVENT_ISO}});
+setInterval(function(){var d=Math.max(0,T-new Date()),v=[['Hari',864e5],['Jam',36e5],['Menit',6e4],['Detik',1e3]],h='';v.forEach(function(x){h+='<div><b>'+Math.floor(d/x[1])%(x[0]=='Hari'?1e6:x[0]=='Jam'?24:60)+'</b><small>'+x[0]+'</small></div>'});document.getElementById('cd').innerHTML=h},1000);
+// Ucapan: tersimpan di browser ini (demo lokal)
+var SHEET_URL={{SHEET_URL}};
+var K={{STORAGE_KEY}};
+function draw(a){var w=document.getElementById('wl');w.textContent='';a.forEach(function(x){var c=document.createElement('div');c.className='wc';var b=document.createElement('b');b.textContent=x.n;var s=document.createElement('small');s.textContent=x.h||'';b.appendChild(s);var p=document.createElement('p');p.textContent=x.m;c.appendChild(b);c.appendChild(p);w.appendChild(c)})}
+function ld(){if(SHEET_URL){fetch(SHEET_URL).then(function(r){return r.json()}).then(draw).catch(function(){})}else draw(JSON.parse(localStorage.getItem(K)||'[]'))}
+document.getElementById('f').onsubmit=function(e){e.preventDefault();var n=this.n.value.trim(),m=this.m.value.trim();if(!n||!m)return;var h=(document.querySelector('input[name=h]:checked')||{}).value||'',f=this;
+if(SHEET_URL){fetch(SHEET_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({n:n,m:m,h:h})}).then(function(){f.m.value='';ld()}).catch(function(){alert('Gagal mengirim, coba lagi.')})}
+else{var a=JSON.parse(localStorage.getItem(K)||'[]');a.unshift({n:n,m:m,h:h});localStorage.setItem(K,JSON.stringify(a));f.m.value='';ld()}};ld();
+</script>
+
+{{AUDIO_TAG}}
+</body></html>
