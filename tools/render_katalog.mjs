@@ -26,6 +26,8 @@ const contoh = {
 const modeDari = a => ['aqiqah', 'khitan'].includes(a) ? 'anak' : ['ultah-anak', 'ultah', 'wisuda', 'formal'].includes(a) ? 'tunggal' : 'pasangan';
 for (const t of themes) {
   const a = t.acara[0], d = JSON.parse(JSON.stringify(contoh[modeDari(a)]));
+  if (a === 'wisuda') { d.judulAcara = 'Syukuran Wisuda'; d.salam = 'Assalamu\'alaikum'; d.pengantar = 'Dengan rasa syukur, kami mengundang Anda pada syukuran kelulusan:'; d.p1 = { nama: 'Raka Velora, S.T.', panggil: 'Raka', keterangan: 'Wisuda Sarjana Teknik' }; d.sesi[0].nama = 'Syukuran Wisuda'; }
+  if (a === 'formal') { d.judulAcara = 'Undangan Resmi'; d.salam = 'Dengan hormat,'; d.pengantar = 'Kami mengundang Bapak/Ibu untuk menghadiri acara:'; d.p1 = { nama: 'Peluncuran Program Velora', panggil: 'Velora Fest', keterangan: 'Peluncuran Program 2027' }; d.sesi[0].nama = 'Acara Utama'; }
   if (a === 'khitan') { d.judulAcara = 'Tasyakuran Khitan'; d.kutipan = ''; d.p1 = { nama: 'Raka Velora Putra', panggil: 'Raka', status: 'Putra pertama', ayah: 'Bapak Arif', ibu: 'Ibu Sari' }; d.sesi[0].nama = 'Acara Khitanan'; }
   const id = (suasana[t.musik] || [])[0] || (suasana.lembut || [])[0], l = lagu.find(x => x.id === id);
   const html = E.render(d, t, { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' })

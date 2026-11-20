@@ -867,5 +867,804 @@
   "gerak": "kilau",
   "musik": "megah",
   "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam."
+ },
+ {
+  "id": "sabit-zamrud-lentera",
+  "nama": "Sabit Zamrud Lentera",
+  "koleksi": "Special",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "aqiqah",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": true,
+  "font": {
+   "judul": "Amiri",
+   "isi": "Poppins",
+   "skrip": "Great Vibes"
+  },
+  "warna": {
+   "bg1": "#0B2A2E",
+   "bg2": "#10363A",
+   "bg3": "#082124",
+   "ink": "#E8CF8E",
+   "teks": "#F1EEE4",
+   "aksen": "#7A5A24",
+   "emas": "#C9A66B",
+   "kartu": "#123A3E"
+  },
+  "ornamen": "bulan",
+  "gerak": "cahaya",
+  "interaksi": "none",
+  "musik": "khidmat",
+  "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama."
+ },
+ {
+  "id": "lentera-pagi-fitri",
+  "nama": "Lentera Pagi Fitri",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "aqiqah",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Reem Kufi",
+   "isi": "Poppins",
+   "skrip": "Satisfy"
+  },
+  "warna": {
+   "bg1": "#F6F8F1",
+   "bg2": "#EAF1E3",
+   "bg3": "#F4EEDB",
+   "ink": "#24483A",
+   "teks": "#2F3A33",
+   "aksen": "#2E6B4F",
+   "emas": "#C8A45A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bulan",
+  "gerak": "kilau",
+  "interaksi": "none",
+  "musik": "khidmat",
+  "deskripsi": "Pagi hijau muda dengan lentera dan bulan sabit berkilau lembut, cocok untuk halalbihalal, aqiqah, atau pernikahan selepas Lebaran."
+ },
+ {
+  "id": "malam-salju-bintang",
+  "nama": "Malam Salju Bintang",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": true,
+  "font": {
+   "judul": "Yeseva One",
+   "isi": "Poppins",
+   "skrip": "Mea Culpa"
+  },
+  "warna": {
+   "bg1": "#0F1F2E",
+   "bg2": "#16304A",
+   "bg3": "#0B1724",
+   "ink": "#DCE9F5",
+   "teks": "#EEF3F8",
+   "aksen": "#2F6E8F",
+   "emas": "#B8C9D9",
+   "kartu": "#18324A"
+  },
+  "ornamen": "bintang",
+  "gerak": "salju",
+  "interaksi": "none",
+  "musik": "lembut",
+  "deskripsi": "Malam biru musim dingin dengan bintang dan salju turun perlahan, hangat untuk acara akhir tahun."
+ },
+ {
+  "id": "merah-kencana-musim-semi",
+  "nama": "Merah Kencana Musim Semi",
+  "koleksi": "Special",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Noto Serif Display",
+   "isi": "Poppins",
+   "skrip": "Lavishly Yours"
+  },
+  "warna": {
+   "bg1": "#FFF6EC",
+   "bg2": "#FBE6D4",
+   "bg3": "#F8EBDD",
+   "ink": "#8A1C1F",
+   "teks": "#3E2622",
+   "aksen": "#A82428",
+   "emas": "#C9963A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "kilau",
+  "interaksi": "none",
+  "musik": "megah",
+  "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi."
+ },
+ {
+  "id": "ukir-tiga-warna",
+  "nama": "Ukir Tiga Warna",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": true,
+  "font": {
+   "judul": "Cinzel",
+   "isi": "Poppins",
+   "skrip": "Ballet"
+  },
+  "warna": {
+   "bg1": "#161212",
+   "bg2": "#221A19",
+   "bg3": "#120E0E",
+   "ink": "#F2E6D8",
+   "teks": "#F4EEE8",
+   "aksen": "#A3262A",
+   "emas": "#D8CFC4",
+   "kartu": "#241C1B"
+  },
+  "ornamen": "ukiran",
+  "gerak": "none",
+  "interaksi": "none",
+  "musik": "tradisional",
+  "deskripsi": "Merah, hitam, dan putih dengan sulur ukiran geometris tegas, terinspirasi visual ukiran rumah adat Batak."
+ },
+ {
+  "id": "teras-jingga-hijau",
+  "nama": "Teras Jingga Hijau",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Rozha One",
+   "isi": "Poppins",
+   "skrip": "Kaushan Script"
+  },
+  "warna": {
+   "bg1": "#FFF7EE",
+   "bg2": "#FBE9D6",
+   "bg3": "#EFF4E8",
+   "ink": "#7A2E14",
+   "teks": "#3A2A20",
+   "aksen": "#A8401A",
+   "emas": "#2F7A4A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "geometris",
+  "gerak": "kelopak",
+  "interaksi": "none",
+  "musik": "tradisional",
+  "deskripsi": "Jingga, hijau, dan krem dengan pinggiran segitiga berulang, ceria dan bernuansa Betawi."
+ },
+ {
+  "id": "sutra-kotak-magenta",
+  "nama": "Sutra Kotak Magenta",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": false,
+  "font": {
+   "judul": "Playfair Display SC",
+   "isi": "Poppins",
+   "skrip": "Corinthia"
+  },
+  "warna": {
+   "bg1": "#FAF4F8",
+   "bg2": "#F1E3EE",
+   "bg3": "#F6EEF3",
+   "ink": "#5A1F4E",
+   "teks": "#3B2A36",
+   "aksen": "#7E2A6E",
+   "emas": "#C9A24E",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "geometris",
+  "gerak": "kilau",
+  "interaksi": "none",
+  "musik": "tradisional",
+  "deskripsi": "Magenta dan emas dengan kisi kotak bergaya kain sutra tenun, anggun dan bernuansa Bugis."
+ },
+ {
+  "id": "tenun-gading-kencana",
+  "nama": "Tenun Gading Kencana",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "MonteCarlo"
+  },
+  "warna": {
+   "bg1": "#FBF4E4",
+   "bg2": "#F3E4C2",
+   "bg3": "#F7EDD8",
+   "ink": "#6B1A1F",
+   "teks": "#3A2A1E",
+   "aksen": "#8E1F2A",
+   "emas": "#B8892E",
+   "kartu": "#FFFDF6"
+  },
+  "ornamen": "songket",
+  "gerak": "cahaya",
+  "interaksi": "none",
+  "musik": "tradisional",
+  "deskripsi": "Gading, marun, dan emas dengan kisi tenun songket di bawah lengkung, bernuansa Palembang."
+ },
+ {
+  "id": "konfeti-toga-biru",
+  "nama": "Konfeti Toga Biru",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "wisuda"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Bricolage Grotesque",
+   "isi": "Poppins",
+   "skrip": "Caveat Brush"
+  },
+  "warna": {
+   "bg1": "#F2F6FD",
+   "bg2": "#E3ECFA",
+   "bg3": "#FDF6E8",
+   "ink": "#1C3266",
+   "teks": "#263148",
+   "aksen": "#2B4C9A",
+   "emas": "#E0B54A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "konfeti",
+  "gerak": "konfeti",
+  "interaksi": "none",
+  "musik": "ceria",
+  "deskripsi": "Biru cerah dan kuning emas dengan konfeti beterbangan dan bingkai polaroid, merayakan kelulusan."
+ },
+ {
+  "id": "toga-plum-malam",
+  "nama": "Toga Plum Malam",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "wisuda",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": true,
+  "font": {
+   "judul": "Libre Caslon Display",
+   "isi": "Poppins",
+   "skrip": "Allison"
+  },
+  "warna": {
+   "bg1": "#1E1424",
+   "bg2": "#2A1C33",
+   "bg3": "#170F1C",
+   "ink": "#E8D6A8",
+   "teks": "#F1ECF3",
+   "aksen": "#6A3F8A",
+   "emas": "#CDB37A",
+   "kartu": "#2A1D33"
+  },
+  "ornamen": "bintang",
+  "gerak": "bintang",
+  "interaksi": "none",
+  "musik": "khidmat",
+  "deskripsi": "Ungu plum gelap dengan bintang tipis dan bingkai rapi, khidmat untuk syukuran wisuda."
+ },
+ {
+  "id": "batu-abu-korporat",
+  "nama": "Batu Abu Korporat",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "formal",
+   "wisuda"
+  ],
+  "foto": false,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Manrope",
+   "isi": "Inter",
+   "skrip": "Libre Caslon Text"
+  },
+  "warna": {
+   "bg1": "#F3F5F7",
+   "bg2": "#E7EBEF",
+   "bg3": "#EEF1F4",
+   "ink": "#1E2A38",
+   "teks": "#2A3340",
+   "aksen": "#2C4A6E",
+   "emas": "#9AA8B8",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "geometris",
+  "gerak": "none",
+  "interaksi": "none",
+  "musik": "khidmat",
+  "deskripsi": "Abu batu dan biru baja dengan garis geometris tipis, rapi untuk undangan rapat, peluncuran, atau gathering kantor."
+ },
+ {
+  "id": "gala-teal-deco",
+  "nama": "Gala Teal Deco",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "formal",
+   "wisuda"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": true,
+  "font": {
+   "judul": "Limelight",
+   "isi": "Poppins",
+   "skrip": "Marcellus SC"
+  },
+  "warna": {
+   "bg1": "#0C2328",
+   "bg2": "#11313A",
+   "bg3": "#091B1F",
+   "ink": "#E4C98A",
+   "teks": "#EEF2F1",
+   "aksen": "#1F6670",
+   "emas": "#C2A25E",
+   "kartu": "#13323A"
+  },
+  "ornamen": "artdeco",
+  "gerak": "cahaya",
+  "interaksi": "none",
+  "musik": "megah",
+  "deskripsi": "Teal gelap dan emas dengan lengkung art deco dan sorot cahaya, untuk gala dinner dan malam penghargaan."
+ },
+ {
+  "id": "kartu-terakota-senja",
+  "nama": "Kartu Terakota Senja",
+  "koleksi": "Interaktif",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": false,
+  "font": {
+   "judul": "Young Serif",
+   "isi": "Poppins",
+   "skrip": "Birthstone"
+  },
+  "warna": {
+   "bg1": "#FBF3EC",
+   "bg2": "#F4E2D3",
+   "bg3": "#F7ECE4",
+   "ink": "#6A2E1C",
+   "teks": "#3C2A22",
+   "aksen": "#A3472A",
+   "emas": "#C98E62",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "daun",
+  "gerak": "none",
+  "interaksi": "kartu",
+  "musik": "romantis",
+  "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir."
+ },
+ {
+  "id": "tebar-bintang-biru-debu",
+  "nama": "Tebar Bintang Biru Debu",
+  "koleksi": "Interaktif",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Infant",
+   "isi": "Poppins",
+   "skrip": "Sacramento"
+  },
+  "warna": {
+   "bg1": "#F2F5FA",
+   "bg2": "#E2E9F3",
+   "bg3": "#EEF1F7",
+   "ink": "#253A5A",
+   "teks": "#2A3444",
+   "aksen": "#3E5C8A",
+   "emas": "#B79A5E",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bintang",
+  "gerak": "bintang",
+  "interaksi": "tebar",
+  "musik": "romantis",
+  "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai."
+ },
+ {
+  "id": "perahu-kecil-biru-laut",
+  "nama": "Perahu Kecil Biru Laut",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "aqiqah"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": false,
+  "font": {
+   "judul": "Chewy",
+   "isi": "Nunito",
+   "skrip": "Short Stack"
+  },
+  "warna": {
+   "bg1": "#EEF7FC",
+   "bg2": "#DDEEF8",
+   "bg3": "#F3F8FB",
+   "ink": "#1D4466",
+   "teks": "#23384A",
+   "aksen": "#2465A0",
+   "emas": "#8CC2E0",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "gelombang",
+  "gerak": "gelembung",
+  "interaksi": "none",
+  "musik": "lembut",
+  "deskripsi": "Biru laut lembut dengan perahu kertas dan ombak kecil, manis untuk aqiqah putra."
+ },
+ {
+  "id": "layang-layang-hijau-pagi",
+  "nama": "Layang-Layang Hijau Pagi",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "khitan"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Luckiest Guy",
+   "isi": "Poppins",
+   "skrip": "Schoolbell"
+  },
+  "warna": {
+   "bg1": "#F6FAEC",
+   "bg2": "#EAF3D6",
+   "bg3": "#FBF7E4",
+   "ink": "#2E5226",
+   "teks": "#2D3A26",
+   "aksen": "#3F7A2E",
+   "emas": "#E2B84A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "awan",
+  "interaksi": "none",
+  "musik": "ceria",
+  "deskripsi": "Langit pagi hijau-kuning dengan layang-layang dan awan berarak, riang untuk syukuran khitan."
+ },
+ {
+  "id": "kebun-kelinci-wortel",
+  "nama": "Kebun Kelinci Wortel",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "ultah-anak"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": false,
+  "font": {
+   "judul": "Bubblegum Sans",
+   "isi": "Nunito",
+   "skrip": "Gaegu"
+  },
+  "warna": {
+   "bg1": "#FFF8EE",
+   "bg2": "#FDEBD3",
+   "bg3": "#F3F8EA",
+   "ink": "#7A3A12",
+   "teks": "#3D2E22",
+   "aksen": "#B04A16",
+   "emas": "#8BBF5A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "daun",
+  "gerak": "konfeti",
+  "interaksi": "none",
+  "musik": "ceria",
+  "deskripsi": "Kebun sayur dengan kelinci, wortel, dan daun-daun lucu gambar sendiri, untuk ulang tahun anak."
+ },
+ {
+  "id": "pagi-kota-pesisir",
+  "nama": "Pagi Kota Pesisir",
+  "koleksi": "Anime",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": false,
+  "font": {
+   "judul": "Kiwi Maru",
+   "isi": "Nunito",
+   "skrip": "Klee One"
+  },
+  "warna": {
+   "bg1": "#EEF8FA",
+   "bg2": "#DDF0F4",
+   "bg3": "#FFF4E6",
+   "ink": "#1C4A5E",
+   "teks": "#233B47",
+   "aksen": "#1F6E8A",
+   "emas": "#F2C27A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "gelombang",
+  "gerak": "awan",
+  "interaksi": "none",
+  "musik": "ceria",
+  "deskripsi": "Pagi cerah di kota pesisir siluet, laut berkilau dan awan cel-shaded, segar seperti adegan film animasi."
+ },
+ {
+  "id": "taman-malam-kunang",
+  "nama": "Taman Malam Kunang",
+  "koleksi": "Anime",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": true,
+  "font": {
+   "judul": "Yusei Magic",
+   "isi": "M PLUS 1p",
+   "skrip": "Yomogi"
+  },
+  "warna": {
+   "bg1": "#101A2C",
+   "bg2": "#16253B",
+   "bg3": "#0C1422",
+   "ink": "#F1E7A6",
+   "teks": "#EEF1F6",
+   "aksen": "#3F6E6A",
+   "emas": "#D8E07A",
+   "kartu": "#16263D"
+  },
+  "ornamen": "daun",
+  "gerak": "cahaya",
+  "interaksi": "none",
+  "musik": "romantis",
+  "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis."
+ },
+ {
+  "id": "onyx-mutiara",
+  "nama": "Onyx Mutiara",
+  "koleksi": "Luxury",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": true,
+  "font": {
+   "judul": "Bellefair",
+   "isi": "Poppins",
+   "skrip": "Imperial Script"
+  },
+  "warna": {
+   "bg1": "#121214",
+   "bg2": "#1C1C20",
+   "bg3": "#0D0D0F",
+   "ink": "#E9E4DA",
+   "teks": "#F2EFEA",
+   "aksen": "#5E5A6E",
+   "emas": "#C9C2B4",
+   "kartu": "#1E1E22"
+  },
+  "ornamen": "bunga",
+  "gerak": "kilau",
+  "interaksi": "none",
+  "musik": "megah",
+  "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern."
+ },
+ {
+  "id": "burgundi-beludru",
+  "nama": "Burgundi Beludru",
+  "koleksi": "Luxury",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": true,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Luxurious Script"
+  },
+  "warna": {
+   "bg1": "#2B0D16",
+   "bg2": "#3A1220",
+   "bg3": "#220A11",
+   "ink": "#EBCB8B",
+   "teks": "#F6ECEC",
+   "aksen": "#8A2440",
+   "emas": "#C9A060",
+   "kartu": "#3A1420"
+  },
+  "ornamen": "artdeco",
+  "gerak": "cahaya",
+  "interaksi": "none",
+  "musik": "megah",
+  "deskripsi": "Burgundi seperti beludru dengan bingkai art deco emas, hangat dan elegan untuk resepsi malam."
+ },
+ {
+  "id": "pasir-hangat",
+  "nama": "Pasir Hangat",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal"
+  ],
+  "foto": false,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Ephesis"
+  },
+  "warna": {
+   "bg1": "#F7F1E8",
+   "bg2": "#EFE5D6",
+   "bg3": "#F3ECE1",
+   "ink": "#4A3828",
+   "teks": "#3A3029",
+   "aksen": "#7A5638",
+   "emas": "#C9AE8C",
+   "kartu": "#FFFDF9"
+  },
+  "ornamen": "none",
+  "gerak": "none",
+  "interaksi": "none",
+  "musik": "lembut",
+  "deskripsi": "Krem pasir dan cokelat susu dengan satu lengkung tenang, sederhana dan lega dibaca."
+ },
+ {
+  "id": "arang-tipis",
+  "nama": "Arang Tipis",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "pernikahan",
+   "formal",
+   "wisuda"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": true,
+  "font": {
+   "judul": "Space Grotesk",
+   "isi": "Inter",
+   "skrip": "Instrument Serif"
+  },
+  "warna": {
+   "bg1": "#1A1A1A",
+   "bg2": "#222222",
+   "bg3": "#141414",
+   "ink": "#F0EDE6",
+   "teks": "#E9E6E0",
+   "aksen": "#4D4D4D",
+   "emas": "#8C8C8C",
+   "kartu": "#242424"
+  },
+  "ornamen": "geometris",
+  "gerak": "none",
+  "interaksi": "none",
+  "musik": "lembut",
+  "deskripsi": "Arang gelap dengan garis geometris tipis dan tipografi modern, minimal dan tegas."
+ },
+ {
+  "id": "sapuan-indigo",
+  "nama": "Sapuan Indigo",
+  "koleksi": "Art",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": false,
+  "font": {
+   "judul": "Gloock",
+   "isi": "Poppins",
+   "skrip": "Nanum Brush Script"
+  },
+  "warna": {
+   "bg1": "#F6F4EE",
+   "bg2": "#E9ECF2",
+   "bg3": "#EEF0F5",
+   "ink": "#1F2D5A",
+   "teks": "#2A2F40",
+   "aksen": "#2E3F7A",
+   "emas": "#8A9AC4",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "gelombang",
+  "gerak": "none",
+  "interaksi": "none",
+  "musik": "romantis",
+  "deskripsi": "Sapuan kuas tinta indigo membentuk ombak di atas kertas bertekstur, artistik dan tenang."
  }
 ]
