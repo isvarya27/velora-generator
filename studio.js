@@ -17,7 +17,7 @@ var ACARA = {
 };
 var SECS = [['pembuka', 'Pembuka & kutipan', 1], ['hitung', 'Hitung mundur', 1], ['profil', 'Profil', 1], ['acara', 'Waktu & tempat', 1], ['kalender', 'Tombol Simpan Tanggal', 1], ['live', 'Live streaming', 0],
   ['dress', 'Dresscode', 0], ['kisah', 'Kisah / cerita', 0], ['galeri', 'Galeri', 1], ['kado', 'Hadiah: rekening & kado', 0], ['ucapan', 'Ucapan & RSVP', 1], ['penutup', 'Penutup', 1], ['catatan', 'Catatan maaf nama/gelar', 1]];
-var THEMES = [], LAGU = [], SUASANA = {}, acara = 'pernikahan', kol = 'Semua', tema = null, laguManual = false;
+var THEMES = [], LAGU = [], SUASANA = {}, TEMA_LAGU = {}, acara = 'pernikahan', kol = 'Semua', tema = null, laguManual = false;
 var foto = { cover: null, p1: null, p2: null }, galeri = [], mp3 = null, mp3url = '';
 
 function fmt(n) { return 'Rp' + n.toLocaleString('id-ID'); }
@@ -68,7 +68,7 @@ function daftarTema() {
 function pilihTema(t, diam) {
   tema = t; if (!t) return;
   if (t.ucapanPerHalaman) $('perHalaman').value = t.ucapanPerHalaman;
-  if (!laguManual) { var id = (SUASANA[t.musik] || [])[0] || (SUASANA.lembut || [])[0]; if (id) $('lagu').value = id; }
+  if (!laguManual) { var id = ((TEMA_LAGU[t.id] || []).filter(function (x) { return LAGU.some(function (l) { return l.id === x; }); })[0]) || (SUASANA[t.musik] || [])[0] || (SUASANA.lembut || [])[0]; if (id) { $('lagu').value = id; setMulai(); } }
   var h = HARGA[t.tier];
   $('price').innerHTML = '<b>' + esc(t.nama) + '</b> · ' + esc(t.tier) + '<br>Web: ' + fmt(h[0]) + ' (Tanpa Foto ' + fmt(h[1]) + ')';
   if (!diam) daftarTema();
@@ -95,8 +95,9 @@ function data() {
     penutup: val('penutup'), tuanRumah: val('tuanRumah'), sheet: val('sheet'), uuid: val('uuid'), perHalaman: parseInt(val('perHalaman'), 10) || (tema && tema.ucapanPerHalaman) || 5, mulai: parseInt(val('mulai'), 10) || 0
   };
 }
+function setMulai() { var l = laguDipilih(); if (l && l.mulai != null) $('mulai').value = l.mulai; }
 function laguDipilih() { return LAGU.filter(function (l) { return l.id === $('lagu').value; })[0]; }
-function kredit() { var l = laguDipilih(); return $('lsrc').value === 'lib' && l ? 'Musik: “' + l.judul + '” oleh ' + l.artis + ' (incompetech.com), lisensi CC BY 4.0' : ''; }
+function kredit() { var l = laguDipilih(); return $('lsrc').value === 'lib' && l && (!l.sumber || l.sumber === 'cc-by') ? 'Musik: “' + l.judul + '” oleh ' + l.artis + ' (incompetech.com), lisensi CC BY 4.0' : ''; }
 
 function render(zip) {
   var src = $('lsrc').value, l = laguDipilih(), audio = '';
@@ -133,23 +134,50 @@ function thumbs() { $('th').innerHTML = [foto.cover, foto.p1, foto.p2].concat(ga
 /* ---------- unduh ---------- */
 function b64(zip, p, u) { zip.file(p, u.split(',')[1], { base64: true }); }
 async function ambil(p) { var r = await fetch(p); if (!r.ok) throw new Error(p); return r.blob(); }
+async function paket() {
+  var d = data(), f = {}, s = state_wp();
+  if (s) { $('sheet').value = s.rest + 'ucapan'; if (val('slug')) $('base').value = s.situs + 'u/' + val('slug') + '/'; }
+  f['index.html'] = render(true);
+  ['cover', 'p1', 'p2'].forEach(function (k) { if (foto[k]) f['img/' + k + '.jpg'] = foto[k]; });
+  galeri.forEach(function (g, i) { f['img/gal' + (i + 1) + '.jpg'] = g; });
+  if (val('base') && (foto.cover || foto.p1)) f['img/og.jpg'] = await ogDari(foto.cover || foto.p1);
+  f['img/velora-logo-white.svg'] = await ambil('img/velora-logo-white.svg');
+  if ($('lsrc').value === 'lib' && laguDipilih()) f['musik.mp3'] = await ambil(laguDipilih().file);
+  if ($('lsrc').value === 'up' && mp3) f['musik.mp3'] = mp3;
+  return { d: d, f: f };
+}
+function state_wp() { return window.VELORA_WP || null; }
+function keBase64(v) {
+  if (typeof v === 'string' && v.indexOf('data:') === 0) return Promise.resolve(v.split(',')[1]);
+  return new Promise(function (ok) { var r = new FileReader(); r.onload = function () { ok(String(r.result).split(',')[1]); }; r.readAsDataURL(v); });
+}
 async function unduh() {
   var st = $('st'); st.textContent = 'Menyiapkan paket…';
   try {
-    var zip = new JSZip(), d = data(), nama = (d.p1.panggil || d.p1.nama).toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    zip.file('index.html', render(true));
-    ['cover', 'p1', 'p2'].forEach(function (k) { if (foto[k]) b64(zip, 'img/' + k + '.jpg', foto[k]); });
-    galeri.forEach(function (g, i) { b64(zip, 'img/gal' + (i + 1) + '.jpg', g); });
-    if (val('base') && (foto.cover || foto.p1)) b64(zip, 'img/og.jpg', await ogDari(foto.cover || foto.p1));
-    zip.file('img/velora-logo-white.svg', await ambil('img/velora-logo-white.svg'));
-    if ($('lsrc').value === 'lib' && laguDipilih()) zip.file('musik.mp3', await ambil(laguDipilih().file));
-    if ($('lsrc').value === 'up' && mp3) zip.file('musik.mp3', mp3);
+    var p = await paket(), d = p.d, zip = new JSZip(), nama = (d.p1.panggil || d.p1.nama).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    Object.keys(p.f).forEach(function (k) { var v = p.f[k]; if (typeof v === 'string' && v.indexOf('data:') === 0) b64(zip, k, v); else zip.file(k, v); });
     zip.file('apps-script.gs', await ambil('apps-script.gs')); zip.file('.nojekyll', '');
-    zip.file('BACA-DULU.txt', 'Paket undangan Velora (tema: ' + tema.nama + ')\nKode pesanan: ' + d.uuid + '\nLihat ucapan (untuk klien): https://isvarya27.github.io/velora-generator/ucapan.html?id=' + d.uuid + '\n\n1. Unggah SEMUA isi folder ini ke hosting (mis. repo GitHub Pages).\n2. Link per tamu: buka link.html di Studio, atau ALAMAT/?to=Nama+Tamu\n3. Ucapan tersimpan: pasang apps-script.gs di Google Sheet (Ekstensi > Apps Script > Deploy Aplikasi web) lalu isi URL di Studio dan unduh ulang.\n4. Uji di HP sebelum dikirim ke klien.\n');
+    zip.file('BACA-DULU.txt', 'Paket undangan Velora (tema: ' + tema.nama + ')\nKode pesanan: ' + d.uuid + '\n\n1. Unggah SEMUA isi folder ini ke hosting.\n2. Link per tamu: ALAMAT/?to=Nama+Tamu (atau link.html di Studio).\n3. Uji di HP sebelum dikirim ke klien.\n');
     var blob = await zip.generateAsync({ type: 'blob' }), a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = 'undangan-' + (nama || 'velora') + '-' + tema.id + '.zip'; a.click();
     st.textContent = 'Paket diunduh (' + Math.round(blob.size / 1024) + ' KB).';
   } catch (e) { st.textContent = 'Gagal: ' + e.message + '. Buka Studio lewat http(s), bukan file://.'; }
+}
+async function terbit() {
+  var w = state_wp(), st = $('st');
+  if (!w) return;
+  var slug = val('slug').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, '');
+  if (slug.length < 3) { st.textContent = 'Isi alamat undangan (/u/…) minimal 3 huruf.'; $('slug').focus(); return; }
+  $('slug').value = slug; st.textContent = 'Menerbitkan…';
+  try {
+    var p = await paket(), files = {};
+    for (var k in p.f) files[k] = k === 'index.html' ? p.f[k] : await keBase64(p.f[k]);
+    var r = await fetch(w.rest + 'terbit', { method: 'POST', credentials: 'same-origin', headers: { 'X-WP-Nonce': w.nonce, 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ uuid: p.d.uuid, slug: slug, judul: p.d.judulAcara + ' ' + (p.d.p1.panggil || p.d.p1.nama) + (p.d.mode === 'pasangan' ? ' & ' + (p.d.p2.panggil || p.d.p2.nama) : ''), tema: tema.nama, paket: tema.tier + (foto.cover || foto.p1 ? '' : ' (Tanpa Foto)'), klien: val('klien'), wa: val('wa'), bulan: parseInt(val('bulan'), 10) || 12, files: files }) });
+    var j = await r.json();
+    if (!r.ok || !j.ok) throw new Error(j.message || j.error || ('HTTP ' + r.status));
+    st.innerHTML = 'Terbit: <a href="' + esc(j.url) + '" target="_blank" rel="noopener">' + esc(j.url) + '</a> · aktif s.d. ' + esc(j.sampai) + '<br>Rekap untuk klien: <a href="' + esc(j.ucapan) + '" target="_blank" rel="noopener">buka</a>';
+  } catch (e) { st.textContent = 'Gagal menerbitkan: ' + e.message; }
 }
 
 /* ---------- sambungan ---------- */
@@ -164,6 +192,10 @@ async function init() {
     THEMES = await (await fetch('themes/themes.json')).json();
     LAGU = await (await fetch('musik/lagu.json')).json();
     SUASANA = await (await fetch('musik/suasana.json')).json();
+    try { // pustaka internal (hanya ada di Studio WordPress, tidak di repo publik)
+      var tim = await (await fetch('musik/lagu-tim.json')).json(); if (Array.isArray(tim)) LAGU = tim.concat(LAGU);
+      TEMA_LAGU = await (await fetch('musik/tema-lagu.json')).json();
+    } catch (e) {}
   } catch (e) { $('st').textContent = 'Jalankan lewat server: python3 -m http.server 8080 lalu buka http://localhost:8080'; return; }
   $('acara').innerHTML = Object.keys(ACARA).map(function (k) { return '<button type="button" data-a="' + k + '">' + ACARA[k].label + '</button>'; }).join('');
   $('acara').onclick = function (e) { var b = e.target.closest('button'); if (b) pasangAcara(b.dataset.a); };
@@ -171,8 +203,8 @@ async function init() {
   $('tg').onclick = function (e) { var b = e.target.closest('.tc'); if (b) pilihTema(THEMES.filter(function (t) { return t.id === b.dataset.id; })[0]); };
   $('secs').innerHTML = SECS.map(function (s) { return '<label><input type="checkbox" class="sec" data-k="' + s[0] + '"' + (s[2] ? ' checked' : '') + '> ' + s[1] + '</label>'; }).join('');
   document.querySelectorAll('.sec').forEach(function (c) { var x = $('x_' + c.dataset.k), f = function () { if (x) x.hidden = !c.checked; }; c.addEventListener('change', f); f(); });
-  $('lagu').innerHTML = LAGU.map(function (l) { return '<option value="' + l.id + '">' + esc(l.judul) + ' (' + esc(l.suasana) + ')</option>'; }).join('');
-  $('lagu').addEventListener('change', function () { laguManual = true; });
+  $('lagu').innerHTML = LAGU.map(function (l) { return '<option value="' + l.id + '">' + esc(l.judul) + (l.artis ? ' — ' + esc(l.artis) : '') + ' (' + esc(l.label || l.suasana) + ')</option>'; }).join('');
+  $('lagu').addEventListener('change', function () { laguManual = true; setMulai(); refresh(); });
   $('lsrc').addEventListener('change', function () { ['lib', 'up', 'yt'].forEach(function (k) { $('x_' + k).hidden = $('lsrc').value !== k; }); });
   $('addSesi').onclick = function () { var n = document.querySelectorAll('[data-sesi]').length; if (n < 3) { $('sesi').insertAdjacentHTML('beforeend', sesiHtml(n, 'Sesi ' + (n + 1))); wire(); refresh(); } };
   $('kisah').innerHTML = kisahHtml(); $('addKisah').onclick = function () { if (document.querySelectorAll('.kisah-i').length < 4) { $('kisah').insertAdjacentHTML('beforeend', kisahHtml()); wire(); } };
@@ -180,13 +212,24 @@ async function init() {
   $('f_gal').onchange = async function () { galeri = []; for (var i = 0; i < Math.min(10, this.files.length); i++) galeri.push(await bacaFoto(this.files[i], 1000)); thumbs(); refresh(); };
   $('f_mp3').onchange = function () { mp3 = this.files[0] || null; mp3url = mp3 ? URL.createObjectURL(mp3) : ''; refresh(); };
   var bu = function () { $('uuid').value = (crypto.randomUUID ? crypto.randomUUID() : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) { var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 3 | 8)).toString(16); })); refresh(); };
-  bu(); $('uuidBaru').onclick = bu;
+  if (!(state_wp() && state_wp().pesanan && state_wp().pesanan.uuid)) bu(); $('uuidBaru').onclick = bu;
   try { var cf = await (await fetch('config.json')).json(); if (cf.pusatUcapan && !$('sheet').value) $('sheet').value = cf.pusatUcapan; } catch (e) {}
   $('dl').onclick = unduh;
+  if (state_wp()) { $('x_wp').hidden = false; $('terbit').hidden = false; $('terbit').onclick = terbit; $('sheet').value = state_wp().rest + 'ucapan'; $('sheet').readOnly = true; }
   $('op').onclick = function () { var w = window.open('', '_blank'); w.document.write('<base href="' + location.href.replace(/[^/]*$/, '') + '">' + render(false)); w.document.close(); };
   var q = new URLSearchParams(location.search);
   pasangAcara(ACARA[q.get('acara')] ? q.get('acara') : 'pernikahan');
   if (q.get('tema')) pilihTema(THEMES.filter(function (t) { return t.id === q.get('tema'); })[0] || tema);
+  var ps = state_wp() && state_wp().pesanan; // draft pesanan dari formulir Order situs
+  if (ps) {
+    var tp = THEMES.filter(function (t) { return t.id === ps.tema; })[0];
+    if (tp) { pasangAcara(tp.acara[0]); pilihTema(tp); }
+    if (ps.uuid) $('uuid').value = ps.uuid;
+    $('klien').value = ps.klien || ''; $('wa').value = ps.wa || '';
+    $('slug').value = ps.slug || (ps.klien || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    if (ps.tanggal) { var tg = document.querySelector('.s_tgl'); if (tg) tg.value = ps.tanggal; }
+    $('st').textContent = 'Mengerjakan pesanan: ' + (ps.klien || '') + (tp ? ' · tema ' + tp.nama : ' · tema belum dipilih');
+  }
   wire(); refresh();
 }
 init();

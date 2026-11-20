@@ -4,6 +4,7 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const ctx = { globalThis: {} }; vm.createContext(ctx); vm.runInContext(fs.readFileSync(root + '/engine.js', 'utf8'), ctx);
 const E = ctx.globalThis.VeloraEngine;
 const themes = JSON.parse(fs.readFileSync(root + '/themes/themes.json', 'utf8'));
+let FOTO = {}; try { FOTO = JSON.parse(fs.readFileSync(root + '/themes/foto-demo.json', 'utf8')); } catch (e) {}
 const lagu = JSON.parse(fs.readFileSync(root + '/musik/lagu.json', 'utf8')), suasana = JSON.parse(fs.readFileSync(root + '/musik/suasana.json', 'utf8'));
 const sesi = (n, t, j, j2) => ({ nama: n, tgl: t, jam: j, jam2: j2, zona: 'WIB', gedung: 'Gedung Velora Indah', tempat: 'Jl. Velora Indah No. 21, Jakarta' });
 const contoh = {
@@ -33,5 +34,15 @@ for (const t of themes) {
   const html = E.render(d, t, { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' })
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
+  // versi Pakai Foto (bila ada pilihan foto dari designer)
+  const fd = FOTO[t.id];
+  if (fd) {
+    const f = n => '../../../demo-foto/f' + n + '.jpg';
+    const map = { cover: f(fd.cover), p1: f(fd.p1), p2: f(fd.p2) };
+    const t2 = Object.assign({}, t, { posisiFoto: fd.posisi, posisiKartu: fd.kartu });
+    const h2 = E.render(d, t2, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), audio: l ? '../../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../../', kunci: t.id + '-foto-' })
+      .replace('src="img/velora-logo-white.svg"', 'src="../../../img/velora-logo-white.svg"');
+    fs.mkdirSync(root + '/katalog/' + t.id + '/foto', { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/foto/index.html', h2);
+  }
   console.log(t.id, html.length);
 }

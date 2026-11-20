@@ -14,8 +14,21 @@ main{max-width:760px;margin:0 auto;padding:22px 16px 40px}h1{color:var(--ink);fo
 button{font:inherit;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;font-size:13px}button.p{background:var(--ink);color:var(--card)}button:disabled{opacity:.4;cursor:default}
 .it{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}.it b{color:var(--ink)}.it small{color:var(--mut);margin-left:6px;font-size:12px}.it p{margin:4px 0 0;line-height:1.6;white-space:pre-wrap}
 .pg{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px;font-size:13px}.err{background:#fde8e6;color:#7a2a20;padding:12px;border-radius:10px}
+.lt{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0 0 18px}.lt h2{font-size:16px;color:var(--ink);margin:0 0 8px}.lt input,.lt textarea{width:100%;margin-bottom:8px}.lt textarea{min-height:90px;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--txt)}.lt .lk{word-break:break-all;font-size:13px;background:rgba(169,112,106,.12);padding:8px 10px;border-radius:8px;margin-bottom:8px}.lt .row{display:flex;gap:8px;flex-wrap:wrap}.lt a.b{display:inline-block;padding:8px 16px;border-radius:999px;background:var(--ink);color:var(--card);text-decoration:none;font-size:13px}
 </style></head><body><main>
 <h1>Ucapan &amp; Kehadiran</h1><div class="mut" id="sub">Memuat…</div>
+<section class="lt" id="lt" hidden><h2>Buat link untuk tamu</h2>
+<input id="ltn" placeholder="Nama tamu, contoh: Ais &amp; Keluarga" autocomplete="off">
+<div class="lk" id="ltl">Ketik nama tamu untuk membuat link.</div>
+<textarea id="ltm">Assalamu'alaikum Wr. Wb.
+
+Kepada Yth. {nama}
+
+Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Anda ke acara kami. Detail undangan ada di tautan berikut:
+{link}
+
+Terima kasih atas doa dan kehadirannya.</textarea>
+<div class="row"><a class="b" id="ltw" target="_blank" rel="noopener" href="#">Kirim lewat WhatsApp</a><button type="button" id="ltc">Salin pesan</button><button type="button" id="ltk">Salin link saja</button></div></section>
 <div class="st" id="st" hidden><div><b id="s_total">0</b><small>Ucapan</small></div><div><b id="s_hadir">0</b><small>Hadir</small></div><div><b id="s_tidak">0</b><small>Tidak hadir</small></div><div><b id="s_tamu">0</b><small>Perkiraan tamu</small></div></div>
 <div class="bar" id="bar" hidden><label class="mut">Per halaman <select id="size"><option>5</option><option selected>10</option><option>20</option><option>50</option></select></label><button type="button" id="csv">Unduh CSV</button><button type="button" id="muat">Muat ulang</button></div>
 <div id="list" aria-live="polite"></div>
@@ -23,9 +36,9 @@ button{font:inherit;cursor:pointer;border:1px solid var(--ink);background:transp
 </main>
 <script>
 'use strict';
-var $=function(i){return document.getElementById(i)},q=new URLSearchParams(location.search),ID=q.get('id')||'',SRC=q.get('src')||'',HAL=1,TOT=0;
+var $=function(i){return document.getElementById(i)},q=new URLSearchParams(location.search),W=window.VELORA_UCAPAN||{},ID=W.id||q.get('id')||'',SRC=W.src||q.get('src')||'',KEY=W.k||'',HAL=1,TOT=0;
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function url(p){return SRC+(SRC.indexOf('?')<0?'?':'&')+'id='+encodeURIComponent(ID)+'&'+p}
+function url(p){return SRC+(SRC.indexOf('?')<0?'?':'&')+'id='+encodeURIComponent(ID)+(KEY?'&k='+encodeURIComponent(KEY):'')+'&'+p}
 function err(m){$('list').innerHTML='<div class="err">'+esc(m)+'</div>';$('sub').textContent=''}
 function tgl(w){var d=new Date(w);return isNaN(d)?'':d.toLocaleString('id-ID',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}
 function muat(){var size=+$('size').value;
@@ -36,10 +49,13 @@ function muat(){var size=+$('size').value;
 async function csv(){var all=[],p=1,j;do{j=await (await fetch(url('page='+p+'&size=50'))).json();all=all.concat(j.items||[]);p++}while(all.length<j.total&&p<200);
  var c='waktu,nama,kehadiran,jumlah_tamu,ucapan\n'+all.map(function(x){return [x.w,x.n,x.h,x.t,x.m].map(function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"'}).join(',')}).join('\n');
  var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+c],{type:'text/csv'}));a.download='ucapan-'+ID.slice(0,8)+'.csv';a.click()}
+function lt(){var n=$('ltn').value.trim(),u=W.url?W.url+'?to='+encodeURIComponent(n).replace(/%20/g,'+'):'',m=$('ltm').value,t=m.split('{nama}').join(n||'Bapak/Ibu');t=m.indexOf('{link}')>-1?t.split('{link}').join(u):t.replace(/\s+$/,'')+'\n\n'+u;$('ltl').textContent=n?u:'Ketik nama tamu untuk membuat link.';$('ltw').href=n?'https://wa.me/?text='+encodeURIComponent(t):'#';return {u:u,t:t,n:n}}
+function salin(x,b){if(!x)return;var o=b.textContent,ok=function(){b.textContent='Tersalin ✓';setTimeout(function(){b.textContent=o},1500)};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(x).then(ok);else{var a=document.createElement('textarea');a.value=x;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();ok()}}
+if(W.url){$('lt').hidden=false;['ltn','ltm'].forEach(function(i){$(i).addEventListener('input',lt)});$('ltc').onclick=function(){var r=lt();if(r.n)salin(r.t,this)};$('ltk').onclick=function(){var r=lt();if(r.n)salin(r.u,this)};$('ltw').onclick=function(e){if(!lt().n)e.preventDefault()};lt()}
 (async function(){
  if(!/^[0-9a-f-]{36}$/i.test(ID))return err('Buka halaman ini dari tautan yang diberikan Velora (berisi kode pesanan).');
  if(!SRC){try{SRC=(await (await fetch('config.json')).json()).pusatUcapan||''}catch(e){}}
  if(!SRC)return err('Pusat ucapan belum disetel. Hubungi tim Velora.');
- $('sub').textContent='Kode pesanan '+ID.slice(0,8)+'…';$('bar').hidden=false;
+ $('sub').innerHTML=W.judul?'<b>'+esc(W.judul)+'</b> · <a href="'+esc(W.url)+'" target="_blank" rel="noopener">buka undangan</a>':'Kode pesanan '+ID.slice(0,8)+'…';$('bar').hidden=false;
  $('size').onchange=function(){HAL=1;muat()};$('prev').onclick=function(){HAL--;muat()};$('next').onclick=function(){HAL++;muat()};$('muat').onclick=muat;$('csv').onclick=csv;muat()})();
 </script></body></html>

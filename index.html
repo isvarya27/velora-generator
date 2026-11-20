@@ -93,12 +93,13 @@ button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}b
 <label>URL pusat ucapan (Apps Script, sekali pasang untuk semua pesanan)</label><input id="sheet" placeholder="https://script.google.com/macros/s/.../exec">
 <div class="hint">Semua ucapan tersimpan di satu Sheet dan ditandai kode pesanan. Klien melihat ucapannya lewat <code>ucapan.html?id=KODE</code>.</div>
 <label>Alamat undangan nanti (untuk foto preview WhatsApp)</label><input id="base" placeholder="https://namauser.github.io/nama-acara/">
+<div id="x_wp" hidden><label>Alamat di situs Velora: /u/…</label><input id="slug" placeholder="vela-loka"><div class="row"><div><label>Nama klien</label><input id="klien"></div><div><label>WhatsApp klien</label><input id="wa" inputmode="tel"></div></div><label>Masa aktif (bulan)</label><input type="number" id="bulan" min="1" max="36" value="12"></div>
 </fieldset>
 </form>
 
 <aside class="pv"><div class="ph"><iframe id="pv" title="Pratinjau undangan"></iframe></div>
 <div class="price" id="price"></div>
-<div class="act"><button type="button" id="dl">Unduh paket (.zip)</button><button type="button" class="o" id="op">Layar penuh</button></div>
+<div class="act"><button type="button" id="terbit" hidden>Terbitkan ke situs</button><button type="button" id="dl">Unduh paket (.zip)</button><button type="button" class="o" id="op">Layar penuh</button></div>
 <div class="hint" style="text-align:center;margin-top:8px" id="st"></div></aside>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>

@@ -1,0 +1,454 @@
+{
+ "sakura-senja": {
+  "cover": 30,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   32,
+   35,
+   2,
+   0,
+   31
+  ],
+  "posisi": "50% 50%"
+ },
+ "langit-musim-panas": {
+  "cover": 3,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   2,
+   0,
+   33,
+   30
+  ],
+  "posisi": "50% 30%"
+ },
+ "malam-emas-deco": {
+  "cover": 15,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   5,
+   20,
+   25,
+   17,
+   28
+  ],
+  "posisi": "50% 55%"
+ },
+ "zamrud-bangsawan": {
+  "cover": 20,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   15,
+   5,
+   17,
+   25
+  ],
+  "posisi": "45% 30%"
+ },
+ "sekar-sogan": {
+  "cover": 49,
+  "p1": 61,
+  "p2": 64,
+  "galeri": [
+   43,
+   56,
+   53,
+   60,
+   46
+  ],
+  "posisi": "50% 30%"
+ },
+ "linen-putih": {
+  "cover": 38,
+  "p1": 3,
+  "p2": 2,
+  "galeri": [
+   0,
+   33,
+   30,
+   35
+  ],
+  "posisi": "50% 30%"
+ },
+ "sage-garis": {
+  "cover": 33,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   35,
+   30,
+   0,
+   3,
+   31
+  ],
+  "posisi": "50% 55%"
+ },
+ "taman-cat-air": {
+  "cover": 32,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   30,
+   35,
+   33,
+   2
+  ],
+  "posisi": "50% 45%"
+ },
+ "ivory-signature": {
+  "cover": 33,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   0,
+   30,
+   35,
+   2,
+   32
+  ],
+  "posisi": "50% 55%",
+  "kartu": "atas"
+ },
+ "gelombang-senja": {
+  "cover": 28,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   25,
+   17,
+   20,
+   15
+  ],
+  "posisi": "50% 40%"
+ },
+ "amplop-champagne": {
+  "cover": 5,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   15,
+   20,
+   3,
+   30
+  ],
+  "posisi": "55% 30%"
+ },
+ "tebar-kelopak-lavender": {
+  "cover": 32,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   2,
+   30,
+   33,
+   0
+  ],
+  "posisi": "50% 45%"
+ },
+ "mega-hijau-kencana": {
+  "cover": 55,
+  "p1": 60,
+  "p2": 63,
+  "galeri": [
+   43,
+   49,
+   53,
+   56
+  ],
+  "posisi": "50% 30%"
+ },
+ "songket-merah-saga": {
+  "cover": 53,
+  "p1": 61,
+  "p2": 63,
+  "galeri": [
+   43,
+   46,
+   55,
+   56,
+   59
+  ],
+  "posisi": "50% 25%"
+ },
+ "sulur-teal-kencana": {
+  "cover": 43,
+  "p1": 59,
+  "p2": 64,
+  "galeri": [
+   53,
+   55,
+   56,
+   49
+  ],
+  "posisi": "50% 30%"
+ },
+ "kilau-galaksi": {
+  "cover": 17,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   28,
+   25,
+   20,
+   22
+  ],
+  "posisi": "55% 30%"
+ },
+ "salju-pagi": {
+  "cover": 3,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   2,
+   33,
+   0,
+   31
+  ],
+  "posisi": "50% 30%"
+ },
+ "lampion-malam-festival": {
+  "cover": 25,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   28,
+   20,
+   15,
+   17
+  ],
+  "posisi": "55% 35%"
+ },
+ "botani-cat-minyak": {
+  "cover": 35,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   30,
+   33,
+   31,
+   0
+  ],
+  "posisi": "50% 60%"
+ },
+ "navy-kencana": {
+  "cover": 10,
+  "p1": 22,
+  "p2": 13,
+  "galeri": [
+   15,
+   20,
+   5,
+   17,
+   28
+  ],
+  "posisi": "50% 30%"
+ },
+ "sabit-zamrud-lentera": {
+  "cover": 20,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   15,
+   5,
+   25,
+   22
+  ],
+  "posisi": "45% 30%"
+ },
+ "lentera-pagi-fitri": {
+  "cover": 30,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   33,
+   32,
+   35,
+   0
+  ],
+  "posisi": "50% 50%"
+ },
+ "malam-salju-bintang": {
+  "cover": 17,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   22,
+   28,
+   20,
+   15
+  ],
+  "posisi": "55% 30%"
+ },
+ "merah-kencana-musim-semi": {
+  "cover": 56,
+  "p1": 59,
+  "p2": 64,
+  "galeri": [
+   43,
+   53,
+   55,
+   46
+  ],
+  "posisi": "50% 35%"
+ },
+ "ukir-tiga-warna": {
+  "cover": 46,
+  "p1": 60,
+  "p2": 64,
+  "galeri": [
+   53,
+   43,
+   55,
+   56
+  ],
+  "posisi": "50% 25%"
+ },
+ "teras-jingga-hijau": {
+  "cover": 56,
+  "p1": 61,
+  "p2": 63,
+  "galeri": [
+   43,
+   49,
+   55,
+   46
+  ],
+  "posisi": "50% 35%"
+ },
+ "sutra-kotak-magenta": {
+  "cover": 55,
+  "p1": 60,
+  "p2": 64,
+  "galeri": [
+   53,
+   43,
+   56,
+   49
+  ],
+  "posisi": "50% 30%"
+ },
+ "tenun-gading-kencana": {
+  "cover": 43,
+  "p1": 61,
+  "p2": 63,
+  "galeri": [
+   46,
+   53,
+   55,
+   56
+  ],
+  "posisi": "50% 30%"
+ },
+ "kartu-terakota-senja": {
+  "cover": 31,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   30,
+   35,
+   2,
+   3
+  ],
+  "posisi": "50% 55%"
+ },
+ "tebar-bintang-biru-debu": {
+  "cover": 3,
+  "p1": 32,
+  "p2": 38,
+  "galeri": [
+   2,
+   33,
+   0,
+   30
+  ],
+  "posisi": "50% 30%"
+ },
+ "pagi-kota-pesisir": {
+  "cover": 2,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   0,
+   33,
+   32,
+   31
+  ],
+  "posisi": "45% 35%"
+ },
+ "taman-malam-kunang": {
+  "cover": 25,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   28,
+   17,
+   20,
+   15
+  ],
+  "posisi": "55% 35%"
+ },
+ "onyx-mutiara": {
+  "cover": 15,
+  "p1": 22,
+  "p2": 13,
+  "galeri": [
+   10,
+   5,
+   20,
+   28
+  ],
+  "posisi": "50% 55%"
+ },
+ "burgundi-beludru": {
+  "cover": 13,
+  "p1": 10,
+  "p2": 20,
+  "galeri": [
+   15,
+   5,
+   25,
+   28
+  ],
+  "posisi": "50% 35%"
+ },
+ "pasir-hangat": {
+  "cover": 2,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   30,
+   0,
+   35,
+   32
+  ],
+  "posisi": "45% 35%"
+ },
+ "arang-tipis": {
+  "cover": 22,
+  "p1": 10,
+  "p2": 13,
+  "galeri": [
+   15,
+   5,
+   20,
+   17
+  ],
+  "posisi": "50% 25%"
+ },
+ "sapuan-indigo": {
+  "cover": 31,
+  "p1": 3,
+  "p2": 38,
+  "galeri": [
+   2,
+   33,
+   0,
+   35
+  ],
+  "posisi": "50% 55%"
+ }
+}

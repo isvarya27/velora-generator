@@ -130,7 +130,7 @@
       '.ph-polaroid{width:230px;height:290px;background:#fff;padding:10px 10px 38px;transform:rotate(-3deg);border-radius:3px}.ph-polaroid img{border-radius:2px}' +
       '.ph-card{width:200px;height:200px;border-radius:50%;border:4px solid var(--kartu);outline:1px solid var(--emas);outline-offset:6px}' +
       '.ph-split{width:calc(100% + 56px);margin:-56px -28px 24px;height:52vh;border-radius:0 0 50% 50%/0 0 14% 14%;box-shadow:none}' +
-      '.cover.full{justify-content:flex-end;background-size:cover;background-position:center 30%}.cover.full .isi{background:color-mix(in srgb,var(--bg1) 88%,transparent);backdrop-filter:blur(4px);border-radius:var(--r);padding:22px 18px;width:100%}' +
+      '.cover.full{justify-content:flex-end;background-size:cover;padding:40px 16px 22px}.cover.full .isi{background:color-mix(in srgb,var(--bg1) 86%,transparent);backdrop-filter:blur(6px);border-radius:var(--r);padding:16px 16px 18px;width:100%}.cover.full h1{font-size:34px;margin:6px 0 2px}.cover.full.kt-atas{justify-content:flex-start;padding-top:28px}.cover.full.ob-awan{padding-bottom:100px}.cover.full .guest{margin:10px 0 12px}.cover.full .guest b{font-size:20px}' +
       '.mono{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:22px auto;border:1px solid var(--emas);outline:1px solid var(--emas);outline-offset:7px;font:400 64px var(--sf);color:var(--ink)}' +
       '.orn{position:absolute;width:150px;height:150px;color:var(--emas);pointer-events:none;z-index:1}.tl{top:0;left:0}.tr{top:0;right:0;transform:scaleX(-1)}.bl{bottom:0;left:0;transform:scaleY(-1)}.br{bottom:0;right:0;transform:scale(-1)}' +
       '.wave{position:absolute;left:0;right:0;bottom:0;height:70px;z-index:1;color:var(--emas);opacity:.5}' +
@@ -171,7 +171,7 @@
       '.ix-kartu .fade{opacity:0;transform:perspective(900px) rotateY(-75deg);transform-origin:left center;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .8s}.ix-kartu .fade.in{opacity:1;transform:none}' +
       '@media(prefers-reduced-motion:reduce){.fx{display:none}.fade{opacity:1;transform:none;transition:none}}' +
       /* footer standar Velora */
-      '.vf{position:relative;z-index:2;padding:34px 24px 40px;text-align:center;background:#6B5560;color:#ECE4E7;font-size:12px;line-height:1.7}.vf-t{font:400 20px var(--hf);color:#fff;margin-bottom:14px}.vf img{display:block;margin:0 auto 10px}.vf b{color:#E3C9A0;font-weight:500}.vf-c{display:inline-block;margin-top:14px;padding:9px 20px;border:1px solid #E3C9A0;border-radius:999px;color:#fff;text-decoration:none}.vf small{display:block;margin-top:12px;opacity:.8;font-size:11px}';
+      '.vf{position:relative;z-index:2;padding:34px 24px 40px;text-align:center;background:#6B5560;color:#ECE4E7;font-size:12px;line-height:1.7}.vf-t{font:400 20px var(--hf);color:#fff;margin-bottom:14px}.vf img{display:block;margin:0 auto 10px}.vf b{color:#F2E2C6;font-weight:500}.vf-c{display:inline-block;margin-top:14px;padding:9px 20px;border:1px solid #E3C9A0;border-radius:999px;color:#fff;text-decoration:none}.vf small{display:block;margin-top:12px;color:#F3ECEF;font-size:11px}';
   }
 
   /* ---------- runtime undangan ---------- */
@@ -211,16 +211,16 @@
     var namaUtama = mode === 'pasangan' ? (d.p1.panggil || d.p1.nama) + ' & ' + (d.p2.panggil || d.p2.nama) : (d.p1.panggil || d.p1.nama);
     var s1 = d.sesi[0] || {};
     var h = [];
-    var ph = function (k, cls, alt, pos) { var u = img(k); return u ? '<div class="ph ' + cls + '"><img src="' + esc(u) + '" alt="' + esc(alt) + '" loading="lazy" style="object-position:' + (pos || '50% 30%') + '"></div>' : ''; };
+    var ph = function (k, cls, alt, pos) { var u = img(k); return u ? '<div class="ph ' + cls + '"><img src="' + esc(u) + '" alt="' + esc(alt) + '" loading="lazy" style="object-position:' + (pos || t.posisiFoto || '50% 30%') + '"></div>' : ''; };
 
     /* cover */
     var coverImg = img('cover'), fullBg = lay === 'full' && coverImg;
-    h.push('<section class="cover' + (fullBg ? ' full' : '') + '" id="cover"' + (fullBg ? ' style="background-image:url(\'' + esc(coverImg) + '\')"' : '') + '>' + (t.ornamen === 'gelombang' ? '' : empatSudut(t.ornamen, true)) +
+    h.push('<section class="cover' + (fullBg ? ' full' + (t.posisiKartu === 'atas' ? ' kt-atas' : '') + (t.ornamen === 'awan' ? ' ob-awan' : '') : '') + '" id="cover"' + (fullBg ? ' style="background-image:url(\'' + esc(coverImg) + '\');background-position:' + esc(t.posisiFoto || '50% 25%') + '"' : '') + '>' + (t.ornamen === 'gelombang' ? '' : empatSudut(t.ornamen, true)) +
       (fullBg ? '<div class="isi">' : '') +
       '<div class="ey">' + esc(d.judulAcara) + '</div>' +
       (fullBg ? '' : coverImg ? ph('cover', 'ph-' + (lay === 'full' ? 'arch' : lay), namaUtama) : '<div class="mono">' + esc(mode === 'pasangan' ? inisial(d.p1.panggil || d.p1.nama) + '&' + inisial(d.p2.panggil || d.p2.nama) : inisial(d.p1.panggil || d.p1.nama)) + '</div>') +
       '<h1 class="sk">' + esc(namaUtama) + '</h1><div class="sub">' + esc(tglPanjang(s1.tgl)) + '</div>' +
-      '<div class="guest">Kepada Yth. Bapak/Ibu/Saudara/i<b id="tamu">Tamu Undangan</b></div><button class="btn" onclick="buka()">Buka Undangan</button>' + (t.interaksi === 'tebar' ? '<div class="hint">Ketuk layar untuk menebar kelopak</div>' : '') +
+      '<div class="guest">Kepada Yth. Bapak/Ibu/Saudara/i<b id="tamu">Tamu Undangan</b></div><button class="btn" onclick="buka()">Buka Undangan</button>' + (t.interaksi === 'tebar' ? '<div class="hint">Ketuk layar untuk menebar ' + ((t.ornamen === 'bintang' || t.gerak === 'bintang' || t.gerak === 'kilau') ? 'bintang' : 'kelopak') + '</div>' : '') +
       (fullBg ? '</div>' : '') + (t.ornamen === 'gelombang' ? wave() : t.ornamen === 'awan' ? awanBawah() : '') + (t.interaksi === 'amplop' ? '<div class="env" onclick="this.classList.add(\'open\')" role="button" aria-label="Buka amplop"><div class="to">' + esc(namaUtama) + '</div><div class="ev"><div class="bd"></div><div class="fl"></div><div class="sl">' + esc(mode === 'pasangan' ? inisial(d.p1.panggil || d.p1.nama) + inisial(d.p2.panggil || d.p2.nama) : inisial(d.p1.panggil || d.p1.nama)) + '</div></div><div class="hn">Ketuk untuk membuka</div></div>' : '') + '</section>');
     h.push('<div id="isi">');
 

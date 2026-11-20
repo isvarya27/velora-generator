@@ -30,7 +30,8 @@
   "gerak": "kelopak",
   "musik": "romantis",
   "deskripsi": "Langit senja sinematik dengan kelopak sakura yang berguguran pelan, hangat seperti adegan film animasi.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "langit-musim-panas",
@@ -64,7 +65,8 @@
   "gerak": "awan",
   "musik": "ceria",
   "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "malam-emas-deco",
@@ -97,7 +99,8 @@
   "gerak": "kilau",
   "musik": "megah",
   "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "zamrud-bangsawan",
@@ -130,7 +133,8 @@
   "gerak": "cahaya",
   "musik": "megah",
   "deskripsi": "Hijau zamrud tua berpadu emas champagne dan sulur daun, elegan tanpa berlebihan.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "aqiqah-pastel-awan",
@@ -228,7 +232,8 @@
   "gerak": "cahaya",
   "musik": "tradisional",
   "deskripsi": "Nuansa sogan cokelat-emas dengan bingkai ornamen batik buatan Velora, hangat untuk pernikahan adat Jawa atau Sunda.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "linen-putih",
@@ -262,7 +267,8 @@
   "gerak": "none",
   "musik": "lembut",
   "deskripsi": "Putih gading, tipografi tenang, ruang kosong yang lega; fokus pada nama dan tanggal.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "demoFoto": true
  },
  {
   "id": "sage-garis",
@@ -296,7 +302,8 @@
   "gerak": "none",
   "musik": "lembut",
   "deskripsi": "Hijau sage dengan garis geometris tipis dan tata letak terbelah, modern dan rapi.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "demoFoto": true
  },
  {
   "id": "taman-cat-air",
@@ -329,7 +336,8 @@
   "gerak": "kelopak",
   "musik": "romantis",
   "deskripsi": "Bunga lukisan cat air dengan sapuan warna merembes lembut, seperti kartu yang dilukis tangan.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "ivory-signature",
@@ -361,7 +369,8 @@
   "gerak": "cahaya",
   "musik": "romantis",
   "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "gelombang-senja",
@@ -394,7 +403,8 @@
   "gerak": "bintang",
   "musik": "megah",
   "deskripsi": "Lapisan gelombang bergerak di bawah langit senja-malam bertabur bintang, sinematik sejak layar pertama.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "pastel-lebah",
@@ -527,7 +537,8 @@
   "interaksi": "amplop",
   "musik": "romantis",
   "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "tebar-kelopak-lavender",
@@ -561,7 +572,8 @@
   "interaksi": "tebar",
   "musik": "romantis",
   "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "mega-hijau-kencana",
@@ -594,7 +606,8 @@
   "gerak": "cahaya",
   "musik": "tradisional",
   "deskripsi": "Hijau daun dan emas dengan ornamen awan berlapis gambar Velora di bawah lengkung gapura, teduh untuk pernikahan adat Sunda.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "songket-merah-saga",
@@ -627,7 +640,8 @@
   "gerak": "kilau",
   "musik": "tradisional",
   "deskripsi": "Merah tua dengan kisi belah ketupat emas bergaya tenun buatan Velora, berkilau megah untuk pernikahan adat Minang.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "sulur-teal-kencana",
@@ -660,7 +674,8 @@
   "gerak": "kelopak",
   "musik": "tradisional",
   "deskripsi": "Teal dan ungu lembut dengan sulur ukiran emas gambar Velora di sampul layar penuh, anggun untuk pernikahan adat Bali.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "pesta-stroberi-manis",
@@ -759,7 +774,8 @@
   "gerak": "kilau",
   "musik": "megah",
   "deskripsi": "Langit galaksi gelap yang berkelip pelan dengan kilau bintang, sinematik di tata letak terbelah.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "salju-pagi",
@@ -793,7 +809,8 @@
   "gerak": "salju",
   "musik": "lembut",
   "deskripsi": "Butir salju turun pelan di atas biru pagi yang bersih, tenang dan sejuk dari layar pertama.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "lampion-malam-festival",
@@ -827,7 +844,8 @@
   "gerak": "cahaya",
   "musik": "romantis",
   "deskripsi": "Malam festival musim panas dengan lampion bercahaya di tepi sungai siluet kota, hangat seperti adegan animasi orisinal.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "botani-cat-minyak",
@@ -860,7 +878,8 @@
   "gerak": "none",
   "musik": "romantis",
   "deskripsi": "Daun dan bunga botani bertekstur sapuan cat minyak dalam bingkai galeri, kaya warna dan klasik.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "navy-kencana",
@@ -893,7 +912,8 @@
   "gerak": "kilau",
   "musik": "megah",
   "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "sabit-zamrud-lentera",
@@ -928,7 +948,8 @@
   "interaksi": "none",
   "musik": "khidmat",
   "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "lentera-pagi-fitri",
@@ -963,7 +984,8 @@
   "interaksi": "none",
   "musik": "khidmat",
   "deskripsi": "Pagi hijau muda dengan lentera dan bulan sabit berkilau lembut, cocok untuk halalbihalal, aqiqah, atau pernikahan selepas Lebaran.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "malam-salju-bintang",
@@ -999,7 +1021,8 @@
   "interaksi": "none",
   "musik": "lembut",
   "deskripsi": "Malam biru musim dingin dengan bintang dan salju turun perlahan, hangat untuk acara akhir tahun.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "merah-kencana-musim-semi",
@@ -1035,7 +1058,8 @@
   "interaksi": "none",
   "musik": "megah",
   "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "ukir-tiga-warna",
@@ -1069,7 +1093,8 @@
   "interaksi": "none",
   "musik": "tradisional",
   "deskripsi": "Merah, hitam, dan putih dengan sulur ukiran geometris tegas, terinspirasi visual ukiran rumah adat Batak.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "teras-jingga-hijau",
@@ -1103,7 +1128,8 @@
   "interaksi": "none",
   "musik": "tradisional",
   "deskripsi": "Jingga, hijau, dan krem dengan pinggiran segitiga berulang, ceria dan bernuansa Betawi.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "sutra-kotak-magenta",
@@ -1137,7 +1163,8 @@
   "interaksi": "none",
   "musik": "tradisional",
   "deskripsi": "Magenta dan emas dengan kisi kotak bergaya kain sutra tenun, anggun dan bernuansa Bugis.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "tenun-gading-kencana",
@@ -1171,7 +1198,8 @@
   "interaksi": "none",
   "musik": "tradisional",
   "deskripsi": "Gading, marun, dan emas dengan kisi tenun songket di bawah lengkung, bernuansa Palembang.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "konfeti-toga-biru",
@@ -1340,7 +1368,8 @@
   "interaksi": "kartu",
   "musik": "romantis",
   "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "tebar-bintang-biru-debu",
@@ -1375,7 +1404,8 @@
   "interaksi": "tebar",
   "musik": "romantis",
   "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "perahu-kecil-biru-laut",
@@ -1509,7 +1539,8 @@
   "interaksi": "none",
   "musik": "ceria",
   "deskripsi": "Pagi cerah di kota pesisir siluet, laut berkilau dan awan cel-shaded, segar seperti adegan film animasi.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "taman-malam-kunang",
@@ -1543,7 +1574,8 @@
   "interaksi": "none",
   "musik": "romantis",
   "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  },
  {
   "id": "onyx-mutiara",
@@ -1577,7 +1609,8 @@
   "interaksi": "none",
   "musik": "megah",
   "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "burgundi-beludru",
@@ -1612,7 +1645,8 @@
   "interaksi": "none",
   "musik": "megah",
   "deskripsi": "Burgundi seperti beludru dengan bingkai art deco emas, hangat dan elegan untuk resepsi malam.",
-  "ucapanPerHalaman": 8
+  "ucapanPerHalaman": 8,
+  "demoFoto": true
  },
  {
   "id": "pasir-hangat",
@@ -1647,7 +1681,8 @@
   "interaksi": "none",
   "musik": "lembut",
   "deskripsi": "Krem pasir dan cokelat susu dengan satu lengkung tenang, sederhana dan lega dibaca.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "demoFoto": true
  },
  {
   "id": "arang-tipis",
@@ -1682,7 +1717,8 @@
   "interaksi": "none",
   "musik": "lembut",
   "deskripsi": "Arang gelap dengan garis geometris tipis dan tipografi modern, minimal dan tegas.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "demoFoto": true
  },
  {
   "id": "sapuan-indigo",
@@ -1716,6 +1752,7 @@
   "interaksi": "none",
   "musik": "romantis",
   "deskripsi": "Sapuan kuas tinta indigo membentuk ombak di atas kertas bertekstur, artistik dan tenang.",
-  "ucapanPerHalaman": 6
+  "ucapanPerHalaman": 6,
+  "demoFoto": true
  }
 ]
