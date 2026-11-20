@@ -20,8 +20,8 @@ button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}
 </style></head><body>
 <header><b>Link Tamu</b><a href="./">← Generator undangan</a></header>
 <main>
-<label for="base">Alamat undangan</label>
-<input id="base" placeholder="https://isvarya27.github.io/alunacya-invitation/" inputmode="url" autocomplete="off">
+<details style="margin-bottom:6px"><summary style="cursor:pointer;font-size:12px;opacity:.75">Alamat undangan: <span id="bshow"></span> (ubah)</summary>
+<input id="base" inputmode="url" autocomplete="off" style="margin-top:8px"></details>
 <label for="nama">Kirim ke siapa?</label>
 <input id="nama" placeholder="Contoh: Ais &amp; Keluarga" autocomplete="off">
 <label for="msg">Isi pesan</label>
@@ -45,6 +45,7 @@ Terima kasih atas doa dan kehadirannya.</textarea>
 </main>
 <script>
 'use strict';
+var DEFAULT_BASE='https://isvarya27.github.io/alunacya-invitation/';
 var $=function(i){return document.getElementById(i)};
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k)||'';localStorage.setItem(k,v)}catch(e){return ''}}
 function enc(n){return encodeURIComponent(n).replace(/%20/g,'+')}
@@ -57,20 +58,20 @@ function get(){
   return{link:link,teks:teks};
 }
 function draw(){
-  var g=get();ls('vl_base',$('base').value);ls('vl_msg',$('msg').value);
-  $('lk').textContent=g.link||'Isi alamat undangan dan nama tamu.';
+  var g=get();ls('vl_base',$('base').value);$('bshow').textContent=$('base').value.replace(/^https?:\/\//,'');ls('vl_msg',$('msg').value);
+  $('lk').textContent=g.link||'Isi nama tamu.';
   $('wa').href=g.link?'https://wa.me/?text='+encodeURIComponent(g.teks):'#';
   $('wa').style.opacity=g.link?1:.5;
 }
 function copy(t,label){
-  if(!t){$('st').textContent='Isi alamat undangan dan nama tamu dulu.';return}
+  if(!t){$('st').textContent='Isi nama tamu dulu.';return}
   var ok=function(){$('st').textContent=label+' tersalin ✓';setTimeout(function(){$('st').textContent=''},1800)};
   var fb=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity=0;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){$('st').textContent='Gagal menyalin, salin manual dari kotak link.'}a.remove()};
   if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(ok,fb);else fb();
 }
-$('wa').addEventListener('click',function(e){if(!get().link){e.preventDefault();$('st').textContent='Isi alamat undangan dan nama tamu dulu.'}});
+$('wa').addEventListener('click',function(e){if(!get().link){e.preventDefault();$('st').textContent='Isi nama tamu dulu.'}});
 $('cp').onclick=function(){copy(get().teks,'Pesan + link')};
 $('cl').onclick=function(){copy(get().link,'Link')};
 ['base','nama','msg'].forEach(function(i){$(i).addEventListener('input',draw)});
-$('base').value=ls('vl_base');if(ls('vl_msg'))$('msg').value=ls('vl_msg');draw();
+$('base').value=ls('vl_base')||DEFAULT_BASE;if(ls('vl_msg'))$('msg').value=ls('vl_msg');draw();
 </script></body></html>
