@@ -203,7 +203,9 @@ async function init() {
   $('tg').onclick = function (e) { var b = e.target.closest('.tc'); if (b) pilihTema(THEMES.filter(function (t) { return t.id === b.dataset.id; })[0]); };
   $('secs').innerHTML = SECS.map(function (s) { return '<label><input type="checkbox" class="sec" data-k="' + s[0] + '"' + (s[2] ? ' checked' : '') + '> ' + s[1] + '</label>'; }).join('');
   document.querySelectorAll('.sec').forEach(function (c) { var x = $('x_' + c.dataset.k), f = function () { if (x) x.hidden = !c.checked; }; c.addEventListener('change', f); f(); });
-  $('lagu').innerHTML = LAGU.map(function (l) { return '<option value="' + l.id + '">' + esc(l.judul) + (l.artis ? ' — ' + esc(l.artis) : '') + ' (' + esc(l.label || l.suasana) + ')</option>'; }).join('');
+  var vokal = function (l) { return l.sumber === 'populer' && !/karaoke/.test(l.id); };
+  LAGU.sort(function (a, b) { return (vokal(b) ? 1 : 0) - (vokal(a) ? 1 : 0); });
+  $('lagu').innerHTML = LAGU.map(function (l) { return '<option value="' + l.id + '">' + esc(l.judul) + (l.artis ? ' — ' + esc(l.artis) : '') + ' (' + (vokal(l) ? 'vokal' : 'instrumental') + ')</option>'; }).join('');
   $('lagu').addEventListener('change', function () { laguManual = true; setMulai(); refresh(); });
   $('lsrc').addEventListener('change', function () { ['lib', 'up', 'yt'].forEach(function (k) { $('x_' + k).hidden = $('lsrc').value !== k; }); });
   $('addSesi').onclick = function () { var n = document.querySelectorAll('[data-sesi]').length; if (n < 3) { $('sesi').insertAdjacentHTML('beforeend', sesiHtml(n, 'Sesi ' + (n + 1))); wire(); refresh(); } };
