@@ -1,0 +1,483 @@
+[
+ {
+  "id": "sakura-senja",
+  "nama": "Sakura Senja",
+  "koleksi": "Anime",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Zen Maru Gothic",
+   "isi": "Poppins",
+   "skrip": "Yuji Syuku"
+  },
+  "warna": {
+   "bg1": "#FDF1F3",
+   "bg2": "#F6E3F0",
+   "bg3": "#E9EEFB",
+   "ink": "#5B3A55",
+   "teks": "#4A3A46",
+   "aksen": "#B04A6E",
+   "emas": "#D9A9B8",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "sakura",
+  "gerak": "kelopak",
+  "musik": "romantis",
+  "deskripsi": "Langit senja sinematik dengan kelopak sakura yang berguguran pelan, hangat seperti adegan film animasi."
+ },
+ {
+  "id": "langit-musim-panas",
+  "nama": "Langit Musim Panas",
+  "koleksi": "Anime",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "M PLUS Rounded 1c",
+   "isi": "Nunito",
+   "skrip": "Kaisei Decol"
+  },
+  "warna": {
+   "bg1": "#EAF5FF",
+   "bg2": "#D6ECFB",
+   "bg3": "#FFF6E4",
+   "ink": "#1E3A5C",
+   "teks": "#243447",
+   "aksen": "#2A6FB0",
+   "emas": "#F4C66B",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "awan",
+  "musik": "ceria",
+  "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani."
+ },
+ {
+  "id": "malam-emas-deco",
+  "nama": "Malam Emas Deco",
+  "koleksi": "Luxury",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": true,
+  "font": {
+   "judul": "Cinzel",
+   "isi": "Poppins",
+   "skrip": "Pinyon Script"
+  },
+  "warna": {
+   "bg1": "#111111",
+   "bg2": "#1A1712",
+   "bg3": "#0B0B0B",
+   "ink": "#E3C27E",
+   "teks": "#F3EBDD",
+   "aksen": "#8A6A2E",
+   "emas": "#C9A66B",
+   "kartu": "#1C1A16"
+  },
+  "ornamen": "artdeco",
+  "gerak": "kilau",
+  "musik": "megah",
+  "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah."
+ },
+ {
+  "id": "zamrud-bangsawan",
+  "nama": "Zamrud Bangsawan",
+  "koleksi": "Luxury",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": true,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Great Vibes"
+  },
+  "warna": {
+   "bg1": "#0F2A24",
+   "bg2": "#12221F",
+   "bg3": "#0A1A16",
+   "ink": "#E6C88E",
+   "teks": "#F4EFE4",
+   "aksen": "#7A5A24",
+   "emas": "#B8935A",
+   "kartu": "#16352E"
+  },
+  "ornamen": "daun",
+  "gerak": "cahaya",
+  "musik": "megah",
+  "deskripsi": "Hijau zamrud tua berpadu emas champagne dan sulur daun, elegan tanpa berlebihan."
+ },
+ {
+  "id": "aqiqah-pastel-awan",
+  "nama": "Aqiqah Pastel Awan",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "aqiqah"
+  ],
+  "foto": false,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Fredoka",
+   "isi": "Quicksand",
+   "skrip": "Comfortaa"
+  },
+  "warna": {
+   "bg1": "#F3F8FB",
+   "bg2": "#FFF5F4",
+   "bg3": "#FFF9EA",
+   "ink": "#2F4A63",
+   "teks": "#33475A",
+   "aksen": "#3D6E97",
+   "emas": "#E2C27D",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "gelembung",
+  "musik": "lembut",
+  "deskripsi": "Awan pastel dan gelembung lembut untuk menyambut buah hati, nyaman dibaca keluarga besar."
+ },
+ {
+  "id": "petualang-bintang-kecil",
+  "nama": "Petualang Bintang Kecil",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "khitan",
+   "ultah-anak"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Baloo 2",
+   "isi": "Nunito",
+   "skrip": "Caveat"
+  },
+  "warna": {
+   "bg1": "#FFF9EA",
+   "bg2": "#FFF1CC",
+   "bg3": "#EAF2FF",
+   "ink": "#1F2F4A",
+   "teks": "#1F2F4A",
+   "aksen": "#2F5C9E",
+   "emas": "#F2B93B",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bintang",
+  "gerak": "konfeti",
+  "musik": "ceria",
+  "deskripsi": "Biru-kuning ceria dengan bintang dan bingkai polaroid, cocok untuk khitan atau ulang tahun si kecil."
+ },
+ {
+  "id": "sekar-sogan",
+  "nama": "Sekar Sogan",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Alex Brush"
+  },
+  "warna": {
+   "bg1": "#F6EEDF",
+   "bg2": "#EFE2CB",
+   "bg3": "#E7D6BA",
+   "ink": "#4A2F1B",
+   "teks": "#3A2A1C",
+   "aksen": "#5A3A22",
+   "emas": "#B58B4C",
+   "kartu": "#FFFBF2"
+  },
+  "ornamen": "batik",
+  "gerak": "cahaya",
+  "musik": "tradisional",
+  "deskripsi": "Nuansa sogan cokelat-emas dengan bingkai ornamen batik buatan Velora, hangat untuk pernikahan adat Jawa atau Sunda."
+ },
+ {
+  "id": "linen-putih",
+  "nama": "Linen Putih",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal"
+  ],
+  "foto": false,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Italiana"
+  },
+  "warna": {
+   "bg1": "#FAF8F4",
+   "bg2": "#F4F1EA",
+   "bg3": "#EEEAE1",
+   "ink": "#222222",
+   "teks": "#3A3631",
+   "aksen": "#3A3631",
+   "emas": "#C8BBA6",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "none",
+  "gerak": "none",
+  "musik": "lembut",
+  "deskripsi": "Putih gading, tipografi tenang, ruang kosong yang lega; fokus pada nama dan tanggal."
+ },
+ {
+  "id": "sage-garis",
+  "nama": "Sage Garis",
+  "koleksi": "Minimalis",
+  "tier": "Standar",
+  "acara": [
+   "pernikahan",
+   "wisuda",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": false,
+  "font": {
+   "judul": "Jost",
+   "isi": "Inter",
+   "skrip": "Marcellus"
+  },
+  "warna": {
+   "bg1": "#F4F5EE",
+   "bg2": "#EAEDE2",
+   "bg3": "#DFE5D6",
+   "ink": "#2B3426",
+   "teks": "#2B3426",
+   "aksen": "#4A5A3F",
+   "emas": "#7F9A74",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "geometris",
+  "gerak": "none",
+  "musik": "lembut",
+  "deskripsi": "Hijau sage dengan garis geometris tipis dan tata letak terbelah, modern dan rapi."
+ },
+ {
+  "id": "taman-cat-air",
+  "nama": "Taman Cat Air",
+  "koleksi": "Art",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Playfair Display",
+   "isi": "Lora",
+   "skrip": "Parisienne"
+  },
+  "warna": {
+   "bg1": "#FBF6F1",
+   "bg2": "#F6ECE6",
+   "bg3": "#EEF1EA",
+   "ink": "#4A2E2A",
+   "teks": "#3E302C",
+   "aksen": "#9A4A4F",
+   "emas": "#D8A7A0",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bunga",
+  "gerak": "kelopak",
+  "musik": "romantis",
+  "deskripsi": "Bunga lukisan cat air dengan sapuan warna merembes lembut, seperti kartu yang dilukis tangan."
+ },
+ {
+  "id": "ivory-signature",
+  "nama": "Ivory Signature",
+  "koleksi": "Special",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Mrs Saint Delafield"
+  },
+  "warna": {
+   "bg1": "#FAF6EE",
+   "bg2": "#F3ECDD",
+   "bg3": "#EDE3D0",
+   "ink": "#1F3D36",
+   "teks": "#1F3D36",
+   "aksen": "#1F3D36",
+   "emas": "#B8935A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "daun",
+  "gerak": "cahaya",
+  "musik": "romantis",
+  "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh."
+ },
+ {
+  "id": "gelombang-senja",
+  "nama": "Gelombang Senja",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": true,
+  "font": {
+   "judul": "DM Serif Display",
+   "isi": "Poppins",
+   "skrip": "Sacramento"
+  },
+  "warna": {
+   "bg1": "#1B2540",
+   "bg2": "#3A2A55",
+   "bg3": "#7A3E5C",
+   "ink": "#FCCF7F",
+   "teks": "#F6F1FA",
+   "aksen": "#B0305E",
+   "emas": "#F6AD1F",
+   "kartu": "#232E4D"
+  },
+  "ornamen": "gelombang",
+  "gerak": "bintang",
+  "musik": "megah",
+  "deskripsi": "Lapisan gelombang bergerak di bawah langit senja-malam bertabur bintang, sinematik sejak layar pertama."
+ },
+ {
+  "id": "pastel-lebah",
+  "nama": "Pastel Lebah",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "aqiqah",
+   "ultah-anak"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Fredoka",
+   "isi": "Poppins",
+   "skrip": "Mali"
+  },
+  "warna": {
+   "bg1": "#FFF9F2",
+   "bg2": "#FDEFE9",
+   "bg3": "#EEF5FA",
+   "ink": "#6B5560",
+   "teks": "#4A3C42",
+   "aksen": "#96605A",
+   "emas": "#C9A27A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bintang",
+  "gerak": "gelembung",
+  "musik": "ceria",
+  "deskripsi": "Pastel peach dan biru langit dengan balon dan bintang, hangat untuk si kecil."
+ },
+ {
+  "id": "mint-awan",
+  "nama": "Mint Awan",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "aqiqah",
+   "khitan"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Baloo 2",
+   "isi": "Poppins",
+   "skrip": "Mali"
+  },
+  "warna": {
+   "bg1": "#F4FBF6",
+   "bg2": "#E6F4EF",
+   "bg3": "#E8F1F8",
+   "ink": "#3F6B62",
+   "teks": "#2F4A45",
+   "aksen": "#357A6C",
+   "emas": "#B8A06A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "awan",
+  "musik": "lembut",
+  "deskripsi": "Hijau mint segar dengan awan lembut, tenang dan bersih."
+ },
+ {
+  "id": "peony-blush",
+  "nama": "Peony Blush",
+  "koleksi": "Kids",
+  "tier": "Premium",
+  "acara": [
+   "aqiqah",
+   "ultah-anak"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Sniglet",
+   "isi": "Poppins",
+   "skrip": "Mali"
+  },
+  "warna": {
+   "bg1": "#FFF7F7",
+   "bg2": "#FDE9EE",
+   "bg3": "#F6EAF6",
+   "ink": "#8A4E66",
+   "teks": "#5A3C48",
+   "aksen": "#B05476",
+   "emas": "#D9A0B4",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bunga",
+  "gerak": "kelopak",
+  "musik": "lembut",
+  "deskripsi": "Merah muda peony dengan bingkai polaroid, manis untuk putri kecil."
+ }
+]

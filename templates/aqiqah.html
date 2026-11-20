@@ -51,7 +51,7 @@ footer{padding:30px;text-align:center;font-size:12px;background:var(--ink);color
 .bb{position:absolute;bottom:-60px;width:var(--s);height:calc(var(--s)*1.2);border-radius:50% 50% 50% 50%/45% 45% 55% 55%;opacity:.7;animation:up var(--d) ease-in infinite}
 @keyframes up{to{transform:translateY(-115vh) translateX(26px)}}
 @media(prefers-reduced-motion:reduce){.bg *{animation:none!important}}
-.lahir{margin-top:6px;font-family:var(--df);font-size:15px;color:var(--rose)}{{THEME_CSS}}</style></head><body><div class="wrap">
+.lahir{margin-top:6px;font-family:var(--df);font-size:15px;color:var(--rose)}.sbtn{margin-top:10px}.rk{background:#fff;border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 2px 10px rgba(0,0,0,.06);text-align:left}.rk small{opacity:.65;display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.rk b{display:block;font-family:var(--hf);font-size:20px;color:var(--ink);margin:2px 0 6px;word-break:break-all}.rk .btn{padding:8px 18px;font-size:12px}.dc{display:flex;gap:10px;justify-content:center;margin:14px 0}.dc i{width:34px;height:34px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)}.note{font-size:11px;opacity:.7;padding:18px 28px 0;text-align:center;line-height:1.6}{{THEME_CSS}}</style></head><body><div class="wrap">
 <div class="bg" aria-hidden="true">{{BGV}}
  <i class="cl c1"></i><i class="cl c2"></i><i class="cl c3"></i>
  <i class="st" style="left:12%;top:14%"></i><i class="st" style="left:82%;top:22%;animation-delay:.8s"></i><i class="st" style="left:30%;top:60%;animation-delay:1.6s"></i><i class="st" style="left:70%;top:75%;animation-delay:.4s"></i><i class="st" style="left:50%;top:38%;animation-delay:2s"></i>
@@ -68,7 +68,7 @@ footer{padding:30px;text-align:center;font-size:12px;background:var(--ink);color
 </section>
 
 <div id="isi">
-<section class="soft fade">
+<!--S:pembuka--><section class="soft fade">
  <div class="eyebrow">Bismillahirrahmanirrahim</div>
  <h2>Dengan Rasa Syukur</h2>
  <p>{{PENGANTAR}}</p>
@@ -76,28 +76,33 @@ footer{padding:30px;text-align:center;font-size:12px;background:var(--ink);color
  <h2 style="font-size:34px">{{NAMA_PENUH}}</h2>
  <p class="doa">“Setiap anak tergadai dengan aqiqahnya.”</p>
  <p style="font-size:12px;opacity:.7">(HR. Abu Dawud, At-Tirmidzi, dan lainnya)</p>
-</section>
+</section><!--/S:pembuka-->
 
-<section class="fade">
+<!--S:ortu--><section class="fade">
  <div class="eyebrow">Orang Tua</div>
  <h2>{{ORTU_TITLE}}</h2>
  <p>{{ORTU_NAMES}}</p>
-</section>
+</section><!--/S:ortu-->
 
-<section class="soft2 fade">
+<!--S:acara--><section class="soft2 fade">
  <div class="eyebrow">Hari Bahagia</div><h2>Waktu &amp; Tempat</h2>
- <div class="count" id="cd"></div>
- <div class="card"><h3>Acara {{EVENT_SHORT}}</h3><div class="big">{{DATE_TEXT}}</div><p>{{TIME_TEXT}}<br>{{TEMPAT}}</p><br><a class="btn o" href="{{MAPS_URL}}" target="_blank" rel="noopener">Buka Peta</a></div>
-</section>
+ <!--S:hitung--><div class="count" id="cd"></div><!--/S:hitung-->
+ <div class="card"><h3>Acara {{EVENT_SHORT}}</h3><div class="big">{{DATE_TEXT}}</div><p>{{TIME_TEXT}}<br>{{TEMPAT}}</p><br><a class="btn o" href="{{MAPS_URL}}" target="_blank" rel="noopener">Buka Peta</a>{{CAL_BTN}}</div>
+</section><!--/S:acara-->
+{{LIVE_SECTION}}
 
 {{GAL_SECTION}}
-<section class="soft fade">
+{{GIFT_SECTION}}
+{{DRESS_SECTION}}
+<!--S:ucapan--><section class="soft fade">
  <h2>Ucapan</h2><p>Berikan doa dan ucapan terbaik untuk {{PANGGILAN}}.</p><br>
  <form id="f"><input class="vw-i" id="n" placeholder="Nama" maxlength="60"><textarea class="vw-i" id="m" rows="3" placeholder="Ucapan" maxlength="500"></textarea>
  <div class="dv">Konfirmasi Kehadiran</div>
  <div class="rd"><label><input type="radio" name="h" value="Hadir"><span>✓ Hadir</span></label><label><input type="radio" name="h" value="Tidak Hadir"><span>✕ Tidak Hadir</span></label></div>
+ <select class="vw-i" id="jt" aria-label="Jumlah tamu"><option value="">Jumlah tamu hadir</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
  <button class="btn k">Kirim</button></form><div class="wl" id="wl"></div>
-</section>
+</section><!--/S:ucapan-->
+{{NOTE_SECTION}}
 
 <footer class="vf">
  <div class="vf-t">Terima kasih atas doa dan kehadiran Anda.</div>
@@ -122,6 +127,7 @@ function mulaiLagu(){var id=ytId(LAGU_YOUTUBE);
  var a=document.getElementById('au');if(a){var go=function(){try{a.currentTime=LAGU_MULAI}catch(e){}a.volume=0;a.play().then(function(){var v=0,t=setInterval(function(){v=Math.min(1,v+.05);a.volume=v;if(v>=1)clearInterval(t)},120)}).catch(function(){})};if(a.readyState>0)go();else a.addEventListener('loadedmetadata',go,{once:true});a.load&&a.readyState==0&&a.load();document.getElementById('mus').style.display='block'}}
 function buka(){document.getElementById('isi').classList.add('on');document.getElementById('cover').style.minHeight='auto';document.getElementById('isi').scrollIntoView({behavior:'smooth'});obs();mulaiLagu()}
 function tg(){if(yt){yt.remove();yt=null;document.getElementById('mus').style.opacity=.5;return}var a=document.getElementById('au');if(a){a.paused?a.play():a.pause()}}
+function cpy(b,t){var ok=function(){var o=b.textContent;b.textContent='Tersalin ✓';setTimeout(function(){b.textContent=o},1500)};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(ok);else{var a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){}a.remove()}}
 function obs(){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.15});document.querySelectorAll('.fade').forEach(function(s){o.observe(s)})}
 // Hitung mundur — ubah tanggal acara:
 var T=new Date({{EVENT_ISO}});
@@ -129,11 +135,11 @@ setInterval(function(){var d=Math.max(0,T-new Date()),v=[['Hari',864e5],['Jam',3
 // Ucapan: tersimpan di browser ini (demo lokal)
 var SHEET_URL={{SHEET_URL}};
 var K={{STORAGE_KEY}};
-function draw(a){var w=document.getElementById('wl');w.textContent='';a.forEach(function(x){var c=document.createElement('div');c.className='wc';var b=document.createElement('b');b.textContent=x.n;var s=document.createElement('small');s.textContent=x.h||'';b.appendChild(s);var p=document.createElement('p');p.textContent=x.m;c.appendChild(b);c.appendChild(p);w.appendChild(c)})}
+function draw(a){var w=document.getElementById('wl');w.textContent='';a.forEach(function(x){var c=document.createElement('div');c.className='wc';var b=document.createElement('b');b.textContent=x.n;var s=document.createElement('small');s.textContent=(x.h||'')+(x.t?' · '+x.t+' orang':'');b.appendChild(s);var p=document.createElement('p');p.textContent=x.m;c.appendChild(b);c.appendChild(p);w.appendChild(c)})}
 function ld(){if(SHEET_URL){fetch(SHEET_URL).then(function(r){return r.json()}).then(draw).catch(function(){})}else draw(JSON.parse(localStorage.getItem(K)||'[]'))}
-document.getElementById('f').onsubmit=function(e){e.preventDefault();var n=this.n.value.trim(),m=this.m.value.trim();if(!n||!m)return;var h=(document.querySelector('input[name=h]:checked')||{}).value||'',f=this;
-if(SHEET_URL){fetch(SHEET_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({n:n,m:m,h:h})}).then(function(){f.m.value='';ld()}).catch(function(){alert('Gagal mengirim, coba lagi.')})}
-else{var a=JSON.parse(localStorage.getItem(K)||'[]');a.unshift({n:n,m:m,h:h});localStorage.setItem(K,JSON.stringify(a));f.m.value='';ld()}};ld();
+document.getElementById('f').onsubmit=function(e){e.preventDefault();var n=this.n.value.trim(),m=this.m.value.trim();if(!n||!m)return;var h=(document.querySelector('input[name=h]:checked')||{}).value||'Tidak Konfirmasi',t=(document.getElementById('jt')||{}).value||'',f=this;
+if(SHEET_URL){fetch(SHEET_URL,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify({n:n,m:m,h:h,t:t})}).then(function(){f.m.value='';ld()}).catch(function(){alert('Gagal mengirim, coba lagi.')})}
+else{var a=JSON.parse(localStorage.getItem(K)||'[]');a.unshift({n:n,m:m,h:h,t:t});localStorage.setItem(K,JSON.stringify(a));f.m.value='';ld()}};ld();
 </script>
 
 {{AUDIO_TAG}}

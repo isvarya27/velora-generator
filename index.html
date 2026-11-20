@@ -1,93 +1,104 @@
 <!doctype html>
 <html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Velora Generator Undangan</title>
+<title>Velora Studio Undangan</title>
 <meta name="robots" content="noindex,nofollow">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#6B5560;--gold:#C9A27A;--rose:#A9706A;--bg:#F7F2EC;--card:#fff;--line:#E4DACB;--txt:#4A3C42}
-@media(prefers-color-scheme:dark){:root{--bg:#1E1A1C;--card:#2A2427;--line:#44393F;--txt:#EDE3E6;--ink:#E7D7DC}}
+:root{--ink:#6B5560;--rose:#A9706A;--bg:#F7F2EC;--card:#fff;--line:#E4DACB;--txt:#4A3C42;--mut:#7d6f74}
+@media(prefers-color-scheme:dark){:root{--bg:#1E1A1C;--card:#2A2427;--line:#44393F;--txt:#EDE3E6;--ink:#E7D7DC;--mut:#b9aab0}}
 *{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:var(--bg);color:var(--txt);font-size:14px}
-header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:var(--card)}
-header img{height:34px}header b{font-weight:600;color:var(--ink)}header small{opacity:.65}
-main{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:20px;padding:20px;max-width:1100px;margin:0 auto}
-@media(max-width:860px){main{grid-template-columns:1fr}.pv{position:static!important}}
+header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:var(--card);flex-wrap:wrap}
+header img{height:34px;background:#6B5560;padding:6px 10px;border-radius:8px}header b{color:var(--ink)}header small{color:var(--mut)}header nav{margin-left:auto;display:flex;gap:14px}header nav a{color:var(--rose);text-decoration:none;font-size:13px}
+main{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:20px;padding:20px;max-width:1180px;margin:0 auto}
+@media(max-width:900px){main{grid-template-columns:1fr}.pv{position:static!important}}
 fieldset{border:1px solid var(--line);background:var(--card);border-radius:12px;margin:0 0 14px;padding:14px 16px}
 legend{padding:0 8px;font-weight:600;color:var(--ink)}
-label{display:block;margin:10px 0 4px;font-size:12px;opacity:.8}
+label{display:block;margin:10px 0 4px;font-size:12px;color:var(--mut)}
 input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--txt)}
-textarea{min-height:70px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.tp label{margin:0;opacity:1}
-.tp input{position:absolute;opacity:0}.tp span{display:block;padding:10px 6px;text-align:center;border:2px solid var(--line);border-radius:10px;cursor:pointer;font-size:12px;line-height:1.35}
-.tp i{display:block;height:34px;border-radius:6px;margin-bottom:6px}
-.tp input:checked+span{border-color:var(--rose);box-shadow:0 0 0 2px rgba(169,112,106,.25)}
-.hint{font-size:11px;opacity:.65;margin-top:4px}
-button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 24px;background:var(--rose);color:#fff;font-weight:500}
-button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}
+textarea{min-height:64px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips button{background:transparent;border:1px solid var(--line);color:var(--txt);padding:7px 12px;border-radius:999px;font-size:12px}.chips button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+.tc{border:2px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;background:var(--bg);text-align:left;padding:0;color:var(--txt);font:inherit}
+.tc.on{border-color:var(--rose);box-shadow:0 0 0 3px rgba(169,112,106,.25)}
+.tc .sw{height:64px;display:flex;align-items:flex-end;padding:6px 8px;font-size:18px}.tc .in{padding:8px 10px}.tc b{display:block;font-size:13px}.tc small{color:var(--mut);font-size:11px;display:block}
+.tc a{font-size:11px;color:var(--rose)}
+.ck{display:grid;grid-template-columns:1fr 1fr;gap:2px 12px}.ck label{display:flex;gap:8px;align-items:center;margin:6px 0;color:var(--txt);font-size:13px}.ck input{width:auto}
+.sub{border-left:3px solid var(--line);padding-left:12px;margin-top:8px}
+.hint{font-size:11px;color:var(--mut);margin-top:4px}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:12px 22px;background:var(--rose);color:#fff;font-weight:500}
+button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}button.mini{padding:6px 12px;font-size:12px}
 .pv{position:sticky;top:12px;align-self:start}
 .ph{width:100%;max-width:390px;margin:0 auto;border:10px solid #2b2326;border-radius:34px;overflow:hidden;background:#fff;aspect-ratio:390/760}
 .ph iframe{width:100%;height:100%;border:0}
 .act{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
-.thumbs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.thumbs img{height:46px;border-radius:6px}
+.price{text-align:center;margin-top:10px;font-size:13px}.price b{color:var(--ink)}
 .note{font-size:12px;padding:10px 12px;border-radius:8px;background:rgba(201,162,122,.18);margin-bottom:14px}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.thumbs img{height:44px;border-radius:6px}
 </style></head><body>
-<header><a href="link.html" style="order:3;margin-left:auto;color:#A9706A;text-decoration:none;font-size:13px">Link tamu →</a><img src="img/velora-logo-white.svg" alt="Velora" style="background:#6B5560;padding:6px 10px;border-radius:8px"><div><b>Generator Undangan</b><br><small>Alat internal tim Velora — Aqiqah</small></div></header>
+<header><img src="img/velora-logo-white.svg" alt="Velora"><div><b>Studio Undangan</b><br><small>Alat internal tim Velora</small></div>
+<nav><a href="katalog.html">Katalog tema</a><a href="link.html">Link tamu</a></nav></header>
 <main>
-<form id="fm" autocomplete="off">
-<div class="note">Isi data klien, pilih template, lihat pratinjau di kanan, lalu <b>Unduh paket (.zip)</b>. Paket berisi halaman undangan siap diunggah ke hosting.</div>
+<form id="fm" autocomplete="off" onsubmit="return false">
+<div class="note">Pilih acara dan tema, isi data klien, lihat pratinjau, lalu <b>Unduh paket (.zip)</b> untuk diunggah ke hosting.</div>
 
-<fieldset><legend>1. Template</legend>
-<div class="tp" id="tp"></div>
-<label><input type="checkbox" id="video" style="width:auto"> Latar video bergerak (hanya cocok untuk Pastel Lebah)</label>
+<fieldset><legend>1. Acara &amp; tema</legend>
+<div class="chips" id="acara"></div>
+<div class="chips" id="kol" style="margin-top:10px"></div>
+<div class="tg" id="tg"></div>
 </fieldset>
 
-<fieldset><legend>2. Data anak</legend>
-<label>Nama lengkap anak</label><input id="nama" value="" placeholder="Contoh: Aisyah Putri Pratama">
-<div class="row"><div><label>Nama panggilan</label><input id="pang" value="" placeholder="Contoh: Aisyah"></div>
-<div><label>Putra / Putri</label><select id="jk"><option>Putri</option><option>Putra</option></select></div></div>
-<div class="row"><div><label>Anak ke-</label><select id="ke"><option>Pertama</option><option>Kedua</option><option>Ketiga</option><option>Keempat</option><option>Kelima</option></select></div>
-<div><label>Tanggal lahir (opsional)</label><input type="date" id="lahir" value=""></div></div>
-<div class="row"><div><label>Nama ayah</label><input id="ayah" value="" placeholder="Nama ayah"></div>
-<div><label>Nama ibu</label><input id="ibu" value="" placeholder="Nama ibu"></div></div>
-<label>Kata pengantar</label><textarea id="pengantar">Atas karunia Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan mendoakan buah hati kami pada acara aqiqah.</textarea>
+<fieldset><legend>2. Data utama</legend>
+<label>Judul acara</label><input id="judulAcara">
+<div id="f_p1"></div>
+<div id="f_p2"></div>
+<label>Kalimat pengantar</label><textarea id="pengantar"></textarea>
+<div class="row"><div><label>Salam pembuka</label><input id="salam"></div><div><label>Sumber kutipan</label><input id="sumber"></div></div>
+<label>Kutipan / ayat / doa (kosongkan bila tidak perlu)</label><textarea id="kutipan"></textarea>
 </fieldset>
 
-<fieldset><legend>3. Acara</legend>
-<div class="row"><div><label>Nama acara</label><select id="acara"><option>Tasyakuran Aqiqah</option><option>Syukuran Aqiqah</option><option>Aqiqah &amp; Tasmiyah</option></select></div>
-<div><label>Tanggal acara</label><input type="date" id="tgl" value=""></div></div>
-<div class="row"><div><label>Jam mulai</label><input type="time" id="jam" value="12:00"></div>
-<div><label>Jam selesai (kosong = "selesai")</label><input type="time" id="jam2"></div></div>
-<label>Zona waktu</label><select id="zona"><option value="WIB">WIB</option><option value="WITA">WITA</option><option value="WIT">WIT</option></select>
-<label>Tempat / alamat</label><textarea id="tempat" placeholder="Alamat lengkap acara"></textarea>
-<label>Link Google Maps (opsional, kosong = dibuat dari alamat)</label><input id="maps" placeholder="https://maps.app.goo.gl/...">
+<fieldset><legend>3. Rangkaian acara</legend>
+<div id="sesi"></div>
+<button type="button" class="o mini" id="addSesi">+ Tambah sesi</button>
 </fieldset>
 
-<fieldset><legend>4. Foto</legend>
-<label>Foto sampul (wajib agar tampil cantik)</label><input type="file" id="fcover" accept="image/*">
-<label>Foto utama di bagian pembuka</label><input type="file" id="fhero" accept="image/*">
-<label>Galeri (boleh banyak, maks 6)</label><input type="file" id="fgal" accept="image/*" multiple>
+<fieldset><legend>4. Bagian undangan (centang = tampil)</legend>
+<div class="hint" style="margin-bottom:6px">Klien bisa minta bagian tertentu disembunyikan: hilangkan centangnya.</div>
+<div class="ck" id="secs"></div>
+<div class="sub" id="x_live" hidden><label>Link live streaming</label><input id="live" placeholder="https://youtube.com/live/..."></div>
+<div class="sub" id="x_dress" hidden><label>Keterangan dresscode</label><input id="dress" placeholder="Nuansa pastel lembut"><label>Warna (hex, pisahkan koma)</label><input id="dressWarna" placeholder="#E8D5C4,#C9A27A"></div>
+<div class="sub" id="x_kisah" hidden><div id="kisah"></div><button type="button" class="o mini" id="addKisah">+ Tambah cerita</button></div>
+<div class="sub" id="x_kado" hidden>
+<div class="row3"><div><label>Bank 1</label><input id="bk1"></div><div><label>No. rek 1</label><input id="no1" inputmode="numeric"></div><div><label>Atas nama 1</label><input id="an1"></div></div>
+<div class="row3"><div><label>Bank 2</label><input id="bk2"></div><div><label>No. rek 2</label><input id="no2" inputmode="numeric"></div><div><label>Atas nama 2</label><input id="an2"></div></div>
+<label>Alamat kado (opsional)</label><textarea id="alamatKado"></textarea></div>
+<label>Kalimat penutup</label><textarea id="penutup"></textarea>
+<label>"Kami yang berbahagia" (kosong = nama utama)</label><input id="tuanRumah">
+</fieldset>
+
+<fieldset><legend>5. Foto (kosongkan untuk versi Tanpa Foto)</legend>
+<div class="row"><div><label>Foto sampul</label><input type="file" id="f_cover" accept="image/*"></div><div><label id="lp1">Foto 1</label><input type="file" id="f_p1img" accept="image/*"></div></div>
+<div class="row" id="rowp2"><div><label>Foto 2</label><input type="file" id="f_p2img" accept="image/*"></div><div></div></div>
+<label>Galeri (maks 10)</label><input type="file" id="f_gal" accept="image/*" multiple>
 <div class="thumbs" id="th"></div>
-<div class="hint">Foto otomatis diperkecil (maks 1000 px) agar ringan. Tanpa foto, bagian foto disembunyikan (cocok untuk paket Tanpa Foto).</div>
 </fieldset>
 
-<fieldset><legend>5. Lagu</legend>
-<label>Sumber lagu</label><select id="lsrc"><option value="lib">Pustaka lagu Velora (berlisensi)</option><option value="up">Unggah mp3 sendiri</option><option value="yt">Link YouTube</option><option value="none">Tanpa musik</option></select>
-<div id="lib"><label>Pilih lagu</label><select id="lagu"></select></div>
-<div id="up" hidden><label>File mp3 klien</label><input type="file" id="fmp3" accept="audio/mpeg,.mp3"></div>
-<div id="yt" hidden><label>Link YouTube</label><input id="ytl" placeholder="https://youtu.be/XXXXXXXXXXX"></div>
+<fieldset><legend>6. Musik, ucapan, dan link</legend>
+<label>Sumber lagu</label><select id="lsrc"><option value="lib">Pustaka Velora (berlisensi, otomatis sesuai tema)</option><option value="up">Unggah mp3 klien</option><option value="yt">Link YouTube</option><option value="none">Tanpa musik</option></select>
+<div id="x_lib"><label>Lagu</label><select id="lagu"></select></div>
+<div id="x_up" hidden><label>File mp3</label><input type="file" id="f_mp3" accept="audio/mpeg,.mp3"></div>
+<div id="x_yt" hidden><label>Link YouTube</label><input id="yt" placeholder="https://youtu.be/..."></div>
 <label>Mulai dari detik ke-</label><input type="number" id="mulai" value="0" min="0">
-</fieldset>
-
-<fieldset><legend>6. Ucapan &amp; preview link</legend>
-<label>URL Google Apps Script (agar ucapan tersimpan di Sheet; kosong = hanya di browser tamu)</label><input id="sheet" placeholder="https://script.google.com/macros/s/.../exec">
-<div class="hint">Skrip siap pakai ada di folder undangan hasil unduhan: <code>apps-script.gs</code>.</div>
-<label>Alamat undangan nanti (untuk foto preview saat link dibagikan)</label><input id="base" placeholder="https://namauser.github.io/nama-anak/">
+<label>URL Google Apps Script untuk ucapan (opsional)</label><input id="sheet" placeholder="https://script.google.com/macros/s/.../exec">
+<label>Alamat undangan nanti (untuk foto preview WhatsApp)</label><input id="base" placeholder="https://namauser.github.io/nama-acara/">
 </fieldset>
 </form>
 
-<aside class="pv"><div class="ph"><iframe id="pv" title="Pratinjau"></iframe></div>
-<div class="act"><button type="button" id="dl">Unduh paket (.zip)</button><button type="button" class="o" id="op">Buka pratinjau layar penuh</button></div>
+<aside class="pv"><div class="ph"><iframe id="pv" title="Pratinjau undangan"></iframe></div>
+<div class="price" id="price"></div>
+<div class="act"><button type="button" id="dl">Unduh paket (.zip)</button><button type="button" class="o" id="op">Layar penuh</button></div>
 <div class="hint" style="text-align:center;margin-top:8px" id="st"></div></aside>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="app.js"></script>
+<script src="engine.js"></script>
+<script src="studio.js"></script>
 </body></html>

@@ -62,5 +62,53 @@
   "suasana": "minimalist-elegant",
   "file": "musik/wallpaper-kevin-macleod.mp3",
   "kredit": "Wallpaper Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "there-is-romance-kevin-macleod",
+  "judul": "There is Romance",
+  "artis": "Kevin MacLeod",
+  "suasana": "wedding-romantis",
+  "file": "musik/there-is-romance-kevin-macleod.mp3",
+  "kredit": "Music: \"There is Romance\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "reawakening-kevin-macleod",
+  "judul": "Reawakening",
+  "artis": "Kevin MacLeod",
+  "suasana": "wedding-romantis",
+  "file": "musik/reawakening-kevin-macleod.mp3",
+  "kredit": "Music: \"Reawakening\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "carefree-kevin-macleod",
+  "judul": "Carefree",
+  "artis": "Kevin MacLeod",
+  "suasana": "khitan",
+  "file": "musik/carefree-kevin-macleod.mp3",
+  "kredit": "Carefree Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "air-prelude-kevin-macleod",
+  "judul": "Air Prelude",
+  "artis": "Kevin MacLeod",
+  "suasana": "formal-korporat",
+  "file": "musik/air-prelude-kevin-macleod.mp3",
+  "kredit": "\"Air Prelude\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "crusade-kevin-macleod",
+  "judul": "Crusade",
+  "artis": "Kevin MacLeod",
+  "suasana": "wisuda",
+  "file": "musik/crusade-kevin-macleod.mp3",
+  "kredit": "\"Crusade\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "id": "crossing-the-chasm-kevin-macleod",
+  "judul": "Crossing the Chasm",
+  "artis": "Kevin MacLeod",
+  "suasana": "wisuda",
+  "file": "musik/crossing-the-chasm-kevin-macleod.mp3",
+  "kredit": "\"Crossing the Chasm\" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 https://creativecommons.org/licenses/by/4.0/"
  }
 ]

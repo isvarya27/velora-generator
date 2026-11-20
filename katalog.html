@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Katalog Tema Velora</title><meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#6B5560;--rose:#A9706A;--bg:#F7F2EC;--card:#fff;--line:#E4DACB;--txt:#4A3C42;--mut:#7d6f74}
+@media(prefers-color-scheme:dark){:root{--bg:#1E1A1C;--card:#2A2427;--line:#44393F;--txt:#EDE3E6;--ink:#E7D7DC;--mut:#b9aab0}}
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:var(--bg);color:var(--txt)}
+header{padding:28px 20px 10px;text-align:center}h1{margin:0;color:var(--ink);font-weight:600;font-size:28px}header p{color:var(--mut);margin:6px 0 0;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:14px 16px}.chips button{font:inherit;font-size:13px;cursor:pointer;background:transparent;border:1px solid var(--line);color:var(--txt);padding:8px 16px;border-radius:999px}.chips button.on{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.chips b{font-weight:600;margin-left:4px;font-size:11px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;padding:10px 20px 40px;max-width:1180px;margin:0 auto}
+.c{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.c .sh{aspect-ratio:9/14;overflow:hidden;position:relative}.c iframe{width:390px;height:606px;border:0;transform:scale(.59);transform-origin:0 0;pointer-events:none}
+.c .in{padding:12px 14px 14px}.c b{display:block;color:var(--ink)}.c small{color:var(--mut);font-size:12px}.c .pr{margin:6px 0 10px;font-size:13px}
+.c .bt{display:flex;gap:8px}.c a{flex:1;text-align:center;font-size:12px;padding:8px;border-radius:999px;text-decoration:none;border:1px solid var(--rose);color:var(--rose)}.c a.p{background:var(--rose);color:#fff}
+</style></head><body>
+<header><h1>Katalog Tema Velora</h1><p>Semua tema tersedia versi Pakai Foto dan Tanpa Foto.</p></header>
+<div class="chips" id="kol"></div>
+<div class="grid" id="g"></div>
+<script>
+'use strict';
+var HARGA={Standar:[99000,79000],Premium:[149000,129000],Signature:[199000,179000]},T=[],k='Semua';
+function fmt(n){return 'Rp'+n.toLocaleString('id-ID')}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function draw(){
+  var ks=['Semua'];T.forEach(function(t){if(ks.indexOf(t.koleksi)<0)ks.push(t.koleksi)});
+  document.getElementById('kol').innerHTML=ks.map(function(x){var n=x==='Semua'?T.length:T.filter(function(t){return t.koleksi===x}).length;return '<button class="'+(x===k?'on':'')+'" data-k="'+esc(x)+'">'+esc(x)+'<b>'+n+'</b></button>'}).join('');
+  document.getElementById('g').innerHTML=T.filter(function(t){return k==='Semua'||t.koleksi===k}).map(function(t){var h=HARGA[t.tier];
+    return '<div class="c"><div class="sh"><iframe loading="lazy" src="katalog/'+t.id+'/" title="'+esc(t.nama)+'" tabindex="-1"></iframe></div><div class="in"><b>'+esc(t.nama)+'</b><small>'+esc(t.koleksi)+' · '+esc(t.tier)+'</small><div class="pr">'+fmt(h[0])+' <small>· Tanpa Foto '+fmt(h[1])+'</small></div><div class="bt"><a href="katalog/'+t.id+'/" target="_blank" rel="noopener">Lihat contoh</a><a class="p" href="./?tema='+t.id+'&acara='+t.acara[0]+'">Pakai tema</a></div></div></div>'}).join('');
+}
+document.getElementById('kol').onclick=function(e){var b=e.target.closest('button');if(b){k=b.dataset.k;draw()}};
+fetch('themes/themes.json').then(function(r){return r.json()}).then(function(j){T=j;draw()});
+</script></body></html>

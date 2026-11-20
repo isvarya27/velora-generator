@@ -124,8 +124,32 @@ function build(mode, extra) {
   if (s.lsrc === 'up' && mp3File) src = z ? 'musik.mp3' : (extra && extra.mp3url) || '';
   o.AUDIO_TAG = src ? '<audio id="au" src="' + esc(src) + '" loop preload="auto"></audio>' : '';
   o.CREDIT = (s.lsrc === 'lib' && pic) ? '<div class="vf-s" style="margin-top:12px;font-size:11px;opacity:.7">Musik: “' + esc(pic.judul) + '” oleh ' + esc(pic.artis) + ' (incompetech.com), lisensi CC BY 4.0</div>' : '';
+  var iso = s.tgl + 'T' + s.jam + ':00' + OFFSET[s.zona];
+  o.CAL_BTN = on('kalender') ? '<br><a class="btn o sbtn" href="' + esc(calUrl(s, iso)) + '" target="_blank" rel="noopener">Simpan Tanggal</a>' : '';
+  var liveu = $('liveurl').value.trim();
+  o.LIVE_SECTION = (on('live') && liveu) ? '<section class="fade"><div class="eyebrow">Siaran Langsung</div><h2>Live Streaming</h2><p>Bagi keluarga dan sahabat yang berhalangan hadir, silakan menyaksikan acara kami secara virtual.</p><br><a class="btn" href="' + esc(liveu) + '" target="_blank" rel="noopener">Lihat Live Streaming</a></section>' : '';
+  var rk = rekCard($('bk1').value.trim(), $('no1').value.trim(), $('an1').value.trim()) + rekCard($('bk2').value.trim(), $('no2').value.trim(), $('an2').value.trim());
+  var ak = $('alamatkado').value.trim();
+  if (ak) rk += '<div class="rk"><small>Alamat kado</small><div style="margin:4px 0 8px">' + esc(ak).replace(/\n/g, '<br>') + '</div><button class="btn o" type="button" onclick="cpy(this,' + esc(js(ak)) + ')">Salin</button></div>';
+  o.GIFT_SECTION = (on('kado') && rk) ? '<section class="soft2 fade"><div class="eyebrow">Hadiah</div><h2>Tanda Kasih</h2><p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun bila ingin memberi tanda kasih, dapat melalui:</p>' + rk + '</section>' : '';
+  var dt = $('dctext').value.trim(), dc = $('dccol').value.split(',').map(function (x) { return x.trim(); }).filter(function (x) { return /^#[0-9a-fA-F]{3,8}$/.test(x); });
+  o.DRESS_SECTION = (on('dress') && (dt || dc.length)) ? '<section class="fade"><div class="eyebrow">Dresscode</div><h2>Busana</h2><p>' + esc(dt) + '</p><div class="dc">' + dc.map(function (c) { return '<i style="background:' + c + '"></i>'; }).join('') + '</div></section>' : '';
+  o.NOTE_SECTION = on('catatan') ? '<div class="note">Mohon maaf apabila terdapat kesalahan dalam penulisan nama atau gelar.</div>' : '';
   Object.keys(o).forEach(function (k) { h = h.split('{{' + k + '}}').join(o[k]); });
+  h = stripSec(h);
   return h;
+}
+
+function on(k) { var e = document.querySelector('.sec[data-k=' + k + ']'); return !e || e.checked; }
+function calUrl(s, eventIso) {
+  var st = new Date(eventIso), en = new Date(st.getTime() + 3 * 36e5);
+  if (s.jam2) { var d = new Date(s.tgl + 'T' + s.jam2 + ':00' + OFFSET[s.zona]); if (d > st) en = d; }
+  var f = function (d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d+/, ''); };
+  return 'https://www.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(s.acara + ' ' + s.pang) + '&details=' + encodeURIComponent(s.acara + ' ' + s.nama + ' - ' + s.ayah + ' & ' + s.ibu) + '&location=' + encodeURIComponent(s.tempat.replace(/\s+/g, ' ')) + '&dates=' + f(st) + '/' + f(en);
+}
+function rekCard(b, n, a) { if (!n) return ''; return '<div class="rk"><small>' + esc(b || 'No. Rekening') + '</small><b>' + esc(n) + '</b><small>Atas nama</small><div style="margin-bottom:8px">' + esc(a) + '</div><button class="btn o" type="button" onclick="cpy(this,' + esc(js(n)) + ')">Salin</button></div>'; }
+function stripSec(h) {
+  return h.replace(/<!--S:([a-z]+)-->([\s\S]*?)<!--\/S:\1-->/g, function (m, k, inner) { return on(k) ? inner : ''; });
 }
 function lagu() { return LAGU.filter(function (l) { return l.id === $('lagu').value; })[0]; }
 
@@ -176,6 +200,7 @@ async function init() {
   } catch (e) { $('st').textContent = 'Jalankan lewat server: python3 -m http.server 8080 lalu buka http://localhost:8080'; return; }
   $('lagu').innerHTML = LAGU.map(function (l) { return '<option value="' + l.id + '">' + esc(l.judul) + ' — ' + esc(l.artis) + '</option>'; }).join('');
   document.querySelectorAll('#fm input,#fm select,#fm textarea').forEach(function (el) { el.addEventListener('input', refresh); el.addEventListener('change', refresh); });
+  document.querySelectorAll('.sec').forEach(function (c) { var x = $('x_' + c.dataset.k); var f = function () { if (x) x.hidden = !c.checked; }; c.addEventListener('change', f); f(); });
   $('lsrc').addEventListener('change', function () { ['lib', 'up', 'yt'].forEach(function (k) { $(k).hidden = $('lsrc').value !== k; }); });
   document.querySelectorAll('input[name=tema]').forEach(function (r) { r.addEventListener('change', function () { $('video').checked = theme().video; refresh(); }); });
   $('fcover').onchange = async function () { photos.cover = this.files[0] ? await readImage(this.files[0], 1000) : null; thumbs(); refresh(); };
