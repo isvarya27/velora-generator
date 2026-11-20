@@ -14,10 +14,15 @@ header{padding:28px 20px 10px;text-align:center}h1{margin:0;color:var(--ink);fon
 .c .sh{aspect-ratio:390/700;overflow:hidden;background:var(--line)}.c .sh img{width:100%;height:auto;display:block}
 .c .in{padding:12px 14px 14px}.c b{display:block;color:var(--ink)}.c small{color:var(--mut);font-size:12px}.c .pr{margin:6px 0 10px;font-size:13px}
 .c .bt{display:flex;gap:8px}.c a{flex:1;text-align:center;font-size:12px;padding:8px;border-radius:999px;text-decoration:none;border:1px solid var(--rose);color:var(--rose)}.c a.p{background:var(--rose);color:#fff}
+.c .dt{background:none;border:0;padding:0;margin:0 0 8px;color:var(--rose);font:inherit;font-size:12px;text-decoration:underline;cursor:pointer;text-align:left}
+dialog{border:0;border-radius:16px;padding:0;max-width:520px;width:calc(100% - 32px);max-height:88vh;color:var(--txt);background:var(--card);font-family:Poppins,sans-serif}dialog::backdrop{background:rgba(20,20,20,.55)}
+dialog .hd{display:flex;gap:14px;padding:18px 18px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--card)}dialog .hd img{width:74px;border-radius:8px}dialog h3{margin:0;color:var(--ink);font-size:22px}dialog .hd small{color:var(--mut)}
+dialog .bd{padding:14px 18px 18px;font-size:13.5px;line-height:1.6}dialog h4{margin:14px 0 6px;color:var(--ink);font-size:14px}dialog ul{list-style:none;margin:0;padding:0}dialog li{display:flex;gap:8px;padding:4px 0;border-bottom:1px dashed var(--line)}dialog li i{font-style:normal;width:18px;flex:none;text-align:center}dialog li.no{color:var(--mut)}dialog li em{margin-left:auto;font-style:normal;font-size:11px;white-space:nowrap}
+dialog .x{position:absolute;right:12px;top:10px;background:none;border:0;font-size:22px;cursor:pointer;color:var(--ink)}
 </style></head><body>
 <header><h1>Katalog Tema Velora</h1><p>Semua tema tersedia versi Pakai Foto dan Tanpa Foto.</p></header>
 <div class="chips" id="kol"></div>
-<div class="grid" id="g"></div>
+<div class="grid" id="g"></div><dialog id="dlg" aria-label="Detail tema"></dialog>
 <script>
 'use strict';
 var HARGA={Standar:[99000,79000],Premium:[149000,129000],Signature:[199000,179000]},T=[],k='Semua';
@@ -27,8 +32,15 @@ function draw(){
   var ks=['Semua'];T.forEach(function(t){if(ks.indexOf(t.koleksi)<0)ks.push(t.koleksi)});
   document.getElementById('kol').innerHTML=ks.map(function(x){var n=x==='Semua'?T.length:T.filter(function(t){return t.koleksi===x}).length;return '<button class="'+(x===k?'on':'')+'" data-k="'+esc(x)+'">'+esc(x)+'<b>'+n+'</b></button>'}).join('');
   document.getElementById('g').innerHTML=T.filter(function(t){return k==='Semua'||t.koleksi===k}).map(function(t){var h=HARGA[t.tier];
-    return '<div class="c"><div class="sh"><img loading="lazy" src="katalog/'+t.id+'/sampul.jpg" alt="Contoh tema '+esc(t.nama)+'" width="390" height="844"></div><div class="in"><b>'+esc(t.nama)+'</b><small>'+esc(t.koleksi)+' · '+esc(t.tier)+'</small><div class="pr">'+fmt(h[0])+' <small>· Tanpa Foto '+fmt(h[1])+'</small></div><div class="bt"><a href="katalog/'+t.id+'/" target="_blank" rel="noopener">Lihat contoh</a><a class="p" href="./?tema='+t.id+'&acara='+t.acara[0]+'">Pakai tema</a></div></div></div>'}).join('');
+    return '<div class="c"><div class="sh"><img loading="lazy" src="katalog/'+t.id+'/sampul.jpg" alt="Contoh tema '+esc(t.nama)+'" width="390" height="844"></div><div class="in"><b>'+esc(t.nama)+'</b><small>'+esc(t.koleksi)+' · '+esc(t.tier)+'</small><div class="pr">'+fmt(h[0])+' <small>· Tanpa Foto '+fmt(h[1])+'</small></div><button type="button" class="dt" data-id="'+t.id+'">Detail tema &amp; bagian</button><div class="bt"><a href="katalog/'+t.id+'/" target="_blank" rel="noopener">Lihat contoh</a><a class="p" href="./?tema='+t.id+'&acara='+t.acara[0]+'">Pakai tema</a></div></div></div>'}).join('');
 }
 document.getElementById('kol').onclick=function(e){var b=e.target.closest('button');if(b){k=b.dataset.k;draw()}};
-fetch('themes/themes.json').then(function(r){return r.json()}).then(function(j){T=j;draw()});
+var I={},TR={Standar:0,Premium:1,Signature:2};
+document.getElementById('g').addEventListener('click',function(ev){var b=ev.target.closest('.dt');if(!b)return;var t=T.filter(function(x){return x.id===b.dataset.id})[0],L=function(g,k){return (I[g]||{})[k]||k},lv=TR[t.tier]||0,h=HARGA[t.tier];
+ var gaya=[L('layout',t.layout),L('ornamen',t.ornamen),L('gerak',t.gerak)];if(t.interaksi&&t.interaksi!=='none')gaya.push(L('interaksi',t.interaksi));if(t.gelap)gaya.push('Latar gelap');
+ var sec=(I.section||[]).map(function(s){var ok=(TR[s[1]]||0)<=lv;return '<li class="'+(ok?'':'no')+'"><i>'+(ok?'✓':'–')+'</i>'+esc(s[0])+(ok?'':'<em>paket '+esc(s[1])+'</em>')+'</li>'}).join('');
+ var d=document.getElementById('dlg');d.innerHTML='<button class="x" type="button" aria-label="Tutup">×</button><div class="hd"><img src="katalog/'+t.id+'/sampul.jpg" alt=""><div><h3>'+esc(t.nama)+'</h3><small>'+esc(t.koleksi)+' · '+esc(t.tier)+'</small><div>'+fmt(h[0])+' <small>· Tanpa Foto '+fmt(h[1])+'</small></div></div></div><div class="bd"><p>'+esc(t.deskripsi||'')+'</p><h4>Cocok untuk</h4><p>'+t.acara.map(function(a){return esc(L('acara',a))}).join(', ')+'</p><h4>Gaya</h4><p>'+gaya.map(esc).join(' · ')+'</p><h4>Bagian undangan (paket '+esc(t.tier)+')</h4><ul>'+sec+'</ul><p style="font-size:12px;opacity:.8;margin-top:10px">'+esc(I.catatan||'')+'</p></div>';
+ d.querySelector('.x').onclick=function(){d.close()};d.showModal()});
+document.getElementById('dlg').addEventListener('click',function(ev){if(ev.target===this)this.close()});
+Promise.all([fetch('themes/themes.json').then(function(r){return r.json()}),fetch('themes/info.json').then(function(r){return r.json()})]).then(function(j){T=j[0];I=j[1];draw()});
 </script></body></html>
