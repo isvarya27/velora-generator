@@ -40,7 +40,7 @@ for (const t of themes) {
     const f = n => '../../../demo-foto/f' + n + '.jpg';
     const map = { cover: f(fd.cover), p1: f(fd.p1), p2: f(fd.p2) };
     const t2 = Object.assign({}, t, { posisiFoto: fd.posisi, posisiKartu: fd.kartu });
-    const h2 = E.render(d, t2, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), audio: l ? '../../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../../', kunci: t.id + '-foto-' })
+    const h2 = E.render(d, t2, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), audio: l ? '../../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../../', kunci: t.id + '-foto-', tanpaFotoSampul: true })
       .replace('src="img/velora-logo-white.svg"', 'src="../../../img/velora-logo-white.svg"');
     fs.mkdirSync(root + '/katalog/' + t.id + '/foto', { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/foto/index.html', h2);
   }

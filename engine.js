@@ -131,6 +131,14 @@
       '.ph-card{width:200px;height:200px;border-radius:50%;border:4px solid var(--kartu);outline:1px solid var(--emas);outline-offset:6px}' +
       '.ph-split{width:calc(100% + 56px);margin:-56px -28px 24px;height:52vh;border-radius:0 0 50% 50%/0 0 14% 14%;box-shadow:none}' +
       '.cover.full{justify-content:flex-end;background-size:cover;padding:40px 16px 22px}.cover.full .isi{background:color-mix(in srgb,var(--bg1) 86%,transparent);backdrop-filter:blur(6px);border-radius:var(--r);padding:16px 16px 18px;width:100%}.cover.full h1{font-size:34px;margin:6px 0 2px}.cover.full.kt-atas{justify-content:flex-start;padding-top:28px}.cover.full.ob-awan{padding-bottom:100px}.cover.full .guest{margin:10px 0 12px}.cover.full .guest b{font-size:20px}' +
+      '.nm{margin:18px auto 12px;position:relative;font-weight:400}.nm .n{display:block;font:400 var(--fz,62px)/1.04 var(--sf);color:var(--ink)}.nm .amp{display:block;font:400 30px var(--hf);color:var(--emas);margin:4px 0}.nm .kt{display:block;font:500 13px var(--bf);letter-spacing:.24em;text-transform:uppercase;color:var(--ink);margin-top:14px}' +
+      '.nm-arch{width:262px;padding:74px 18px 50px;border:2px solid var(--emas);border-radius:131px 131px 14px 14px;outline:1px solid var(--emas);outline-offset:7px;background:color-mix(in srgb,var(--kartu) 35%,transparent)}' +
+      '.nm-frame{width:278px;padding:50px 18px;border:1px solid var(--emas);outline:1px solid var(--emas);outline-offset:9px}.nm-frame .n{font-family:var(--hf);text-transform:uppercase;letter-spacing:.06em}' +
+      '.nm-card{width:286px;height:286px;border-radius:50%;background:var(--kartu);display:flex;flex-direction:column;justify-content:center;border:1px solid var(--emas);box-shadow:0 14px 34px rgba(0,0,0,.12)}' +
+      '.nm-polaroid{width:268px;padding:42px 18px 54px;background:#fff;transform:rotate(-3deg);box-shadow:0 14px 30px rgba(0,0,0,.18)}.nm-polaroid:before{content:"";position:absolute;top:-12px;left:50%;width:96px;height:26px;margin-left:-48px;background:color-mix(in srgb,var(--emas) 45%,#fff);opacity:.85;transform:rotate(2deg)}.nm-polaroid .n{color:#3A2E33}.nm-polaroid .kt{color:#3A2E33}' +
+      '.nm-split{width:100%;text-align:left;padding:0 6px}.nm-split .n{font-family:var(--hf);line-height:.98}.nm-split .amp{font-family:var(--sf);font-size:44px}' +
+      '.nm-full{width:100%;text-align:left;padding:0 6px}.nm-full .n{font-family:var(--hf);text-transform:uppercase;letter-spacing:.02em;line-height:.96}.nm-full .amp{font-size:24px;letter-spacing:.2em;text-transform:lowercase}' +
+      '.cover .sub.tp{letter-spacing:.22em;text-transform:uppercase;font-size:12px}.cover.kiri{align-items:flex-start;text-align:left}' +
       '.mono{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:22px auto;border:1px solid var(--emas);outline:1px solid var(--emas);outline-offset:7px;font:400 64px var(--sf);color:var(--ink)}' +
       '.orn{position:absolute;width:150px;height:150px;color:var(--emas);pointer-events:none;z-index:1}.tl{top:0;left:0}.tr{top:0;right:0;transform:scaleX(-1)}.bl{bottom:0;left:0;transform:scaleY(-1)}.br{bottom:0;right:0;transform:scale(-1)}' +
       '.wave{position:absolute;left:0;right:0;bottom:0;height:70px;z-index:1;color:var(--emas);opacity:.5}' +
@@ -214,12 +222,19 @@
     var ph = function (k, cls, alt, pos) { var u = img(k); return u ? '<div class="ph ' + cls + '"><img src="' + esc(u) + '" alt="' + esc(alt) + '" loading="lazy" style="object-position:' + (pos || t.posisiFoto || '50% 30%') + '"></div>' : ''; };
 
     /* cover */
-    var coverImg = img('cover'), fullBg = lay === 'full' && coverImg;
-    h.push('<section class="cover' + (fullBg ? ' full' + (t.posisiKartu === 'atas' ? ' kt-atas' : '') + (t.ornamen === 'awan' ? ' ob-awan' : '') : '') + '" id="cover"' + (fullBg ? ' style="background-image:url(\'' + esc(coverImg) + '\');background-position:' + esc(t.posisiFoto || '50% 25%') + '"' : '') + '>' + (t.ornamen === 'gelombang' ? '' : empatSudut(t.ornamen, true)) +
+    var coverImg = o.tanpaFotoSampul ? '' : img('cover'), fullBg = lay === 'full' && coverImg;
+    var nmBlok = function () {
+      var a = d.p1.panggil || d.p1.nama, b = mode === 'pasangan' ? (d.p2.panggil || d.p2.nama) : '';
+      var base = { arch: 54, frame: 44, card: 50, polaroid: 56, split: 76, full: 70 }[lay] || 60, pjg = Math.max(String(a).length, String(b).length);
+      var fz = Math.max(28, Math.min(base, Math.floor(base * 7 / Math.max(7, pjg))));
+      return '<h1 class="nm nm-' + lay + '" style="--fz:' + fz + 'px"><span class="n">' + esc(a) + '</span>' + (b ? '<span class="amp">' + (lay === 'full' ? 'and' : '&amp;') + '</span><span class="n">' + esc(b) + '</span>' : (d.p1.keterangan ? '<span class="kt">' + esc(d.p1.keterangan) + '</span>' : '')) + '</h1>';
+    };
+    var kiri = !coverImg && (lay === 'split' || lay === 'full');
+    h.push('<section class="cover' + (kiri ? ' kiri' : '') + (fullBg ? ' full' + (t.posisiKartu === 'atas' ? ' kt-atas' : '') + (t.ornamen === 'awan' ? ' ob-awan' : '') : '') + '" id="cover"' + (fullBg ? ' style="background-image:url(\'' + esc(coverImg) + '\');background-position:' + esc(t.posisiFoto || '50% 25%') + '"' : '') + '>' + (t.ornamen === 'gelombang' ? '' : empatSudut(t.ornamen, true)) +
       (fullBg ? '<div class="isi">' : '') +
       '<div class="ey">' + esc(d.judulAcara) + '</div>' +
-      (fullBg ? '' : coverImg ? ph('cover', 'ph-' + (lay === 'full' ? 'arch' : lay), namaUtama) : '<div class="mono">' + esc(mode === 'pasangan' ? inisial(d.p1.panggil || d.p1.nama) + '&' + inisial(d.p2.panggil || d.p2.nama) : inisial(d.p1.panggil || d.p1.nama)) + '</div>') +
-      '<h1 class="sk">' + esc(namaUtama) + '</h1><div class="sub">' + esc(tglPanjang(s1.tgl)) + '</div>' +
+      (fullBg ? '' : coverImg ? ph('cover', 'ph-' + (lay === 'full' ? 'arch' : lay), namaUtama) : '') +
+      (coverImg ? '<h1 class="sk">' + esc(namaUtama) + '</h1><div class="sub">' + esc(tglPanjang(s1.tgl)) + '</div>' : nmBlok() + '<div class="sub tp">' + esc(tglPanjang(s1.tgl)) + '</div>') +
       '<div class="guest">Kepada Yth. Bapak/Ibu/Saudara/i<b id="tamu">Tamu Undangan</b></div><button class="btn" onclick="buka()">Buka Undangan</button>' + (t.interaksi === 'tebar' ? '<div class="hint">Ketuk layar untuk menebar ' + ((t.ornamen === 'bintang' || t.gerak === 'bintang' || t.gerak === 'kilau') ? 'bintang' : 'kelopak') + '</div>' : '') +
       (fullBg ? '</div>' : '') + (t.ornamen === 'gelombang' ? wave() : t.ornamen === 'awan' ? awanBawah() : '') + (t.interaksi === 'amplop' ? '<div class="env" onclick="this.classList.add(\'open\')" role="button" aria-label="Buka amplop"><div class="to">' + esc(namaUtama) + '</div><div class="ev"><div class="bd"></div><div class="fl"></div><div class="sl">' + esc(mode === 'pasangan' ? inisial(d.p1.panggil || d.p1.nama) + inisial(d.p2.panggil || d.p2.nama) : inisial(d.p1.panggil || d.p1.nama)) + '</div></div><div class="hn">Ketuk untuk membuka</div></div>' : '') + '</section>');
     h.push('<div id="isi">');

@@ -35,7 +35,7 @@ for (const t of themes) {
     const f = k => BASE + 'demo-foto/f' + k + '.jpg', map = { cover: f(fd.cover), p1: f(fd.p1), p2: f(fd.p2) };
     const t2 = Object.assign({}, t, { posisiFoto: fd.posisi, posisiKartu: fd.kartu });
     fs.mkdirSync(OUT + '/' + t.id + '/foto', { recursive: true });
-    fs.writeFileSync(OUT + '/' + t.id + '/foto/index.html', fix(E.render(d, t2, Object.assign({}, opt, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), kunci: 'wp-' + t.id + '-foto-' })))); n++;
+    fs.writeFileSync(OUT + '/' + t.id + '/foto/index.html', fix(E.render(d, t2, Object.assign({}, opt, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), kunci: 'wp-' + t.id + '-foto-', tanpaFotoSampul: true })))); n++;
   }
 }
 console.log('demo WP:', n, 'halaman, lagu:', fs.readdirSync(OUT + '/musik').length);
