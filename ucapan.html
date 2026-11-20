@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ucapan Tamu · Velora</title><meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%236B5560%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-size=%2728%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27serif%27%3EVL%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F3D36;--rose:#A9706A;--bg:#F7F2EC;--card:#fff;--line:#E4DACB;--txt:#3E3539;--mut:#6F6468}
+@media(prefers-color-scheme:dark){:root{--bg:#1C1A1B;--card:#272325;--line:#423A3E;--txt:#ECE4E7;--ink:#CFE3DA;--mut:#B3A8AD}}
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:var(--bg);color:var(--txt)}
+main{max-width:760px;margin:0 auto;padding:22px 16px 40px}h1{color:var(--ink);font-size:24px;margin:0 0 4px}.mut{color:var(--mut);font-size:13px}
+.st{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.st div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}.st b{display:block;font-size:24px;color:var(--ink)}.st small{color:var(--mut);font-size:11px}
+@media(max-width:480px){.st{grid-template-columns:repeat(2,1fr)}}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}select,input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--txt)}
+button{font:inherit;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 16px;font-size:13px}button.p{background:var(--ink);color:var(--card)}button:disabled{opacity:.4;cursor:default}
+.it{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px}.it b{color:var(--ink)}.it small{color:var(--mut);margin-left:6px;font-size:12px}.it p{margin:4px 0 0;line-height:1.6;white-space:pre-wrap}
+.pg{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px;font-size:13px}.err{background:#fde8e6;color:#7a2a20;padding:12px;border-radius:10px}
+</style></head><body><main>
+<h1>Ucapan &amp; Kehadiran</h1><div class="mut" id="sub">Memuat…</div>
+<div class="st" id="st" hidden><div><b id="s_total">0</b><small>Ucapan</small></div><div><b id="s_hadir">0</b><small>Hadir</small></div><div><b id="s_tidak">0</b><small>Tidak hadir</small></div><div><b id="s_tamu">0</b><small>Perkiraan tamu</small></div></div>
+<div class="bar" id="bar" hidden><label class="mut">Per halaman <select id="size"><option>5</option><option selected>10</option><option>20</option><option>50</option></select></label><button type="button" id="csv">Unduh CSV</button><button type="button" id="muat">Muat ulang</button></div>
+<div id="list" aria-live="polite"></div>
+<div class="pg" id="pg" hidden><button type="button" id="prev">‹ Sebelumnya</button><span id="info"></span><button type="button" id="next">Berikutnya ›</button></div>
+</main>
+<script>
+'use strict';
+var $=function(i){return document.getElementById(i)},q=new URLSearchParams(location.search),ID=q.get('id')||'',SRC=q.get('src')||'',HAL=1,TOT=0;
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function url(p){return SRC+(SRC.indexOf('?')<0?'?':'&')+'id='+encodeURIComponent(ID)+'&'+p}
+function err(m){$('list').innerHTML='<div class="err">'+esc(m)+'</div>';$('sub').textContent=''}
+function tgl(w){var d=new Date(w);return isNaN(d)?'':d.toLocaleString('id-ID',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}
+function muat(){var size=+$('size').value;
+ fetch(url('page='+HAL+'&size='+size)).then(function(r){return r.json()}).then(function(j){if(j.error)return err('Tautan tidak valid: '+j.error);TOT=j.total;var n=Math.max(1,Math.ceil(TOT/size));
+  $('list').innerHTML=(j.items||[]).map(function(x){return '<div class="it"><b>'+esc(x.n)+'</b><small>'+esc(x.h||'')+(x.t?' · '+esc(x.t)+' orang':'')+' · '+esc(tgl(x.w))+'</small><p>'+esc(x.m)+'</p></div>'}).join('')||'<p class="mut">Belum ada ucapan.</p>';
+  $('pg').hidden=TOT<=size;$('info').textContent='Halaman '+HAL+' dari '+n;$('prev').disabled=HAL<=1;$('next').disabled=HAL>=n}).catch(function(){err('Gagal memuat ucapan. Periksa koneksi.')});
+ fetch(url('ringkas=1')).then(function(r){return r.json()}).then(function(s){if(s.error)return;$('st').hidden=false;['total','hadir','tidak','tamu'].forEach(function(k){$('s_'+k).textContent=s[k]||0})}).catch(function(){})}
+async function csv(){var all=[],p=1,j;do{j=await (await fetch(url('page='+p+'&size=50'))).json();all=all.concat(j.items||[]);p++}while(all.length<j.total&&p<200);
+ var c='waktu,nama,kehadiran,jumlah_tamu,ucapan\n'+all.map(function(x){return [x.w,x.n,x.h,x.t,x.m].map(function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"'}).join(',')}).join('\n');
+ var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+c],{type:'text/csv'}));a.download='ucapan-'+ID.slice(0,8)+'.csv';a.click()}
+(async function(){
+ if(!/^[0-9a-f-]{36}$/i.test(ID))return err('Buka halaman ini dari tautan yang diberikan Velora (berisi kode pesanan).');
+ if(!SRC){try{SRC=(await (await fetch('config.json')).json()).pusatUcapan||''}catch(e){}}
+ if(!SRC)return err('Pusat ucapan belum disetel. Hubungi tim Velora.');
+ $('sub').textContent='Kode pesanan '+ID.slice(0,8)+'…';$('bar').hidden=false;
+ $('size').onchange=function(){HAL=1;muat()};$('prev').onclick=function(){HAL--;muat()};$('next').onclick=function(){HAL++;muat()};$('muat').onclick=muat;$('csv').onclick=csv;muat()})();
+</script></body></html>

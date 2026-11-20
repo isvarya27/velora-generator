@@ -29,7 +29,8 @@
   "ornamen": "sakura",
   "gerak": "kelopak",
   "musik": "romantis",
-  "deskripsi": "Langit senja sinematik dengan kelopak sakura yang berguguran pelan, hangat seperti adegan film animasi."
+  "deskripsi": "Langit senja sinematik dengan kelopak sakura yang berguguran pelan, hangat seperti adegan film animasi.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "langit-musim-panas",
@@ -62,7 +63,8 @@
   "ornamen": "awan",
   "gerak": "awan",
   "musik": "ceria",
-  "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani."
+  "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "malam-emas-deco",
@@ -94,7 +96,8 @@
   "ornamen": "artdeco",
   "gerak": "kilau",
   "musik": "megah",
-  "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah."
+  "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "zamrud-bangsawan",
@@ -126,7 +129,8 @@
   "ornamen": "daun",
   "gerak": "cahaya",
   "musik": "megah",
-  "deskripsi": "Hijau zamrud tua berpadu emas champagne dan sulur daun, elegan tanpa berlebihan."
+  "deskripsi": "Hijau zamrud tua berpadu emas champagne dan sulur daun, elegan tanpa berlebihan.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "aqiqah-pastel-awan",
@@ -157,7 +161,8 @@
   "ornamen": "awan",
   "gerak": "gelembung",
   "musik": "lembut",
-  "deskripsi": "Awan pastel dan gelembung lembut untuk menyambut buah hati, nyaman dibaca keluarga besar."
+  "deskripsi": "Awan pastel dan gelembung lembut untuk menyambut buah hati, nyaman dibaca keluarga besar.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "petualang-bintang-kecil",
@@ -189,7 +194,8 @@
   "ornamen": "bintang",
   "gerak": "konfeti",
   "musik": "ceria",
-  "deskripsi": "Biru-kuning ceria dengan bintang dan bingkai polaroid, cocok untuk khitan atau ulang tahun si kecil."
+  "deskripsi": "Biru-kuning ceria dengan bintang dan bingkai polaroid, cocok untuk khitan atau ulang tahun si kecil.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "sekar-sogan",
@@ -221,7 +227,8 @@
   "ornamen": "batik",
   "gerak": "cahaya",
   "musik": "tradisional",
-  "deskripsi": "Nuansa sogan cokelat-emas dengan bingkai ornamen batik buatan Velora, hangat untuk pernikahan adat Jawa atau Sunda."
+  "deskripsi": "Nuansa sogan cokelat-emas dengan bingkai ornamen batik buatan Velora, hangat untuk pernikahan adat Jawa atau Sunda.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "linen-putih",
@@ -254,7 +261,8 @@
   "ornamen": "none",
   "gerak": "none",
   "musik": "lembut",
-  "deskripsi": "Putih gading, tipografi tenang, ruang kosong yang lega; fokus pada nama dan tanggal."
+  "deskripsi": "Putih gading, tipografi tenang, ruang kosong yang lega; fokus pada nama dan tanggal.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "sage-garis",
@@ -287,7 +295,8 @@
   "ornamen": "geometris",
   "gerak": "none",
   "musik": "lembut",
-  "deskripsi": "Hijau sage dengan garis geometris tipis dan tata letak terbelah, modern dan rapi."
+  "deskripsi": "Hijau sage dengan garis geometris tipis dan tata letak terbelah, modern dan rapi.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "taman-cat-air",
@@ -319,7 +328,8 @@
   "ornamen": "bunga",
   "gerak": "kelopak",
   "musik": "romantis",
-  "deskripsi": "Bunga lukisan cat air dengan sapuan warna merembes lembut, seperti kartu yang dilukis tangan."
+  "deskripsi": "Bunga lukisan cat air dengan sapuan warna merembes lembut, seperti kartu yang dilukis tangan.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "ivory-signature",
@@ -350,7 +360,8 @@
   "ornamen": "daun",
   "gerak": "cahaya",
   "musik": "romantis",
-  "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh."
+  "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "gelombang-senja",
@@ -382,7 +393,8 @@
   "ornamen": "gelombang",
   "gerak": "bintang",
   "musik": "megah",
-  "deskripsi": "Lapisan gelombang bergerak di bawah langit senja-malam bertabur bintang, sinematik sejak layar pertama."
+  "deskripsi": "Lapisan gelombang bergerak di bawah langit senja-malam bertabur bintang, sinematik sejak layar pertama.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "pastel-lebah",
@@ -414,7 +426,8 @@
   "ornamen": "bintang",
   "gerak": "gelembung",
   "musik": "ceria",
-  "deskripsi": "Pastel peach dan biru langit dengan balon dan bintang, hangat untuk si kecil."
+  "deskripsi": "Pastel peach dan biru langit dengan balon dan bintang, hangat untuk si kecil.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "mint-awan",
@@ -446,7 +459,8 @@
   "ornamen": "awan",
   "gerak": "awan",
   "musik": "lembut",
-  "deskripsi": "Hijau mint segar dengan awan lembut, tenang dan bersih."
+  "deskripsi": "Hijau mint segar dengan awan lembut, tenang dan bersih.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "peony-blush",
@@ -478,7 +492,8 @@
   "ornamen": "bunga",
   "gerak": "kelopak",
   "musik": "lembut",
-  "deskripsi": "Merah muda peony dengan bingkai polaroid, manis untuk putri kecil."
+  "deskripsi": "Merah muda peony dengan bingkai polaroid, manis untuk putri kecil.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "amplop-champagne",
@@ -511,7 +526,8 @@
   "gerak": "cahaya",
   "interaksi": "amplop",
   "musik": "romantis",
-  "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi."
+  "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "tebar-kelopak-lavender",
@@ -544,7 +560,8 @@
   "gerak": "kelopak",
   "interaksi": "tebar",
   "musik": "romantis",
-  "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua."
+  "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "mega-hijau-kencana",
@@ -576,7 +593,8 @@
   "ornamen": "mega",
   "gerak": "cahaya",
   "musik": "tradisional",
-  "deskripsi": "Hijau daun dan emas dengan ornamen awan berlapis gambar Velora di bawah lengkung gapura, teduh untuk pernikahan adat Sunda."
+  "deskripsi": "Hijau daun dan emas dengan ornamen awan berlapis gambar Velora di bawah lengkung gapura, teduh untuk pernikahan adat Sunda.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "songket-merah-saga",
@@ -608,7 +626,8 @@
   "ornamen": "songket",
   "gerak": "kilau",
   "musik": "tradisional",
-  "deskripsi": "Merah tua dengan kisi belah ketupat emas bergaya tenun buatan Velora, berkilau megah untuk pernikahan adat Minang."
+  "deskripsi": "Merah tua dengan kisi belah ketupat emas bergaya tenun buatan Velora, berkilau megah untuk pernikahan adat Minang.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "sulur-teal-kencana",
@@ -640,7 +659,8 @@
   "ornamen": "ukiran",
   "gerak": "kelopak",
   "musik": "tradisional",
-  "deskripsi": "Teal dan ungu lembut dengan sulur ukiran emas gambar Velora di sampul layar penuh, anggun untuk pernikahan adat Bali."
+  "deskripsi": "Teal dan ungu lembut dengan sulur ukiran emas gambar Velora di sampul layar penuh, anggun untuk pernikahan adat Bali.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "pesta-stroberi-manis",
@@ -671,7 +691,8 @@
   "ornamen": "konfeti",
   "gerak": "konfeti",
   "musik": "ceria",
-  "deskripsi": "Merah muda stroberi dengan hujan konfeti di sampul layar penuh, ramai dan manis untuk pesta ulang tahun putri kecil."
+  "deskripsi": "Merah muda stroberi dengan hujan konfeti di sampul layar penuh, ramai dan manis untuk pesta ulang tahun putri kecil.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "roket-piksel",
@@ -703,7 +724,8 @@
   "ornamen": "piksel",
   "gerak": "bintang",
   "musik": "ceria",
-  "deskripsi": "Biru angkasa dan kuning dengan bingkai bergaya piksel dan roket kecil, seru untuk ulang tahun atau khitan jagoan."
+  "deskripsi": "Biru angkasa dan kuning dengan bingkai bergaya piksel dan roket kecil, seru untuk ulang tahun atau khitan jagoan.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "kilau-galaksi",
@@ -736,7 +758,8 @@
   "ornamen": "bintang",
   "gerak": "kilau",
   "musik": "megah",
-  "deskripsi": "Langit galaksi gelap yang berkelip pelan dengan kilau bintang, sinematik di tata letak terbelah."
+  "deskripsi": "Langit galaksi gelap yang berkelip pelan dengan kilau bintang, sinematik di tata letak terbelah.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "salju-pagi",
@@ -769,7 +792,8 @@
   "ornamen": "awan",
   "gerak": "salju",
   "musik": "lembut",
-  "deskripsi": "Butir salju turun pelan di atas biru pagi yang bersih, tenang dan sejuk dari layar pertama."
+  "deskripsi": "Butir salju turun pelan di atas biru pagi yang bersih, tenang dan sejuk dari layar pertama.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "lampion-malam-festival",
@@ -802,7 +826,8 @@
   "ornamen": "gelombang",
   "gerak": "cahaya",
   "musik": "romantis",
-  "deskripsi": "Malam festival musim panas dengan lampion bercahaya di tepi sungai siluet kota, hangat seperti adegan animasi orisinal."
+  "deskripsi": "Malam festival musim panas dengan lampion bercahaya di tepi sungai siluet kota, hangat seperti adegan animasi orisinal.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "botani-cat-minyak",
@@ -834,7 +859,8 @@
   "ornamen": "daun",
   "gerak": "none",
   "musik": "romantis",
-  "deskripsi": "Daun dan bunga botani bertekstur sapuan cat minyak dalam bingkai galeri, kaya warna dan klasik."
+  "deskripsi": "Daun dan bunga botani bertekstur sapuan cat minyak dalam bingkai galeri, kaya warna dan klasik.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "navy-kencana",
@@ -866,7 +892,8 @@
   "ornamen": "geometris",
   "gerak": "kilau",
   "musik": "megah",
-  "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam."
+  "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "sabit-zamrud-lentera",
@@ -900,7 +927,8 @@
   "gerak": "cahaya",
   "interaksi": "none",
   "musik": "khidmat",
-  "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama."
+  "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "lentera-pagi-fitri",
@@ -934,7 +962,8 @@
   "gerak": "kilau",
   "interaksi": "none",
   "musik": "khidmat",
-  "deskripsi": "Pagi hijau muda dengan lentera dan bulan sabit berkilau lembut, cocok untuk halalbihalal, aqiqah, atau pernikahan selepas Lebaran."
+  "deskripsi": "Pagi hijau muda dengan lentera dan bulan sabit berkilau lembut, cocok untuk halalbihalal, aqiqah, atau pernikahan selepas Lebaran.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "malam-salju-bintang",
@@ -969,7 +998,8 @@
   "gerak": "salju",
   "interaksi": "none",
   "musik": "lembut",
-  "deskripsi": "Malam biru musim dingin dengan bintang dan salju turun perlahan, hangat untuk acara akhir tahun."
+  "deskripsi": "Malam biru musim dingin dengan bintang dan salju turun perlahan, hangat untuk acara akhir tahun.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "merah-kencana-musim-semi",
@@ -1004,7 +1034,8 @@
   "gerak": "kilau",
   "interaksi": "none",
   "musik": "megah",
-  "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi."
+  "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "ukir-tiga-warna",
@@ -1037,7 +1068,8 @@
   "gerak": "none",
   "interaksi": "none",
   "musik": "tradisional",
-  "deskripsi": "Merah, hitam, dan putih dengan sulur ukiran geometris tegas, terinspirasi visual ukiran rumah adat Batak."
+  "deskripsi": "Merah, hitam, dan putih dengan sulur ukiran geometris tegas, terinspirasi visual ukiran rumah adat Batak.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "teras-jingga-hijau",
@@ -1070,7 +1102,8 @@
   "gerak": "kelopak",
   "interaksi": "none",
   "musik": "tradisional",
-  "deskripsi": "Jingga, hijau, dan krem dengan pinggiran segitiga berulang, ceria dan bernuansa Betawi."
+  "deskripsi": "Jingga, hijau, dan krem dengan pinggiran segitiga berulang, ceria dan bernuansa Betawi.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "sutra-kotak-magenta",
@@ -1103,7 +1136,8 @@
   "gerak": "kilau",
   "interaksi": "none",
   "musik": "tradisional",
-  "deskripsi": "Magenta dan emas dengan kisi kotak bergaya kain sutra tenun, anggun dan bernuansa Bugis."
+  "deskripsi": "Magenta dan emas dengan kisi kotak bergaya kain sutra tenun, anggun dan bernuansa Bugis.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "tenun-gading-kencana",
@@ -1136,7 +1170,8 @@
   "gerak": "cahaya",
   "interaksi": "none",
   "musik": "tradisional",
-  "deskripsi": "Gading, marun, dan emas dengan kisi tenun songket di bawah lengkung, bernuansa Palembang."
+  "deskripsi": "Gading, marun, dan emas dengan kisi tenun songket di bawah lengkung, bernuansa Palembang.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "konfeti-toga-biru",
@@ -1168,7 +1203,8 @@
   "gerak": "konfeti",
   "interaksi": "none",
   "musik": "ceria",
-  "deskripsi": "Biru cerah dan kuning emas dengan konfeti beterbangan dan bingkai polaroid, merayakan kelulusan."
+  "deskripsi": "Biru cerah dan kuning emas dengan konfeti beterbangan dan bingkai polaroid, merayakan kelulusan.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "toga-plum-malam",
@@ -1201,7 +1237,8 @@
   "gerak": "bintang",
   "interaksi": "none",
   "musik": "khidmat",
-  "deskripsi": "Ungu plum gelap dengan bintang tipis dan bingkai rapi, khidmat untuk syukuran wisuda."
+  "deskripsi": "Ungu plum gelap dengan bintang tipis dan bingkai rapi, khidmat untuk syukuran wisuda.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "batu-abu-korporat",
@@ -1234,7 +1271,8 @@
   "gerak": "none",
   "interaksi": "none",
   "musik": "khidmat",
-  "deskripsi": "Abu batu dan biru baja dengan garis geometris tipis, rapi untuk undangan rapat, peluncuran, atau gathering kantor."
+  "deskripsi": "Abu batu dan biru baja dengan garis geometris tipis, rapi untuk undangan rapat, peluncuran, atau gathering kantor.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "gala-teal-deco",
@@ -1267,7 +1305,8 @@
   "gerak": "cahaya",
   "interaksi": "none",
   "musik": "megah",
-  "deskripsi": "Teal gelap dan emas dengan lengkung art deco dan sorot cahaya, untuk gala dinner dan malam penghargaan."
+  "deskripsi": "Teal gelap dan emas dengan lengkung art deco dan sorot cahaya, untuk gala dinner dan malam penghargaan.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "kartu-terakota-senja",
@@ -1300,7 +1339,8 @@
   "gerak": "none",
   "interaksi": "kartu",
   "musik": "romantis",
-  "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir."
+  "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "tebar-bintang-biru-debu",
@@ -1334,7 +1374,8 @@
   "gerak": "bintang",
   "interaksi": "tebar",
   "musik": "romantis",
-  "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai."
+  "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "perahu-kecil-biru-laut",
@@ -1366,7 +1407,8 @@
   "gerak": "gelembung",
   "interaksi": "none",
   "musik": "lembut",
-  "deskripsi": "Biru laut lembut dengan perahu kertas dan ombak kecil, manis untuk aqiqah putra."
+  "deskripsi": "Biru laut lembut dengan perahu kertas dan ombak kecil, manis untuk aqiqah putra.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "layang-layang-hijau-pagi",
@@ -1398,7 +1440,8 @@
   "gerak": "awan",
   "interaksi": "none",
   "musik": "ceria",
-  "deskripsi": "Langit pagi hijau-kuning dengan layang-layang dan awan berarak, riang untuk syukuran khitan."
+  "deskripsi": "Langit pagi hijau-kuning dengan layang-layang dan awan berarak, riang untuk syukuran khitan.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "kebun-kelinci-wortel",
@@ -1430,7 +1473,8 @@
   "gerak": "konfeti",
   "interaksi": "none",
   "musik": "ceria",
-  "deskripsi": "Kebun sayur dengan kelinci, wortel, dan daun-daun lucu gambar sendiri, untuk ulang tahun anak."
+  "deskripsi": "Kebun sayur dengan kelinci, wortel, dan daun-daun lucu gambar sendiri, untuk ulang tahun anak.",
+  "ucapanPerHalaman": 4
  },
  {
   "id": "pagi-kota-pesisir",
@@ -1464,7 +1508,8 @@
   "gerak": "awan",
   "interaksi": "none",
   "musik": "ceria",
-  "deskripsi": "Pagi cerah di kota pesisir siluet, laut berkilau dan awan cel-shaded, segar seperti adegan film animasi."
+  "deskripsi": "Pagi cerah di kota pesisir siluet, laut berkilau dan awan cel-shaded, segar seperti adegan film animasi.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "taman-malam-kunang",
@@ -1497,7 +1542,8 @@
   "gerak": "cahaya",
   "interaksi": "none",
   "musik": "romantis",
-  "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis."
+  "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis.",
+  "ucapanPerHalaman": 6
  },
  {
   "id": "onyx-mutiara",
@@ -1530,7 +1576,8 @@
   "gerak": "kilau",
   "interaksi": "none",
   "musik": "megah",
-  "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern."
+  "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "burgundi-beludru",
@@ -1564,7 +1611,8 @@
   "gerak": "cahaya",
   "interaksi": "none",
   "musik": "megah",
-  "deskripsi": "Burgundi seperti beludru dengan bingkai art deco emas, hangat dan elegan untuk resepsi malam."
+  "deskripsi": "Burgundi seperti beludru dengan bingkai art deco emas, hangat dan elegan untuk resepsi malam.",
+  "ucapanPerHalaman": 8
  },
  {
   "id": "pasir-hangat",
@@ -1598,7 +1646,8 @@
   "gerak": "none",
   "interaksi": "none",
   "musik": "lembut",
-  "deskripsi": "Krem pasir dan cokelat susu dengan satu lengkung tenang, sederhana dan lega dibaca."
+  "deskripsi": "Krem pasir dan cokelat susu dengan satu lengkung tenang, sederhana dan lega dibaca.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "arang-tipis",
@@ -1632,7 +1681,8 @@
   "gerak": "none",
   "interaksi": "none",
   "musik": "lembut",
-  "deskripsi": "Arang gelap dengan garis geometris tipis dan tipografi modern, minimal dan tegas."
+  "deskripsi": "Arang gelap dengan garis geometris tipis dan tipografi modern, minimal dan tegas.",
+  "ucapanPerHalaman": 5
  },
  {
   "id": "sapuan-indigo",
@@ -1665,6 +1715,7 @@
   "gerak": "none",
   "interaksi": "none",
   "musik": "romantis",
-  "deskripsi": "Sapuan kuas tinta indigo membentuk ombak di atas kertas bertekstur, artistik dan tenang."
+  "deskripsi": "Sapuan kuas tinta indigo membentuk ombak di atas kertas bertekstur, artistik dan tenang.",
+  "ucapanPerHalaman": 6
  }
 ]

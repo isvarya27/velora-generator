@@ -67,6 +67,7 @@ function daftarTema() {
 }
 function pilihTema(t, diam) {
   tema = t; if (!t) return;
+  if (t.ucapanPerHalaman) $('perHalaman').value = t.ucapanPerHalaman;
   if (!laguManual) { var id = (SUASANA[t.musik] || [])[0] || (SUASANA.lembut || [])[0]; if (id) $('lagu').value = id; }
   var h = HARGA[t.tier];
   $('price').innerHTML = '<b>' + esc(t.nama) + '</b> · ' + esc(t.tier) + '<br>Web: ' + fmt(h[0]) + ' (Tanpa Foto ' + fmt(h[1]) + ')';
@@ -91,7 +92,7 @@ function data() {
     live: val('live'), dress: val('dress'), dressWarna: val('dressWarna').split(',').map(function (x) { return x.trim(); }).filter(Boolean),
     kisah: [].map.call(document.querySelectorAll('.kisah-i'), function (el) { return { judul: el.querySelector('.k_judul').value.trim(), isi: el.querySelector('.k_isi').value.trim() }; }).filter(function (k) { return k.judul || k.isi; }),
     rekening: [{ bank: val('bk1'), no: val('no1'), an: val('an1') }, { bank: val('bk2'), no: val('no2'), an: val('an2') }], alamatKado: val('alamatKado'),
-    penutup: val('penutup'), tuanRumah: val('tuanRumah'), sheet: val('sheet'), mulai: parseInt(val('mulai'), 10) || 0
+    penutup: val('penutup'), tuanRumah: val('tuanRumah'), sheet: val('sheet'), uuid: val('uuid'), perHalaman: parseInt(val('perHalaman'), 10) || (tema && tema.ucapanPerHalaman) || 5, mulai: parseInt(val('mulai'), 10) || 0
   };
 }
 function laguDipilih() { return LAGU.filter(function (l) { return l.id === $('lagu').value; })[0]; }
@@ -144,7 +145,7 @@ async function unduh() {
     if ($('lsrc').value === 'lib' && laguDipilih()) zip.file('musik.mp3', await ambil(laguDipilih().file));
     if ($('lsrc').value === 'up' && mp3) zip.file('musik.mp3', mp3);
     zip.file('apps-script.gs', await ambil('apps-script.gs')); zip.file('.nojekyll', '');
-    zip.file('BACA-DULU.txt', 'Paket undangan Velora (tema: ' + tema.nama + ')\n\n1. Unggah SEMUA isi folder ini ke hosting (mis. repo GitHub Pages).\n2. Link per tamu: buka link.html di Studio, atau ALAMAT/?to=Nama+Tamu\n3. Ucapan tersimpan: pasang apps-script.gs di Google Sheet (Ekstensi > Apps Script > Deploy Aplikasi web) lalu isi URL di Studio dan unduh ulang.\n4. Uji di HP sebelum dikirim ke klien.\n');
+    zip.file('BACA-DULU.txt', 'Paket undangan Velora (tema: ' + tema.nama + ')\nKode pesanan: ' + d.uuid + '\nLihat ucapan (untuk klien): https://isvarya27.github.io/velora-generator/ucapan.html?id=' + d.uuid + '\n\n1. Unggah SEMUA isi folder ini ke hosting (mis. repo GitHub Pages).\n2. Link per tamu: buka link.html di Studio, atau ALAMAT/?to=Nama+Tamu\n3. Ucapan tersimpan: pasang apps-script.gs di Google Sheet (Ekstensi > Apps Script > Deploy Aplikasi web) lalu isi URL di Studio dan unduh ulang.\n4. Uji di HP sebelum dikirim ke klien.\n');
     var blob = await zip.generateAsync({ type: 'blob' }), a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = 'undangan-' + (nama || 'velora') + '-' + tema.id + '.zip'; a.click();
     st.textContent = 'Paket diunduh (' + Math.round(blob.size / 1024) + ' KB).';
@@ -178,6 +179,9 @@ async function init() {
   [['f_cover', 'cover'], ['f_p1img', 'p1'], ['f_p2img', 'p2']].forEach(function (p) { $(p[0]).onchange = async function () { foto[p[1]] = this.files[0] ? await bacaFoto(this.files[0], 1100) : null; thumbs(); refresh(); }; });
   $('f_gal').onchange = async function () { galeri = []; for (var i = 0; i < Math.min(10, this.files.length); i++) galeri.push(await bacaFoto(this.files[i], 1000)); thumbs(); refresh(); };
   $('f_mp3').onchange = function () { mp3 = this.files[0] || null; mp3url = mp3 ? URL.createObjectURL(mp3) : ''; refresh(); };
+  var bu = function () { $('uuid').value = (crypto.randomUUID ? crypto.randomUUID() : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) { var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 3 | 8)).toString(16); })); refresh(); };
+  bu(); $('uuidBaru').onclick = bu;
+  try { var cf = await (await fetch('config.json')).json(); if (cf.pusatUcapan && !$('sheet').value) $('sheet').value = cf.pusatUcapan; } catch (e) {}
   $('dl').onclick = unduh;
   $('op').onclick = function () { var w = window.open('', '_blank'); w.document.write('<base href="' + location.href.replace(/[^/]*$/, '') + '">' + render(false)); w.document.close(); };
   var q = new URLSearchParams(location.search);

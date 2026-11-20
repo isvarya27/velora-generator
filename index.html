@@ -88,7 +88,10 @@ button.o{background:transparent;border:1px solid var(--rose);color:var(--rose)}b
 <div id="x_up" hidden><label>File mp3</label><input type="file" id="f_mp3" accept="audio/mpeg,.mp3"></div>
 <div id="x_yt" hidden><label>Link YouTube</label><input id="yt" placeholder="https://youtu.be/..."></div>
 <label>Mulai dari detik ke-</label><input type="number" id="mulai" value="0" min="0">
-<label>URL Google Apps Script untuk ucapan (opsional)</label><input id="sheet" placeholder="https://script.google.com/macros/s/.../exec">
+<div class="row"><div><label>Kode pesanan (UUID)</label><input id="uuid" readonly></div><div><label>Ucapan per halaman</label><input type="number" id="perHalaman" min="1" max="50"></div></div>
+<button type="button" class="o mini" id="uuidBaru" style="margin-top:6px">Buat kode pesanan baru</button>
+<label>URL pusat ucapan (Apps Script, sekali pasang untuk semua pesanan)</label><input id="sheet" placeholder="https://script.google.com/macros/s/.../exec">
+<div class="hint">Semua ucapan tersimpan di satu Sheet dan ditandai kode pesanan. Klien melihat ucapannya lewat <code>ucapan.html?id=KODE</code>.</div>
 <label>Alamat undangan nanti (untuk foto preview WhatsApp)</label><input id="base" placeholder="https://namauser.github.io/nama-acara/">
 </fieldset>
 </form>
