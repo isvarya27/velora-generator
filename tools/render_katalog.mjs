@@ -27,8 +27,8 @@ const modeDari = a => ['aqiqah', 'khitan'].includes(a) ? 'anak' : ['ultah-anak',
 for (const t of themes) {
   const a = t.acara[0], d = JSON.parse(JSON.stringify(contoh[modeDari(a)]));
   if (a === 'khitan') { d.judulAcara = 'Tasyakuran Khitan'; d.kutipan = ''; d.p1 = { nama: 'Raka Velora Putra', panggil: 'Raka', status: 'Putra pertama', ayah: 'Bapak Arif', ibu: 'Ibu Sari' }; d.sesi[0].nama = 'Acara Khitanan'; }
-  const id = (suasana[t.musik] || [])[0], l = lagu.find(x => x.id === id);
-  const html = E.render(d, t, { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../' })
+  const id = (suasana[t.musik] || [])[0] || (suasana.lembut || [])[0], l = lagu.find(x => x.id === id);
+  const html = E.render(d, t, { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' })
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
   console.log(t.id, html.length);

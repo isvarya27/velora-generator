@@ -67,7 +67,7 @@ function daftarTema() {
 }
 function pilihTema(t, diam) {
   tema = t; if (!t) return;
-  if (!laguManual) { var id = (SUASANA[t.musik] || [])[0]; if (id) $('lagu').value = id; }
+  if (!laguManual) { var id = (SUASANA[t.musik] || [])[0] || (SUASANA.lembut || [])[0]; if (id) $('lagu').value = id; }
   var h = HARGA[t.tier];
   $('price').innerHTML = '<b>' + esc(t.nama) + '</b> · ' + esc(t.tier) + '<br>Web: ' + fmt(h[0]) + ' (Tanpa Foto ' + fmt(h[1]) + ')';
   if (!diam) daftarTema();

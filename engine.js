@@ -97,7 +97,7 @@
       '*{box-sizing:border-box;margin:0}[hidden]{display:none!important}html{scroll-behavior:smooth}body{font-family:var(--bf);color:var(--teks);background:var(--bg3);-webkit-font-smoothing:antialiased}' +
       '.wrap{max-width:480px;margin:0 auto;min-height:100vh;position:relative;overflow:hidden;background:' + polaLatar(t.ornamen, w.emas) + ',linear-gradient(180deg,var(--bg1),var(--bg2) 50%,var(--bg3));box-shadow:0 0 50px rgba(0,0,0,.18)}' +
       'section{position:relative;z-index:2;padding:64px 28px;text-align:center}.alt{background:color-mix(in srgb,var(--kartu) ' + (gelap ? 6 : 45) + '%,transparent)}' +
-      '.ey{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);opacity:.8}' +
+      '.ey{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);font-weight:500}' +
       'h1,h2,h3{font-family:var(--hf);color:var(--ink);font-weight:400}h2{font-size:34px;line-height:1.15;margin:10px 0 16px}h3{font-size:24px}.sk{font-family:var(--sf);font-weight:400}' +
       'p{font-size:14.5px;line-height:1.8}.dvd{display:block;width:120px;height:24px;margin:18px auto;color:var(--emas)}' +
       '.card{background:var(--kartu);border-radius:var(--r);padding:24px 20px;margin:16px 0;box-shadow:0 6px 24px rgba(0,0,0,' + (gelap ? '.35' : '.07') + ');border:1px solid color-mix(in srgb,var(--emas) 45%,transparent)}' +
@@ -246,9 +246,9 @@
     h.push('</div>');
 
     var head = '<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(d.judulAcara + ' ' + namaUtama) + '</title>' + (o.og || '') +
-      '<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="' + w.bg1 + '"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="' + fontLink(t.font) + '" rel="stylesheet"><style>' + css(t) + '</style></head><body' + (t.gelap ? ' class="gelap"' : '') + '><div class="wrap">' + gerak(t.gerak, t.id);
-    var tail = '</div><div class="lb" id="lb"><img id="lbi" alt=""></div><button id="mus" onclick="tg()" aria-label="Putar atau jeda musik">&#9835;</button>' + (o.audio ? '<audio id="au" src="' + esc(o.audio) + '" loop preload="auto"></audio>' : '') +
-      runtime({ sheet: d.sheet, key: 'ucapan-' + String(namaUtama).toLowerCase().replace(/[^a-z0-9]+/g, '-'), target: iso(s1), mulai: d.mulai, yt: o.yt }) + '</body></html>';
+      '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%236B5560%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-size=%2728%27 text-anchor=%27middle%27 fill=%27%23fff%27 font-family=%27serif%27%3EVL%3C/text%3E%3C/svg%3E"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="' + w.bg1 + '"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="' + fontLink(t.font) + '" rel="stylesheet"><style>' + css(t) + '</style></head><body' + (t.gelap ? ' class="gelap"' : '') + '><div class="wrap">' + gerak(t.gerak, t.id);
+    var tail = '</div><div class="lb" id="lb"><img id="lbi" alt=""></div><button id="mus" onclick="tg()" aria-label="Putar atau jeda musik">&#9835;</button>' + (o.audio ? '<audio id="au" src="' + esc(o.audio) + '" loop preload="none"></audio>' : '') +
+      runtime({ sheet: d.sheet, key: 'ucapan-' + (o.kunci || '') + String(namaUtama).toLowerCase().replace(/[^a-z0-9]+/g, '-'), target: iso(s1), mulai: d.mulai, yt: o.yt }) + '</body></html>';
     return head + h.join('\n') + tail;
   }
   function awanBawah() {
