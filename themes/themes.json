@@ -479,5 +479,393 @@
   "gerak": "kelopak",
   "musik": "lembut",
   "deskripsi": "Merah muda peony dengan bingkai polaroid, manis untuk putri kecil."
+ },
+ {
+  "id": "amplop-champagne",
+  "nama": "Amplop Champagne",
+  "koleksi": "Interaktif",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Bodoni Moda",
+   "isi": "Poppins",
+   "skrip": "Petit Formal Script"
+  },
+  "warna": {
+   "bg1": "#FBF7F0",
+   "bg2": "#F4ECDF",
+   "bg3": "#EFE4D3",
+   "ink": "#3B2F26",
+   "teks": "#3B2F26",
+   "aksen": "#7A5A3A",
+   "emas": "#C7A97A",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "geometris",
+  "gerak": "cahaya",
+  "interaksi": "amplop",
+  "musik": "romantis",
+  "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi."
+ },
+ {
+  "id": "tebar-kelopak-lavender",
+  "nama": "Tebar Kelopak Lavender",
+  "koleksi": "Interaktif",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": false,
+  "font": {
+   "judul": "Gilda Display",
+   "isi": "Poppins",
+   "skrip": "Allura"
+  },
+  "warna": {
+   "bg1": "#F8F5FC",
+   "bg2": "#EEE8F7",
+   "bg3": "#F6EEF3",
+   "ink": "#3F3358",
+   "teks": "#3A3048",
+   "aksen": "#6A4E8C",
+   "emas": "#C3B2DE",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "bunga",
+  "gerak": "kelopak",
+  "interaksi": "tebar",
+  "musik": "romantis",
+  "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua."
+ },
+ {
+  "id": "mega-hijau-kencana",
+  "nama": "Mega Hijau Kencana",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": false,
+  "font": {
+   "judul": "Marcellus",
+   "isi": "Poppins",
+   "skrip": "Tangerine"
+  },
+  "warna": {
+   "bg1": "#F3F5EC",
+   "bg2": "#E6ECDA",
+   "bg3": "#EFE7D2",
+   "ink": "#24402F",
+   "teks": "#26362B",
+   "aksen": "#2F5A3E",
+   "emas": "#B8934E",
+   "kartu": "#FFFDF6"
+  },
+  "ornamen": "mega",
+  "gerak": "cahaya",
+  "musik": "tradisional",
+  "deskripsi": "Hijau daun dan emas dengan ornamen awan berlapis gambar Velora di bawah lengkung gapura, teduh untuk pernikahan adat Sunda."
+ },
+ {
+  "id": "songket-merah-saga",
+  "nama": "Songket Merah Saga",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": true,
+  "font": {
+   "judul": "Cinzel Decorative",
+   "isi": "Poppins",
+   "skrip": "Rouge Script"
+  },
+  "warna": {
+   "bg1": "#3A0E12",
+   "bg2": "#4A1418",
+   "bg3": "#2A0A0D",
+   "ink": "#E8C77E",
+   "teks": "#F7EDE0",
+   "aksen": "#8E2A2A",
+   "emas": "#D4A64F",
+   "kartu": "#4E171B"
+  },
+  "ornamen": "songket",
+  "gerak": "kilau",
+  "musik": "tradisional",
+  "deskripsi": "Merah tua dengan kisi belah ketupat emas bergaya tenun buatan Velora, berkilau megah untuk pernikahan adat Minang."
+ },
+ {
+  "id": "sulur-teal-kencana",
+  "nama": "Sulur Teal Kencana",
+  "koleksi": "Adat",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Cormorant Upright",
+   "isi": "Poppins",
+   "skrip": "Monsieur La Doulaise"
+  },
+  "warna": {
+   "bg1": "#F1F6F5",
+   "bg2": "#E2EEEC",
+   "bg3": "#EEE9F3",
+   "ink": "#1F4A4A",
+   "teks": "#22393A",
+   "aksen": "#1E6363",
+   "emas": "#B8954E",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "ukiran",
+  "gerak": "kelopak",
+  "musik": "tradisional",
+  "deskripsi": "Teal dan ungu lembut dengan sulur ukiran emas gambar Velora di sampul layar penuh, anggun untuk pernikahan adat Bali."
+ },
+ {
+  "id": "pesta-stroberi-manis",
+  "nama": "Pesta Stroberi Manis",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "ultah-anak"
+  ],
+  "foto": true,
+  "layout": "full",
+  "gelap": false,
+  "font": {
+   "judul": "Grandstander",
+   "isi": "Nunito",
+   "skrip": "Patrick Hand"
+  },
+  "warna": {
+   "bg1": "#FFF6F7",
+   "bg2": "#FFE8EE",
+   "bg3": "#FFF3E3",
+   "ink": "#8A2E4E",
+   "teks": "#4A2A36",
+   "aksen": "#B03A62",
+   "emas": "#F2A7BC",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "konfeti",
+  "gerak": "konfeti",
+  "musik": "ceria",
+  "deskripsi": "Merah muda stroberi dengan hujan konfeti di sampul layar penuh, ramai dan manis untuk pesta ulang tahun putri kecil."
+ },
+ {
+  "id": "roket-piksel",
+  "nama": "Roket Piksel",
+  "koleksi": "Kids",
+  "tier": "Standar",
+  "acara": [
+   "ultah-anak",
+   "khitan"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": false,
+  "font": {
+   "judul": "Lilita One",
+   "isi": "Nunito",
+   "skrip": "Gochi Hand"
+  },
+  "warna": {
+   "bg1": "#F0F7FF",
+   "bg2": "#E1EEFF",
+   "bg3": "#FFF7DF",
+   "ink": "#123A6B",
+   "teks": "#1C2F4A",
+   "aksen": "#1F5FA8",
+   "emas": "#F5B935",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "piksel",
+  "gerak": "bintang",
+  "musik": "ceria",
+  "deskripsi": "Biru angkasa dan kuning dengan bingkai bergaya piksel dan roket kecil, seru untuk ulang tahun atau khitan jagoan."
+ },
+ {
+  "id": "kilau-galaksi",
+  "nama": "Kilau Galaksi",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "split",
+  "gelap": true,
+  "font": {
+   "judul": "Prata",
+   "isi": "Poppins",
+   "skrip": "Italianno"
+  },
+  "warna": {
+   "bg1": "#0B1020",
+   "bg2": "#151A36",
+   "bg3": "#1F1440",
+   "ink": "#F2D9A0",
+   "teks": "#EEF0FA",
+   "aksen": "#5B3FA8",
+   "emas": "#C9B27A",
+   "kartu": "#161C38"
+  },
+  "ornamen": "bintang",
+  "gerak": "kilau",
+  "musik": "megah",
+  "deskripsi": "Langit galaksi gelap yang berkelip pelan dengan kilau bintang, sinematik di tata letak terbelah."
+ },
+ {
+  "id": "salju-pagi",
+  "nama": "Salju Pagi",
+  "koleksi": "Motion",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "card",
+  "gelap": false,
+  "font": {
+   "judul": "Libre Baskerville",
+   "isi": "Poppins",
+   "skrip": "Dancing Script"
+  },
+  "warna": {
+   "bg1": "#F5F9FC",
+   "bg2": "#E9F1F8",
+   "bg3": "#F2F2F7",
+   "ink": "#22384F",
+   "teks": "#283848",
+   "aksen": "#3A5F86",
+   "emas": "#B9C9DA",
+   "kartu": "#FFFFFF"
+  },
+  "ornamen": "awan",
+  "gerak": "salju",
+  "musik": "lembut",
+  "deskripsi": "Butir salju turun pelan di atas biru pagi yang bersih, tenang dan sejuk dari layar pertama."
+ },
+ {
+  "id": "lampion-malam-festival",
+  "nama": "Lampion Malam Festival",
+  "koleksi": "Anime",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement",
+   "ultah"
+  ],
+  "foto": true,
+  "layout": "polaroid",
+  "gelap": true,
+  "font": {
+   "judul": "Kosugi Maru",
+   "isi": "Zen Kaku Gothic New",
+   "skrip": "Klee One"
+  },
+  "warna": {
+   "bg1": "#14193A",
+   "bg2": "#2A2350",
+   "bg3": "#4A2C4A",
+   "ink": "#FFC774",
+   "teks": "#F7F0E6",
+   "aksen": "#C2462E",
+   "emas": "#F29A4A",
+   "kartu": "#1E2448"
+  },
+  "ornamen": "gelombang",
+  "gerak": "cahaya",
+  "musik": "romantis",
+  "deskripsi": "Malam festival musim panas dengan lampion bercahaya di tepi sungai siluet kota, hangat seperti adegan animasi orisinal."
+ },
+ {
+  "id": "botani-cat-minyak",
+  "nama": "Botani Cat Minyak",
+  "koleksi": "Art",
+  "tier": "Premium",
+  "acara": [
+   "pernikahan",
+   "engagement"
+  ],
+  "foto": true,
+  "layout": "frame",
+  "gelap": false,
+  "font": {
+   "judul": "Fraunces",
+   "isi": "Poppins",
+   "skrip": "Homemade Apple"
+  },
+  "warna": {
+   "bg1": "#F7F2E7",
+   "bg2": "#EEE5D2",
+   "bg3": "#E8E6D6",
+   "ink": "#2E3A22",
+   "teks": "#33342A",
+   "aksen": "#5A6B32",
+   "emas": "#B08A4A",
+   "kartu": "#FFFDF7"
+  },
+  "ornamen": "daun",
+  "gerak": "none",
+  "musik": "romantis",
+  "deskripsi": "Daun dan bunga botani bertekstur sapuan cat minyak dalam bingkai galeri, kaya warna dan klasik."
+ },
+ {
+  "id": "navy-kencana",
+  "nama": "Navy Kencana",
+  "koleksi": "Luxury",
+  "tier": "Signature",
+  "acara": [
+   "pernikahan",
+   "formal"
+  ],
+  "foto": true,
+  "layout": "arch",
+  "gelap": true,
+  "font": {
+   "judul": "Cormorant Garamond",
+   "isi": "Poppins",
+   "skrip": "Herr Von Muellerhoff"
+  },
+  "warna": {
+   "bg1": "#0E1A33",
+   "bg2": "#13234A",
+   "bg3": "#0A1328",
+   "ink": "#E6C887",
+   "teks": "#F2EEE4",
+   "aksen": "#8A6A2E",
+   "emas": "#C9A66B",
+   "kartu": "#16264A"
+  },
+  "ornamen": "geometris",
+  "gerak": "kilau",
+  "musik": "megah",
+  "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam."
  }
 ]
