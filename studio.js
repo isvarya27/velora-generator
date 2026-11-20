@@ -233,3 +233,52 @@ async function init() {
   wire(); refresh();
 }
 init();
+
+/* ---------- Template WP (Premium dkk) — hanya di Studio internal WordPress ---------- */
+(function () {
+  var w = window.VELORA_WP; if (!w) return;
+  var fm = document.getElementById('fm'); if (!fm) return;
+  var box = document.createElement('div');
+  box.innerHTML = '<fieldset><legend>Sumber desain</legend><div class="chips" id="src"><button type="button" class="on" data-s="studio">Tema Studio (otomatis)</button><button type="button" data-s="wp">Template WP: Premium dkk (edit di Elementor)</button></div>' +
+    '<div class="hint">Template WP hanya untuk tim internal (lisensi Luxee). Pesanan disalin ke /u/nama-klien/ lalu diedit di Elementor.</div></fieldset>' +
+    '<div id="wpbox" hidden><fieldset><legend>Template WP</legend><div class="chips" id="wpkat"></div><div class="tg" id="wpgrid" style="margin-top:10px"></div></fieldset>' +
+    '<fieldset id="wpform" hidden><legend>Buat pesanan dari <span id="wpnama"></span></legend>' +
+    '<label>Alamat undangan: /u/…</label><input id="wpslug" placeholder="nama-klien"><div class="row"><div><label>Nama klien</label><input id="wpklien"></div><div><label>WhatsApp klien</label><input id="wpwa"></div></div>' +
+    '<label>Masa aktif (bulan)</label><input type="number" id="wpbulan" value="12" min="1" max="36"><br><br><button type="button" id="wpbuat">Buat pesanan</button><div class="hint" id="wpst" style="margin-top:8px"></div></fieldset></div>';
+  fm.insertBefore(box, fm.firstChild.nextSibling);
+  var lain = [].slice.call(fm.children).filter(function (el) { return el !== box && el.tagName === 'FIELDSET'; });
+  var data = [], kat = 'Semua', pilih = null;
+  function e(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function gambar() {
+    var ks = ['Semua']; data.forEach(function (t) { if (ks.indexOf(t.kategori) < 0) ks.push(t.kategori); });
+    $('wpkat').innerHTML = ks.map(function (k) { return '<button type="button" class="' + (k === kat ? 'on' : '') + '" data-k="' + e(k) + '">' + e(k) + '</button>'; }).join('');
+    $('wpgrid').innerHTML = data.filter(function (t) { return kat === 'Semua' || t.kategori === kat; }).map(function (t) {
+      return '<div class="tc' + (pilih && pilih.slug === t.slug ? ' on' : '') + '" data-s="' + e(t.slug) + '" role="button" tabindex="0">' + (t.sampul ? '<img src="' + e(t.sampul) + '" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block">' : '') +
+        '<div class="in"><b>' + e(t.nama.replace(/^Velora /, '')) + '</b><small>' + e(t.kategori) + ' · ' + e(t.tier) + '</small><a href="' + e(t.demo) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lihat demo ↗</a></div></div>';
+    }).join('');
+  }
+  $('src').onclick = function (ev) {
+    var b = ev.target.closest('button'); if (!b) return;
+    [].forEach.call($('src').children, function (x) { x.classList.toggle('on', x === b); });
+    var wp = b.dataset.s === 'wp'; $('wpbox').hidden = !wp; lain.forEach(function (f) { f.hidden = wp; });
+    document.querySelector('.pv').hidden = wp; $('price').hidden = wp;
+    if (wp && !data.length) fetch(w.rest + 'template-wp', { headers: { 'X-WP-Nonce': w.nonce }, credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) { data = j; gambar(); });
+  };
+  $('wpkat').onclick = function (ev) { var b = ev.target.closest('button'); if (b) { kat = b.dataset.k; gambar(); } };
+  $('wpgrid').onclick = function (ev) {
+    var c = ev.target.closest('.tc'); if (!c) return;
+    pilih = data.filter(function (t) { return t.slug === c.dataset.s; })[0]; gambar();
+    $('wpform').hidden = false; $('wpnama').textContent = pilih.nama.replace(/^Velora /, ''); $('wpform').scrollIntoView({ behavior: 'smooth' });
+    var ps = w.pesanan; if (ps) { $('wpklien').value = ps.klien || ''; $('wpwa').value = ps.wa || ''; $('wpslug').value = ps.slug || (ps.klien || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  };
+  $('wpbuat').onclick = function () {
+    if (!pilih) return; var slug = $('wpslug').value.toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, '');
+    if (slug.length < 3) { $('wpst').textContent = 'Isi alamat minimal 3 huruf.'; return; }
+    $('wpst').textContent = 'Membuat pesanan…';
+    fetch(w.rest + 'klon', { method: 'POST', credentials: 'same-origin', headers: { 'X-WP-Nonce': w.nonce, 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ template: pilih.slug, slug: slug, klien: $('wpklien').value, wa: $('wpwa').value, bulan: +$('wpbulan').value || 12, uuid: (w.pesanan && w.pesanan.uuid) || '' }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw new Error(j.message || 'gagal'); return j; }); })
+      .then(function (j) { $('wpst').innerHTML = 'Pesanan dibuat: <a href="' + e(j.url) + '" target="_blank" rel="noopener">' + e(j.url) + '</a> · aktif s.d. ' + e(j.sampai) + '<br><a href="' + e(j.edit) + '" target="_blank" rel="noopener"><b>Edit nama, foto, dan teks di Elementor →</b></a>'; })
+      .catch(function (er) { $('wpst').textContent = 'Gagal: ' + er.message; });
+  };
+})();

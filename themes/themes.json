@@ -245,7 +245,7 @@
    "engagement",
    "formal"
   ],
-  "foto": false,
+  "foto": true,
   "layout": "card",
   "gelap": false,
   "font": {
@@ -1658,7 +1658,7 @@
    "engagement",
    "formal"
   ],
-  "foto": false,
+  "foto": true,
   "layout": "arch",
   "gelap": false,
   "font": {
