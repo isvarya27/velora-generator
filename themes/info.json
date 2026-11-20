@@ -1,0 +1,26 @@
+{
+ "acara": {"pernikahan":"Pernikahan","engagement":"Lamaran","aqiqah":"Aqiqah","khitan":"Khitan","ultah-anak":"Ulang tahun anak","ultah":"Ulang tahun","wisuda":"Wisuda","formal":"Acara resmi"},
+ "layout": {"arch":"Bingkai lengkung","full":"Foto layar penuh","frame":"Bingkai ganda","polaroid":"Polaroid","split":"Foto atas melengkung","card":"Kartu bulat"},
+ "ornamen": {"none":"Polos","daun":"Ranting daun","bunga":"Bunga","sakura":"Bunga sakura","bintang":"Bintang","awan":"Awan","batik":"Motif batik","geometris":"Garis geometris","artdeco":"Art deco","gelombang":"Gelombang","konfeti":"Konfeti","piksel":"Piksel","songket":"Motif songket","ukiran":"Sulur ukiran","mega":"Awan berlapis","bulan":"Bulan sabit & lentera"},
+ "gerak": {"none":"Tanpa animasi","kelopak":"Kelopak berjatuhan","bintang":"Bintang berkelip","awan":"Awan melayang","gelembung":"Gelembung naik","kilau":"Kilau","salju":"Salju turun","konfeti":"Konfeti turun","cahaya":"Cahaya lembut"},
+ "interaksi": {"none":"","amplop":"Amplop dibuka saat diketuk","tebar":"Ketuk layar menebar kelopak","kartu":"Bagian muncul seperti kartu dibalik"},
+ "section": [
+  ["Sampul + nama tamu (link per tamu)", "Standar"],
+  ["Pembuka & kutipan/doa", "Standar"],
+  ["Hitung mundur", "Standar"],
+  ["Profil mempelai / anak / tokoh", "Standar"],
+  ["Waktu & tempat + peta (hingga 3 sesi)", "Standar"],
+  ["Galeri foto (Standar 10, Premium 20, Signature 30)", "Standar"],
+  ["Ucapan & konfirmasi kehadiran + jumlah tamu", "Standar"],
+  ["Penutup & catatan maaf nama/gelar", "Standar"],
+  ["Musik latar", "Standar"],
+  ["Tombol Simpan Tanggal (Google Calendar)", "Premium"],
+  ["Live streaming", "Premium"],
+  ["Dresscode", "Premium"],
+  ["Kisah / perjalanan", "Premium"],
+  ["Hadiah: rekening + tombol Salin & alamat kado", "Premium"],
+  ["Ucapan tersimpan di Google Sheet", "Signature"],
+  ["Foto pratinjau saat link dibagikan (WhatsApp)", "Signature"]
+ ],
+ "catatan": "Setiap bagian bisa disembunyikan sesuai permintaan. Semua tema tersedia versi Pakai Foto dan Tanpa Foto."
+}
