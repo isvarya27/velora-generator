@@ -1,0 +1,261 @@
+{
+ "id": "taman-merak",
+ "nama": "Taman Merak Zamrud",
+ "gaya": "kolase litograf PD berwarna, dipetakan ke palet tema",
+ "tint": [
+  "zamrud",
+  "ivory"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "taman-merak/latar-daun.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    844
+   ],
+   "z": 0,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "rasio": 0.46,
+   "op": 0.08,
+   "warnai": "aksen",
+   "tanpaVideo": true,
+   "tanpaFoto": true,
+   "opTerang": 0.05
+  },
+  {
+   "file": "taman-merak/{tint}/dahan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 76.92,
+   "px": [
+    300,
+    190
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0.12
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -2.5,
+   "amp": 1.5
+  },
+  {
+   "file": "taman-merak/{tint}/merak-ekor.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 16.82,
+   "w": 12.82,
+   "px": [
+    50,
+    185
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 12,
+   "delay": -6,
+   "amp": 1,
+   "gerakMin": "Signature"
+  },
+  {
+   "file": "taman-merak/{tint}/merak.webp",
+   "jangkar": "tr",
+   "x": 2.56,
+   "y": 3.32,
+   "w": 28.21,
+   "px": [
+    110,
+    180
+   ],
+   "z": 4,
+   "pivot": [
+    0.5,
+    1
+   ],
+   "gerak": "mekar",
+   "dur": 0.7,
+   "delay": 0.07,
+   "amp": 0
+  },
+  {
+   "file": "taman-merak/{tint}/kiri-atas.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 38.46,
+   "px": [
+    150,
+    170
+   ],
+   "z": 2,
+   "pivot": [
+    0,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 9,
+   "delay": -4,
+   "amp": 2
+  },
+  {
+   "file": "taman-merak/{tint}/rumpun-kiri-bawah.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 61.54,
+   "px": [
+    240,
+    170
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 11,
+   "delay": -7,
+   "amp": 1.5,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "taman-merak/{tint}/pakis-tegak.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 17.06,
+   "w": 14.1,
+   "px": [
+    55,
+    200
+   ],
+   "z": 2,
+   "pivot": [
+    0.36,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 8,
+   "delay": -3,
+   "amp": 2,
+   "min": "Signature",
+   "tanpaVideo": true
+  },
+  {
+   "file": "taman-merak/{tint}/rumpun-kanan-bawah.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 53.85,
+   "px": [
+    210,
+    165
+   ],
+   "z": 3,
+   "pivot": [
+    1,
+    1
+   ],
+   "gerak": "mekar",
+   "dur": 0.7,
+   "delay": 0.14,
+   "amp": 0
+  },
+  {
+   "file": "taman-merak/burung-siluet.svg",
+   "jangkar": "tl",
+   "x": 38.46,
+   "y": 10.9,
+   "w": 8.72,
+   "px": [
+    34,
+    20
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "melintas",
+   "dur": 26,
+   "delay": -8,
+   "amp": 10,
+   "rasio": 1.7,
+   "op": 0.28,
+   "warnai": "ink",
+   "min": "Signature",
+   "tanpaFoto": true
+  },
+  {
+   "file": "taman-merak/{tint}/tirai-kiri.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    0,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "ivory"
+   ]
+  },
+  {
+   "file": "taman-merak/{tint}/tirai-kanan.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    1,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "ivory"
+   ]
+  }
+ ],
+ "catatan": "kiri-atas = daun pisang + pakis (pengganti palem kipas: pelat palem PD terlalu rapat untuk dipotong per daun). opTerang = op latar untuk tint terang (ivory). merak-ekor terpisah dari badan; badan menutup pangkal ekor (z lebih tinggi)."
+}

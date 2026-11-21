@@ -1,0 +1,222 @@
+{
+ "id": "sakura-layang",
+ "nama": "Dahan Musim Semi & Burung Layang",
+ "gaya": "cat air datar, digambar sendiri (SVG)",
+ "tint": [
+  "senja",
+  "kencana"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "sakura-layang/{tint}/awan-bawah.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    170
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "op": 0.6,
+   "tanpaFoto": true
+  },
+  {
+   "file": "sakura-layang/{tint}/dahan-kiri-atas.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 79.49,
+   "px": [
+    310,
+    150
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    0.16
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -2.5,
+   "amp": 1.5
+  },
+  {
+   "file": "sakura-layang/{tint}/ranting-kanan-atas.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 28.21,
+   "px": [
+    110,
+    140
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 8,
+   "delay": -5,
+   "amp": 2
+  },
+  {
+   "file": "sakura-layang/{tint}/dahan-kanan-bawah.svg",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    200
+   ],
+   "z": 3,
+   "pivot": [
+    1,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 11,
+   "delay": -7,
+   "amp": 1.5,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "sakura-layang/{tint}/kuntum-kiri-bawah.svg",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 35.9,
+   "px": [
+    140,
+    90
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0
+  },
+  {
+   "file": "sakura-layang/layang-1.svg",
+   "jangkar": "tl",
+   "x": 38.46,
+   "y": 8.5,
+   "w": 10.26,
+   "px": [
+    40,
+    24
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "melintas",
+   "dur": 22,
+   "delay": -6,
+   "amp": 10,
+   "rasio": 1.67,
+   "op": 0.3,
+   "cermin": true,
+   "warnai": "ink",
+   "min": "Signature",
+   "tanpaFoto": true
+  },
+  {
+   "file": "sakura-layang/layang-2.svg",
+   "jangkar": "tl",
+   "x": 58.97,
+   "y": 13.0,
+   "w": 8.21,
+   "px": [
+    32,
+    20
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "melintas",
+   "dur": 28,
+   "delay": -9,
+   "amp": 8,
+   "rasio": 1.6,
+   "op": 0.22,
+   "cermin": true,
+   "warnai": "ink",
+   "min": "Signature",
+   "tanpaFoto": true,
+   "tanpaVideo": true
+  },
+  {
+   "file": "sakura-layang/{tint}/tirai-kiri.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    0,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "kencana"
+   ]
+  },
+  {
+   "file": "sakura-layang/{tint}/tirai-kanan.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    1,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "kencana"
+   ]
+  }
+ ],
+ "catatan": "layang-1/2 melintas kanan->kiri (cermin); posisi x melintas diatur engine (a-melintas). layang-2 hanya tanpa video."
+}

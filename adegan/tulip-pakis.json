@@ -1,0 +1,199 @@
+{
+ "id": "tulip-pakis",
+ "nama": "Tulip, Peoni & Pakis",
+ "gaya": "litograf botani PD berwarna lembut, dipetakan ke palet tema",
+ "tint": [
+  "galeri",
+  "catair",
+  "blush",
+  "terakota"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "tulip-pakis/{tint}/latar-kertas.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    844
+   ],
+   "z": 0,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "op": 0.12,
+   "tanpaVideo": true,
+   "tanpaFoto": true
+  },
+  {
+   "file": "tulip-pakis/{tint}/tulip-gantung.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 41.03,
+   "px": [
+    160,
+    200
+   ],
+   "z": 3,
+   "pivot": [
+    0.25,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 9,
+   "delay": -2,
+   "amp": 2
+  },
+  {
+   "file": "tulip-pakis/{tint}/pakis-kanan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 43.59,
+   "px": [
+    170,
+    210
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 11,
+   "delay": -5,
+   "amp": 1.5,
+   "kecualiTint": [
+    "blush"
+   ]
+  },
+  {
+   "file": "tulip-pakis/{tint}/daun-bulat-kanan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 43.59,
+   "px": [
+    170,
+    210
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 11,
+   "delay": -5,
+   "amp": 1.5,
+   "hanyaTint": [
+    "blush"
+   ]
+  },
+  {
+   "file": "tulip-pakis/{tint}/peoni-kiri-bawah.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 56.41,
+   "px": [
+    220,
+    170
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -6,
+   "amp": 1.5,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "tulip-pakis/{tint}/tulip-tegak.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 8.77,
+   "w": 14.87,
+   "px": [
+    58,
+    230
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 8,
+   "delay": -3,
+   "amp": 2,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "tulip-pakis/{tint}/daun-kanan-bawah.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 48.72,
+   "px": [
+    190,
+    150
+   ],
+   "z": 4,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0
+  },
+  {
+   "file": "tulip-pakis/{tint}/kupu.webp",
+   "jangkar": "tl",
+   "x": 38.46,
+   "y": 82.94,
+   "w": 7.69,
+   "px": [
+    30,
+    24
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "min": "Premium",
+   "catatanPos": "Premium: diam di atas peoni kiri-bawah; Signature: melintas diagonal kiri-bawah->kanan-atas lewat pita kiri",
+   "gerakSignature": {
+    "gerak": "melintas",
+    "dur": 24,
+    "op": 0.35
+   }
+  }
+ ],
+ "catatan": "blush (Kids) memakai daun-bulat-kanan-atas sebagai pengganti pakis; kupu: Premium diam, Signature melintas (gerakSignature). tirai B7 tidak dibuat (terakota memakai ix-kartu)."
+}

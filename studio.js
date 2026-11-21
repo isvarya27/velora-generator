@@ -1,3 +1,4 @@
+var ADG = {};
 /* Velora Studio: UI generator multi-acara + multi-tema. Memakai engine.js. */
 'use strict';
 var $ = function (id) { return document.getElementById(id); };
@@ -113,6 +114,7 @@ function render(zip) {
     o.og = '<meta property="og:type" content="website"><meta property="og:title" content="' + esc(d.judulAcara + ' ' + (d.p1.panggil || d.p1.nama) + (d.mode === 'pasangan' ? ' & ' + (d.p2.panggil || d.p2.nama) : '')) + '"><meta property="og:description" content="' + esc(VeloraEngine.tglPanjang(d.sesi[0] && d.sesi[0].tgl) + '. Kami mengundang Anda untuk hadir dan memberikan doa restu.') + '"><meta property="og:image" content="' + esc(b + 'img/og.jpg') + '"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">';
   }
   Object.assign(o, vid);
+  if (tema && tema.adegan && ADG[tema.adegan]) { o.adegan = ADG[tema.adegan]; o.adeganBase = zip ? new URL('adegan/', document.baseURI).href : 'adegan/'; }
   return VeloraEngine.render(d, tema, o);
 }
 
@@ -193,6 +195,7 @@ function wire() {
 async function init() {
   try {
     THEMES = await (await fetch('themes/themes.json')).json();
+    THEMES.forEach(function (x) { if (x.adegan && !(x.adegan in ADG)) { ADG[x.adegan] = null; fetch('adegan/' + x.adegan + '.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { ADG[x.adegan] = j; }).catch(function () {}); } });
     LAGU = await (await fetch('musik/lagu.json')).json();
     SUASANA = await (await fetch('musik/suasana.json')).json();
     try { // pustaka internal (hanya ada di Studio WordPress, tidak di repo publik)

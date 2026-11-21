@@ -1,0 +1,473 @@
+{
+ "id": "taman-kunang",
+ "nama": "Taman Kunang Malam",
+ "gaya": "siluet daun berlapis / garis perak, digambar sendiri (SVG)",
+ "tint": [
+  "kunang",
+  "mutiara"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "taman-kunang/{tint}/pohon-jauh.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    260
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "op": 0.2,
+   "tanpaVideo": true,
+   "tanpaFoto": true,
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/sulur-kiri-atas.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 41.03,
+   "px": [
+    160,
+    190
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 12,
+   "delay": -3,
+   "amp": 1.5
+  },
+  {
+   "file": "taman-kunang/{tint}/daun-kanan-atas.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 30.77,
+   "px": [
+    120,
+    150
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 9,
+   "delay": -6,
+   "amp": 2
+  },
+  {
+   "file": "taman-kunang/{tint}/semak-kiri-bawah.svg",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 53.85,
+   "px": [
+    210,
+    180
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -1,
+   "amp": 1.5
+  },
+  {
+   "file": "taman-kunang/{tint}/rumput-kanan.svg",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 14.87,
+   "px": [
+    58,
+    300
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 8,
+   "delay": -4,
+   "amp": 2
+  },
+  {
+   "file": "taman-kunang/{tint}/semak-kanan-bawah.svg",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 46.15,
+   "px": [
+    180,
+    140
+   ],
+   "z": 4,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 8.21,
+   "y": 70.14,
+   "w": 4.1,
+   "px": [
+    16,
+    16
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 7.0,
+   "delay": -0.0,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": -6,
+   "ky": 9,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 36.67,
+   "y": 90.4,
+   "w": 3.59,
+   "px": [
+    14,
+    14
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 7.6,
+   "delay": -1.7,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": 4,
+   "ky": -10,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 74.62,
+   "y": 81.87,
+   "w": 4.62,
+   "px": [
+    18,
+    18
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 8.2,
+   "delay": -3.4,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": -5,
+   "ky": -8,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 89.49,
+   "y": 60.9,
+   "w": 3.08,
+   "px": [
+    12,
+    12
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 8.8,
+   "delay": -5.1,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": 6,
+   "ky": 8,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 22.82,
+   "y": 22.63,
+   "w": 3.59,
+   "px": [
+    14,
+    14
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 9.4,
+   "delay": -6.8,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": 8,
+   "ky": 6,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kunang.webp",
+   "jangkar": "tl",
+   "x": 4.62,
+   "y": 28.91,
+   "w": 3.08,
+   "px": [
+    12,
+    12
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 10.0,
+   "delay": -8.5,
+   "amp": 0,
+   "op": 0.6,
+   "op0": 0.15,
+   "kx": -4,
+   "ky": -9,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kilau-mutiara.svg",
+   "jangkar": "tl",
+   "x": 10.51,
+   "y": 71.68,
+   "w": 3.08,
+   "px": [
+    12,
+    12
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 8,
+   "delay": -0.0,
+   "amp": 0,
+   "op": 0.4,
+   "op0": 0.1,
+   "kx": 4,
+   "ky": -6,
+   "min": "Signature",
+   "hanyaTint": [
+    "mutiara"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kilau-mutiara.svg",
+   "jangkar": "tl",
+   "x": 80.26,
+   "y": 82.35,
+   "w": 3.08,
+   "px": [
+    12,
+    12
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 9,
+   "delay": -2.1,
+   "amp": 0,
+   "op": 0.4,
+   "op0": 0.1,
+   "kx": 4,
+   "ky": -6,
+   "min": "Signature",
+   "hanyaTint": [
+    "mutiara"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kilau-mutiara.svg",
+   "jangkar": "tl",
+   "x": 29.74,
+   "y": 93.13,
+   "w": 2.56,
+   "px": [
+    10,
+    10
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 10,
+   "delay": -4.2,
+   "amp": 0,
+   "op": 0.4,
+   "op0": 0.1,
+   "kx": 4,
+   "ky": -6,
+   "min": "Signature",
+   "hanyaTint": [
+    "mutiara"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/kilau-mutiara.svg",
+   "jangkar": "tl",
+   "x": 16.92,
+   "y": 23.22,
+   "w": 2.56,
+   "px": [
+    10,
+    10
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "kunang",
+   "dur": 11,
+   "delay": -6.300000000000001,
+   "amp": 0,
+   "op": 0.4,
+   "op0": 0.1,
+   "kx": 4,
+   "ky": -6,
+   "min": "Signature",
+   "hanyaTint": [
+    "mutiara"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/tirai-kiri.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    0,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang",
+    "mutiara"
+   ]
+  },
+  {
+   "file": "taman-kunang/{tint}/tirai-kanan.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    1,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "kunang",
+    "mutiara"
+   ]
+  }
+ ],
+ "catatan": "kunang (6) menggantikan partikel cahaya; mutiara memakai kilau-mutiara (4). hanyaTint = lapisan khusus tint itu."
+}

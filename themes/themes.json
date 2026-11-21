@@ -31,7 +31,9 @@
   "musik": "romantis",
   "deskripsi": "Langit senja sinematik dengan kelopak sakura yang berguguran pelan, hangat seperti adegan film animasi.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "sakura-layang",
+  "tintAdegan": "senja"
  },
  {
   "id": "langit-musim-panas",
@@ -136,7 +138,9 @@
   "musik": "megah",
   "deskripsi": "Hijau zamrud tua berpadu emas champagne dan sulur daun, elegan tanpa berlebihan.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "taman-merak",
+  "tintAdegan": "zamrud"
  },
  {
   "id": "aqiqah-pastel-awan",
@@ -339,7 +343,9 @@
   "musik": "romantis",
   "deskripsi": "Bunga lukisan cat air dengan sapuan warna merembes lembut, seperti kartu yang dilukis tangan.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "tulip-pakis",
+  "tintAdegan": "catair"
  },
  {
   "id": "ivory-signature",
@@ -373,7 +379,9 @@
   "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "taman-merak",
+  "tintAdegan": "ivory"
  },
  {
   "id": "gelombang-senja",
@@ -506,7 +514,9 @@
   "gerak": "kelopak",
   "musik": "lembut",
   "deskripsi": "Merah muda peony dengan bingkai polaroid, manis untuk putri kecil.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "adegan": "tulip-pakis",
+  "tintAdegan": "blush"
  },
  {
   "id": "amplop-champagne",
@@ -680,7 +690,9 @@
   "musik": "tradisional",
   "deskripsi": "Teal dan ungu lembut dengan sulur ukiran emas gambar Velora di sampul layar penuh, anggun untuk pernikahan adat Bali.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "teratai-capung",
+  "tintAdegan": "teal"
  },
  {
   "id": "pesta-stroberi-manis",
@@ -884,7 +896,9 @@
   "musik": "romantis",
   "deskripsi": "Daun dan bunga botani bertekstur sapuan cat minyak dalam bingkai galeri, kaya warna dan klasik.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "tulip-pakis",
+  "tintAdegan": "galeri"
  },
  {
   "id": "navy-kencana",
@@ -956,7 +970,9 @@
   "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "lentera-bulan",
+  "tintAdegan": "zamrud"
  },
  {
   "id": "lentera-pagi-fitri",
@@ -992,7 +1008,9 @@
   "musik": "khidmat",
   "deskripsi": "Pagi hijau muda dengan lentera dan bulan sabit berkilau lembut, cocok untuk halalbihalal, aqiqah, atau pernikahan selepas Lebaran.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "lentera-bulan",
+  "tintAdegan": "pagi"
  },
  {
   "id": "malam-salju-bintang",
@@ -1067,7 +1085,9 @@
   "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "sakura-layang",
+  "tintAdegan": "kencana"
  },
  {
   "id": "ukir-tiga-warna",
@@ -1378,7 +1398,9 @@
   "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "tulip-pakis",
+  "tintAdegan": "terakota"
  },
  {
   "id": "tebar-bintang-biru-debu",
@@ -1586,7 +1608,9 @@
   "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "taman-kunang",
+  "tintAdegan": "kunang"
  },
  {
   "id": "onyx-mutiara",
@@ -1622,7 +1646,9 @@
   "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "taman-kunang",
+  "tintAdegan": "mutiara"
  },
  {
   "id": "burgundi-beludru",
@@ -1765,6 +1791,8 @@
   "musik": "romantis",
   "deskripsi": "Sapuan kuas tinta indigo membentuk ombak di atas kertas bertekstur, artistik dan tenang.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "teratai-capung",
+  "tintAdegan": "indigo"
  }
 ]

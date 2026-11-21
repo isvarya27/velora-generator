@@ -1,0 +1,163 @@
+{
+ "id": "teratai-capung",
+ "nama": "Kolam Teratai & Capung",
+ "gaya": "litograf botani PD + sapuan tinta buatan sendiri",
+ "tint": [
+  "teal",
+  "indigo"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "teratai-capung/{tint}/riak-air.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    120
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "op": 0.5,
+   "tanpaFoto": true
+  },
+  {
+   "file": "teratai-capung/{tint}/sapuan-kanan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 41.03,
+   "px": [
+    160,
+    120
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "tanpaFoto": true
+  },
+  {
+   "file": "teratai-capung/{tint}/juntai-kiri-atas.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 43.59,
+   "px": [
+    170,
+    200
+   ],
+   "z": 2,
+   "pivot": [
+    0,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 11,
+   "delay": -4,
+   "amp": 1.5
+  },
+  {
+   "file": "teratai-capung/{tint}/alang-kanan.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 1.66,
+   "w": 14.87,
+   "px": [
+    58,
+    330
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 7,
+   "delay": -2,
+   "amp": 2
+  },
+  {
+   "file": "teratai-capung/{tint}/daun-teratai-kanan.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 46.15,
+   "px": [
+    180,
+    110
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0
+  },
+  {
+   "file": "teratai-capung/{tint}/teratai-kiri-bawah.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 57.69,
+   "px": [
+    225,
+    166
+   ],
+   "z": 3,
+   "pivot": [
+    0.2,
+    1
+   ],
+   "gerak": "mekar",
+   "dur": 0.7,
+   "delay": 0.07,
+   "amp": 0
+  },
+  {
+   "file": "teratai-capung/{tint}/capung-terbang.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 84.12,
+   "w": 9.23,
+   "px": [
+    36,
+    28
+   ],
+   "z": 5,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "melintas",
+   "dur": 20,
+   "delay": -5,
+   "amp": 12,
+   "op": 0.35,
+   "min": "Signature",
+   "cadangan": true
+  }
+ ],
+ "catatan": "capung-terbang cadangan Signature (kedua tema saat ini Premium, tidak dirender). Tepi emas #B8954E hanya pada daun teratai tint teal."
+}

@@ -1,0 +1,219 @@
+{
+ "id": "lentera-bulan",
+ "nama": "Lentera & Bulan Sabit",
+ "gaya": "datar + garis emas (SVG), digambar sendiri",
+ "tint": [
+  "zamrud",
+  "pagi"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "lentera-bulan/{tint}/cahaya-lentera.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    260
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "pendar",
+   "dur": 6,
+   "delay": -2,
+   "amp": 0,
+   "op": 0.5,
+   "op0": 0.25,
+   "min": "Signature",
+   "tanpaVideo": true,
+   "kecualiTint": [
+    "pagi"
+   ]
+  },
+  {
+   "file": "lentera-bulan/{tint}/bintang-gugus.svg",
+   "jangkar": "tl",
+   "x": 15.38,
+   "y": 2.37,
+   "w": 66.67,
+   "px": [
+    260,
+    120
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "pendar",
+   "dur": 7,
+   "delay": -1,
+   "amp": 0,
+   "op": 0.8,
+   "op0": 0.35,
+   "gerakMin": "Signature",
+   "kecualiTint": [
+    "pagi"
+   ]
+  },
+  {
+   "file": "lentera-bulan/{tint}/bulan-sabit.svg",
+   "jangkar": "tl",
+   "x": 24.62,
+   "y": 8.29,
+   "w": 16.41,
+   "px": [
+    64,
+    64
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "mekar",
+   "dur": 0.7,
+   "delay": 0.07,
+   "amp": 0
+  },
+  {
+   "file": "lentera-bulan/{tint}/lentera-kiri.svg",
+   "jangkar": "tl",
+   "x": 5.64,
+   "y": 0.0,
+   "w": 13.33,
+   "px": [
+    52,
+    190
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 8,
+   "delay": -1,
+   "amp": 2
+  },
+  {
+   "file": "lentera-bulan/{tint}/lentera-kanan.svg",
+   "jangkar": "tr",
+   "x": 5.64,
+   "y": 0.0,
+   "w": 11.79,
+   "px": [
+    46,
+    200
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -3,
+   "amp": 2
+  },
+  {
+   "file": "lentera-bulan/{tint}/lentera-tengah.svg",
+   "jangkar": "tr",
+   "x": 27.18,
+   "y": 0.0,
+   "w": 8.72,
+   "px": [
+    34,
+    120
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 12,
+   "delay": -6,
+   "amp": 1.5,
+   "gerakMin": "Signature"
+  },
+  {
+   "file": "lentera-bulan/{tint}/rumpun-bawah.svg",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    150
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0
+  },
+  {
+   "file": "lentera-bulan/{tint}/tirai-kiri.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    0,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "zamrud"
+   ]
+  },
+  {
+   "file": "lentera-bulan/{tint}/tirai-kanan.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    1,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "zamrud"
+   ]
+  }
+ ],
+ "catatan": "kecualiTint: lapisan tidak dirender untuk tint itu (pagi = siang, tanpa bintang/cahaya). op0 = opasitas bawah pendar."
+}

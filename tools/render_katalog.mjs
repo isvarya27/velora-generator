@@ -32,7 +32,9 @@ for (const t of themes) {
   if (a === 'khitan') { d.judulAcara = 'Tasyakuran Khitan'; d.kutipan = ''; d.p1 = { nama: 'Raka Velora Putra', panggil: 'Raka', status: 'Putra pertama', ayah: 'Bapak Arif', ibu: 'Ibu Sari' }; d.sesi[0].nama = 'Acara Khitanan'; }
   const id = (suasana[t.musik] || [])[0] || (suasana.lembut || [])[0], l = lagu.find(x => x.id === id);
   const vid = fs.existsSync(root + '/video/' + t.id + '.mp4');
-  const V = pre => vid ? { video: pre + 'video/' + t.id + '.mp4', videoWebm: pre + 'video/' + t.id + '.webm', videoPoster: pre + 'video/' + t.id + '.jpg' } : {};
+  const ADG = t.adegan && fs.existsSync(root + '/adegan/' + t.adegan + '.json') ? JSON.parse(fs.readFileSync(root + '/adegan/' + t.adegan + '.json', 'utf8')) : null;
+  const V0 = pre => vid ? { video: pre + 'video/' + t.id + '.mp4', videoWebm: pre + 'video/' + t.id + '.webm', videoPoster: pre + 'video/' + t.id + '.jpg' } : {};
+  const V = pre => Object.assign(V0(pre), ADG ? { adegan: ADG, adeganBase: pre + 'adegan/' } : {});
   const html = E.render(d, t, Object.assign(V('../../'), { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' }))
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
