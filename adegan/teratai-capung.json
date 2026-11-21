@@ -53,7 +53,8 @@
    "dur": 0,
    "delay": 0,
    "amp": 0,
-   "tanpaFoto": true
+   "tanpaFoto": true,
+   "op": 0.45
   },
   {
    "file": "teratai-capung/{tint}/juntai-kiri-atas.webp",
