@@ -146,14 +146,14 @@
    "jangkar": "bl",
    "x": 0.0,
    "y": 17.06,
-   "w": 14.1,
+   "w": 15.13,
    "px": [
-    55,
+    59,
     200
    ],
    "z": 2,
    "pivot": [
-    0.36,
+    0.53,
     1
    ],
    "gerak": "ayun",
@@ -257,5 +257,5 @@
    ]
   }
  ],
- "catatan": "kiri-atas = daun pisang + pakis (pengganti palem kipas: pelat palem PD terlalu rapat untuk dipotong per daun). opTerang = op latar untuk tint terang (ivory). merak-ekor terpisah dari badan; badan menutup pangkal ekor (z lebih tinggi)."
+ "catatan": "kiri-atas = daun pisang + pakis (pengganti palem kipas: pelat palem PD terlalu rapat untuk dipotong per daun). opTerang = op latar untuk tint terang (ivory). merak-ekor terpisah dari badan; badan menutup pangkal ekor (z lebih tinggi). Perbaikan 2026-11-21: pakis-tegak dari pindaian BHL301783 (frond utuh, ruang bebas 6% kiri/kanan); dahan tenggeran merak utuh berujung patah alami (tanpa fade)."
 }

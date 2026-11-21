@@ -61,10 +61,10 @@
    "jangkar": "tl",
    "x": 0.0,
    "y": 0.0,
-   "w": 43.59,
+   "w": 45.13,
    "px": [
-    170,
-    200
+    176,
+    168
    ],
    "z": 2,
    "pivot": [
@@ -75,6 +75,27 @@
    "dur": 11,
    "delay": -4,
    "amp": 1.5
+  },
+  {
+   "file": "teratai-capung/{tint}/juntai-kanan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 33.33,
+   "px": [
+    130,
+    162
+   ],
+   "z": 2,
+   "pivot": [
+    1,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -6,
+   "amp": 1.5,
+   "gerakMin": "Signature"
   },
   {
    "file": "teratai-capung/{tint}/alang-kanan.webp",
@@ -115,6 +136,27 @@
    "dur": 0,
    "delay": 0,
    "amp": 0
+  },
+  {
+   "file": "teratai-capung/{tint}/kuncup-teratai.webp",
+   "jangkar": "bl",
+   "x": 38.46,
+   "y": 0.0,
+   "w": 16.67,
+   "px": [
+    65,
+    168
+   ],
+   "z": 2,
+   "pivot": [
+    0.44,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 9,
+   "delay": -3,
+   "amp": 1.2,
+   "gerakMin": "Signature"
   },
   {
    "file": "teratai-capung/{tint}/teratai-kiri-bawah.webp",
@@ -160,5 +202,5 @@
    "cadangan": true
   }
  ],
- "catatan": "capung-terbang cadangan Signature (kedua tema saat ini Premium, tidak dirender). Tepi emas #B8954E hanya pada daun teratai tint teal."
+ "catatan": "capung-terbang cadangan Signature (kedua tema saat ini Premium, tidak dirender). Tepi emas #B8954E hanya pada daun teratai tint teal. Perbaikan 2026-11-21: kuncup-teratai (Blanco pl.158 PD + tangkai digambar sendiri) & juntai-kanan-atas gerakMin Signature (Premium tetap 2 ayun: juntai-kiri + alang); juntai-kiri-atas dilebatkan (cabang melati kedua)."
 }
