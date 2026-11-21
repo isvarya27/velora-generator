@@ -24,7 +24,7 @@ for (const t of themes) {
   if (lg) {
     const fsrc = lg.sumber === 'cc-by' ? root + '/musik/' + path.basename(lg.file) : H + '/Workspace/velora/assets/music/' + lg.file;
     const fn = path.basename(fsrc); if (!fs.existsSync(OUT + '/musik/' + fn)) fs.copyFileSync(fsrc, OUT + '/musik/' + fn);
-    audio = BASE + 'musik/' + fn; d.mulai = lg.mulai_reff_detik || 0;
+    audio = BASE + 'musik/' + fn; d.mulai = lg.mulai_viral_detik || lg.mulai_reff_detik || 0;
     if (lg.sumber === 'cc-by') kredit = 'Musik: ' + lg.judul + ' oleh ' + lg.artis + ' (incompetech.com), CC BY 4.0';
   }
   const opt = { audio, kredit, situs: '/', kunci: 'wp-' + t.id + '-' };
