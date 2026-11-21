@@ -28,6 +28,7 @@ for (const t of themes) {
     if (lg.sumber === 'cc-by') kredit = 'Musik: ' + lg.judul + ' oleh ' + lg.artis + ' (incompetech.com), CC BY 4.0';
   }
   const opt = { audio, kredit, situs: '/', kunci: 'wp-' + t.id + '-' };
+  if (fs.existsSync(root + '/video/' + t.id + '.mp4')) { fs.mkdirSync(OUT + '/video', { recursive: true }); for (const e of ['mp4', 'webm', 'jpg']) if (fs.existsSync(root + '/video/' + t.id + '.' + e)) fs.copyFileSync(root + '/video/' + t.id + '.' + e, OUT + '/video/' + t.id + '.' + e); Object.assign(opt, { video: BASE + 'video/' + t.id + '.mp4', videoWebm: BASE + 'video/' + t.id + '.webm', videoPoster: BASE + 'video/' + t.id + '.jpg' }); }
   const fix = h => h.replace('src="img/velora-logo-white.svg"', 'src="' + BASE + 'img/velora-logo-white.svg"');
   fs.mkdirSync(OUT + '/' + t.id, { recursive: true }); fs.writeFileSync(OUT + '/' + t.id + '/index.html', fix(E.render(d, t, opt))); n++;
   const fd = FOTO[t.id];

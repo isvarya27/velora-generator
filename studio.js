@@ -103,6 +103,7 @@ function render(zip) {
   var src = $('lsrc').value, l = laguDipilih(), audio = '';
   if (src === 'lib' && l) audio = zip ? 'musik.mp3' : l.file;
   if (src === 'up' && mp3) audio = zip ? 'musik.mp3' : mp3url;
+  var vid = tema && tema.video ? (zip ? { video: 'video.mp4', videoWebm: 'video.webm', videoPoster: 'video.jpg' } : { video: 'video/' + tema.id + '.mp4', videoWebm: 'video/' + tema.id + '.webm', videoPoster: 'video/' + tema.id + '.jpg' }) : {};
   var o = { audio: audio, yt: src === 'yt' ? val('yt') : '', kredit: kredit(), situs: 'https://isvarya27.github.io/velora-generator/',
     img: function (k) { return foto[k] ? (zip ? 'img/' + k + '.jpg' : foto[k]) : ''; },
     galeri: galeri.map(function (g, i) { return zip ? 'img/gal' + (i + 1) + '.jpg' : g; }) };
@@ -111,6 +112,7 @@ function render(zip) {
     var b = val('base').replace(/\/?$/, '/');
     o.og = '<meta property="og:type" content="website"><meta property="og:title" content="' + esc(d.judulAcara + ' ' + (d.p1.panggil || d.p1.nama) + (d.mode === 'pasangan' ? ' & ' + (d.p2.panggil || d.p2.nama) : '')) + '"><meta property="og:description" content="' + esc(VeloraEngine.tglPanjang(d.sesi[0] && d.sesi[0].tgl) + '. Kami mengundang Anda untuk hadir dan memberikan doa restu.') + '"><meta property="og:image" content="' + esc(b + 'img/og.jpg') + '"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">';
   }
+  Object.assign(o, vid);
   return VeloraEngine.render(d, tema, o);
 }
 
@@ -143,6 +145,7 @@ async function paket() {
   if (val('base') && (foto.cover || foto.p1)) f['img/og.jpg'] = await ogDari(foto.cover || foto.p1);
   f['img/velora-logo-white.svg'] = await ambil('img/velora-logo-white.svg');
   if ($('lsrc').value === 'lib' && laguDipilih()) f['musik.mp3'] = await ambil(laguDipilih().file);
+  if (tema.video) { for (var ex of ['mp4', 'webm', 'jpg']) { try { f['video.' + ex] = await ambil('video/' + tema.id + '.' + ex); } catch (e) {} } }
   if ($('lsrc').value === 'up' && mp3) f['musik.mp3'] = mp3;
   return { d: d, f: f };
 }

@@ -31,7 +31,9 @@ for (const t of themes) {
   if (a === 'formal') { d.judulAcara = 'Undangan Resmi'; d.salam = 'Dengan hormat,'; d.pengantar = 'Kami mengundang Bapak/Ibu untuk menghadiri acara:'; d.p1 = { nama: 'Peluncuran Program Velora', panggil: 'Velora Fest', keterangan: 'Peluncuran Program 2027' }; d.sesi[0].nama = 'Acara Utama'; }
   if (a === 'khitan') { d.judulAcara = 'Tasyakuran Khitan'; d.kutipan = ''; d.p1 = { nama: 'Raka Velora Putra', panggil: 'Raka', status: 'Putra pertama', ayah: 'Bapak Arif', ibu: 'Ibu Sari' }; d.sesi[0].nama = 'Acara Khitanan'; }
   const id = (suasana[t.musik] || [])[0] || (suasana.lembut || [])[0], l = lagu.find(x => x.id === id);
-  const html = E.render(d, t, { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' })
+  const vid = fs.existsSync(root + '/video/' + t.id + '.mp4');
+  const V = pre => vid ? { video: pre + 'video/' + t.id + '.mp4', videoWebm: pre + 'video/' + t.id + '.webm', videoPoster: pre + 'video/' + t.id + '.jpg' } : {};
+  const html = E.render(d, t, Object.assign(V('../../'), { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' }))
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
   // versi Pakai Foto (bila ada pilihan foto dari designer)
@@ -40,7 +42,7 @@ for (const t of themes) {
     const f = n => '../../../demo-foto/f' + n + '.jpg';
     const map = { cover: f(fd.cover), p1: f(fd.p1), p2: f(fd.p2) };
     const t2 = Object.assign({}, t, { posisiFoto: fd.posisi, posisiKartu: fd.kartu });
-    const h2 = E.render(d, t2, { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), audio: l ? '../../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../../', kunci: t.id + '-foto-', tanpaFotoSampul: true })
+    const h2 = E.render(d, t2, Object.assign(V('../../../'), { img: k => map[k] || '', galeri: (fd.galeri || []).map(f), audio: l ? '../../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../../', kunci: t.id + '-foto-', tanpaFotoSampul: true }))
       .replace('src="img/velora-logo-white.svg"', 'src="../../../img/velora-logo-white.svg"');
     fs.mkdirSync(root + '/katalog/' + t.id + '/foto', { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/foto/index.html', h2);
   }

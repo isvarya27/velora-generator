@@ -66,7 +66,8 @@
   "musik": "ceria",
   "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "malam-emas-deco",
@@ -100,7 +101,8 @@
   "musik": "megah",
   "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "zamrud-bangsawan",
@@ -370,7 +372,8 @@
   "musik": "romantis",
   "deskripsi": "Tema andalan berwarna khas Velora: ivory, hijau tinta, dan emas champagne dengan sampul layar penuh.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "gelombang-senja",
@@ -538,7 +541,8 @@
   "musik": "romantis",
   "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "tebar-kelopak-lavender",
@@ -573,7 +577,8 @@
   "musik": "romantis",
   "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "mega-hijau-kencana",
@@ -913,7 +918,8 @@
   "musik": "megah",
   "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "sabit-zamrud-lentera",
@@ -949,7 +955,8 @@
   "musik": "khidmat",
   "deskripsi": "Bulan sabit, bintang, dan lentera bergantung di atas lengkung hijau zamrud tua, khidmat untuk pernikahan, aqiqah, atau buka bersama.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "lentera-pagi-fitri",
@@ -1059,7 +1066,8 @@
   "musik": "megah",
   "deskripsi": "Merah dan emas di atas krem hangat dengan awan berlapis berkilau, meriah untuk perayaan awal musim semi.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "ukir-tiga-warna",
@@ -1369,7 +1377,8 @@
   "musik": "romantis",
   "deskripsi": "Terakota hangat dengan daun kering; setiap bagian muncul seperti kartu yang dibalik saat digulir.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "tebar-bintang-biru-debu",
@@ -1405,7 +1414,8 @@
   "musik": "romantis",
   "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "perahu-kecil-biru-laut",
@@ -1575,7 +1585,8 @@
   "musik": "romantis",
   "deskripsi": "Taman malam biru tua dengan kunang-kunang berkelip di antara dedaunan, tenang dan romantis.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "onyx-mutiara",
@@ -1610,7 +1621,8 @@
   "musik": "megah",
   "deskripsi": "Hitam onyx dan putih mutiara dengan bunga garis perak berkilau, mewah dan modern.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "video": true
  },
  {
   "id": "burgundi-beludru",
