@@ -276,7 +276,10 @@
   "musik": "tradisional",
   "deskripsi": "Nuansa sogan cokelat-emas dengan bingkai ornamen batik buatan Velora, hangat untuk pernikahan adat Jawa atau Sunda.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "sogan",
+  "varianAdegan": "batik"
  },
  {
   "id": "linen-putih",
@@ -733,7 +736,10 @@
   "musik": "tradisional",
   "deskripsi": "Hijau daun dan emas dengan ornamen awan berlapis gambar Velora di bawah lengkung gapura, teduh untuk pernikahan adat Sunda.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "mega",
+  "varianAdegan": "mega"
  },
  {
   "id": "songket-merah-saga",
@@ -767,7 +773,10 @@
   "musik": "tradisional",
   "deskripsi": "Merah tua dengan kisi belah ketupat emas bergaya tenun buatan Velora, berkilau megah untuk pernikahan adat Minang.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "saga",
+  "varianAdegan": "songket"
  },
  {
   "id": "sulur-teal-kencana",
@@ -1276,7 +1285,10 @@
   "musik": "tradisional",
   "deskripsi": "Merah, hitam, dan putih dengan sulur ukiran geometris tegas, terinspirasi visual ukiran rumah adat Batak.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "ukir",
+  "varianAdegan": "ukir"
  },
  {
   "id": "teras-jingga-hijau",
@@ -1311,7 +1323,10 @@
   "musik": "tradisional",
   "deskripsi": "Jingga, hijau, dan krem dengan pinggiran segitiga berulang, ceria dan bernuansa Betawi.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "teras",
+  "varianAdegan": "tumpal"
  },
  {
   "id": "sutra-kotak-magenta",
@@ -1346,7 +1361,10 @@
   "musik": "tradisional",
   "deskripsi": "Magenta dan emas dengan kisi kotak bergaya kain sutra tenun, anggun dan bernuansa Bugis.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "sutra",
+  "varianAdegan": "kotak"
  },
  {
   "id": "tenun-gading-kencana",
@@ -1381,7 +1399,10 @@
   "musik": "tradisional",
   "deskripsi": "Gading, marun, dan emas dengan kisi tenun songket di bawah lengkung, bernuansa Palembang.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "wastra-nusantara",
+  "tintAdegan": "gading",
+  "varianAdegan": "songket"
  },
  {
   "id": "konfeti-toga-biru",
