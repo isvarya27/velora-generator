@@ -16,6 +16,8 @@ fs.mkdirSync(OUT + '/musik', { recursive: true }); fs.mkdirSync(OUT + '/demo-fot
 fs.copyFileSync(root + '/img/velora-logo-white.svg', OUT + '/img/velora-logo-white.svg');
 for (const f of fs.readdirSync(root + '/demo-foto')) fs.copyFileSync(root + '/demo-foto/' + f, OUT + '/demo-foto/' + f);
 let n = 0;
+const LBK = ['pembuka', 'mempelai', 'acara', 'live', 'dresscode', 'kisah', 'galeri', 'kado', 'ucapan', 'penutup'];
+const latarDari = (id, pre) => { const L = {}; for (const k of LBK) { const b = root + '/latar/' + id + '/' + k; if (fs.existsSync(b + '.jpg') || fs.existsSync(b + '.webp')) L[k] = { poster: pre + 'latar/' + id + '/' + k + (fs.existsSync(b + '.jpg') ? '.jpg' : '.webp'), mp4: fs.existsSync(b + '.mp4') ? pre + 'latar/' + id + '/' + k + '.mp4' : '', webm: fs.existsSync(b + '.webm') ? pre + 'latar/' + id + '/' + k + '.webm' : '' }; } return Object.keys(L).length ? L : null; };
 for (const t of themes) {
   const a = t.acara[0], d = JSON.parse(JSON.stringify(contoh[modeDari(a)]));
   if (a === 'khitan') { d.judulAcara = 'Tasyakuran Khitan'; d.kutipan = ''; d.p1 = { nama: 'Raka Velora Putra', panggil: 'Raka', status: 'Putra pertama', ayah: 'Bapak Arif', ibu: 'Ibu Sari' }; d.sesi[0].nama = 'Acara Khitanan'; }
@@ -32,6 +34,7 @@ for (const t of themes) {
   const opt = { audio, kredit, situs: '/', kunci: 'wp-' + t.id + '-' };
   { const ss = sesiStok(FOTO[t.id]); if (ss) Object.assign(opt, { img: k => k === 'p1' || k === 'p2' ? BASE + 'demo-foto/' + ss[k] : '', galeri: ss.galeri.map(g => BASE + 'demo-foto/' + g), tanpaFotoSampul: true }); }
   fs.cpSync(root + '/adegan', OUT + '/adegan', { recursive: true }); opt.adeganBase = BASE + 'adegan/';
+  if (fs.existsSync(root + '/latar/' + t.id)) { fs.cpSync(root + '/latar/' + t.id, OUT + '/latar/' + t.id, { recursive: true }); opt.latarBagian = latarDari(t.id, BASE); }
   if (t.adegan && fs.existsSync(root + '/adegan/' + t.adegan + '.json')) { Object.assign(opt, { adegan: JSON.parse(fs.readFileSync(root + '/adegan/' + t.adegan + '.json', 'utf8')), adeganBase: BASE + 'adegan/' }); }
   if (fs.existsSync(root + '/video/' + t.id + '.mp4')) { fs.mkdirSync(OUT + '/video', { recursive: true }); for (const e of ['mp4', 'webm', 'jpg']) if (fs.existsSync(root + '/video/' + t.id + '.' + e)) fs.copyFileSync(root + '/video/' + t.id + '.' + e, OUT + '/video/' + t.id + '.' + e); Object.assign(opt, { video: BASE + 'video/' + t.id + '.mp4', videoWebm: BASE + 'video/' + t.id + '.webm', videoPoster: BASE + 'video/' + t.id + '.jpg' }); }
   const fix = h => h.replace('src="img/velora-logo-white.svg"', 'src="' + BASE + 'img/velora-logo-white.svg"');
