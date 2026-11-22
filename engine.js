@@ -340,7 +340,7 @@
       B[k].forEach(function (r) {
         if (r.sisip) {
           if (r.slot === 'pemisah') { var im = D.createElement('img'); im.className = 'pms'; im.alt = ''; im.src = r.lapis[0].file; im.style.width = r.w + '%'; var old = s.querySelector(':scope>.dvd'); if (old) old.replaceWith(im); else { var e = s.querySelector(':scope>.ey') || s.querySelector('h2'); if (e) e.before(im); } }
-          else if (r.slot === 'ikon') { var d = D.createElement('span'); d.className = 'ikn'; d.setAttribute('aria-hidden', 'true'); d.style.setProperty('--m', 'url(' + r.lapis[0].file + ')'); if (r.ref === 'judul-kartu') { var c = s.querySelectorAll('.card.sesi')[r.urutKartu || 0]; if (c) c.prepend(d); } else { var e2 = s.querySelector(':scope>.ey') || s.querySelector('h2'); if (e2) e2.before(d); } }
+          else if (r.slot === 'ikon') { var d = D.createElement('span'); d.className = 'ikn'; d.setAttribute('aria-hidden', 'true'); d.style.setProperty('--m', 'url(' + r.lapis[0].file + ')'); if (r.warnai && r.warnai !== 'emas') d.style.background = /^#/.test(r.warnai) ? r.warnai : 'var(--' + r.warnai + ')'; if (r.ref === 'judul-kartu') { var c = s.querySelectorAll('.card.sesi')[r.urutKartu || 0]; if (c) c.prepend(d); } else { var e2 = s.querySelector(':scope>.ey') || s.querySelector('h2'); if (e2) e2.before(d); } }
           return;
         }
         if (k !== 'sampul') s.classList.add('punya');

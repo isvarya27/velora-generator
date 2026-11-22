@@ -484,7 +484,9 @@
   "musik": "megah",
   "deskripsi": "Lapisan gelombang bergerak di bawah langit senja-malam bertabur bintang, sinematik sejak layar pertama.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "langit-malam",
+  "tintAdegan": "senja"
  },
  {
   "id": "pastel-lebah",
@@ -928,7 +930,9 @@
   "musik": "megah",
   "deskripsi": "Langit galaksi gelap yang berkelip pelan dengan kilau bintang, sinematik di tata letak terbelah.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "langit-malam",
+  "tintAdegan": "galaksi"
  },
  {
   "id": "salju-pagi",
@@ -963,7 +967,9 @@
   "musik": "lembut",
   "deskripsi": "Butir salju turun pelan di atas biru pagi yang bersih, tenang dan sejuk dari layar pertama.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "langit-malam",
+  "tintAdegan": "salju-pagi"
  },
  {
   "id": "lampion-malam-festival",
@@ -1185,7 +1191,9 @@
   "musik": "lembut",
   "deskripsi": "Malam biru musim dingin dengan bintang dan salju turun perlahan, hangat untuk acara akhir tahun.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "langit-malam",
+  "tintAdegan": "salju-malam"
  },
  {
   "id": "merah-kencana-musim-semi",
@@ -1608,7 +1616,9 @@
   "deskripsi": "Biru debu dan emas pucat; ketuk layar untuk menebar bintang kecil di sekitar nama mempelai.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "langit-malam",
+  "tintAdegan": "biru-debu"
  },
  {
   "id": "perahu-kecil-biru-laut",
