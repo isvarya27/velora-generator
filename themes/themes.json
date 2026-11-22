@@ -172,7 +172,23 @@
   "gerak": "gelembung",
   "musik": "lembut",
   "deskripsi": "Awan pastel dan gelembung lembut untuk menyambut buah hati, nyaman dibaca keluarga besar.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/balon-awan.svg",
+   "jangkar": "tr",
+   "x": 5.6,
+   "y": 2.8,
+   "w": 24.6,
+   "px": [
+    96,
+    128
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "bl",
+    "w": 20
+   }
+  }
  },
  {
   "id": "petualang-bintang-kecil",
@@ -205,7 +221,24 @@
   "gerak": "konfeti",
   "musik": "ceria",
   "deskripsi": "Biru-kuning ceria dengan bintang dan bingkai polaroid, cocok untuk khitan atau ulang tahun si kecil.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/teropong.svg",
+   "jangkar": "tl",
+   "x": 4.6,
+   "y": 3.3,
+   "w": 30.3,
+   "px": [
+    118,
+    118
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "br",
+    "w": 24,
+    "cermin": true
+   }
+  }
  },
  {
   "id": "sekar-sogan",
@@ -274,7 +307,25 @@
   "musik": "lembut",
   "deskripsi": "Putih gading, tipografi tenang, ruang kosong yang lega; fokus pada nama dan tanggal.",
   "ucapanPerHalaman": 5,
-  "demoFoto": true
+  "demoFoto": true,
+  "aksen": {
+   "file": "taman-kunang/mutiara/daun-kanan-atas.svg",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 33.8,
+   "px": [
+    132,
+    165
+   ],
+   "warnai": "teks",
+   "op": 0.55,
+   "gantiSudut": false,
+   "penutup": {
+    "jangkar": "tr",
+    "w": 28
+   }
+  }
  },
  {
   "id": "sage-garis",
@@ -309,7 +360,23 @@
   "musik": "lembut",
   "deskripsi": "Hijau sage dengan garis geometris tipis dan tata letak terbelah, modern dan rapi.",
   "ucapanPerHalaman": 5,
-  "demoFoto": true
+  "demoFoto": true,
+  "aksen": {
+   "file": "aksen/tangkai-sage.svg",
+   "jangkar": "br",
+   "x": 3.1,
+   "y": 1.2,
+   "w": 22.6,
+   "px": [
+    88,
+    250
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "br",
+    "w": 18
+   }
+  }
  },
  {
   "id": "taman-cat-air",
@@ -448,7 +515,24 @@
   "gerak": "gelembung",
   "musik": "ceria",
   "deskripsi": "Pastel peach dan biru langit dengan balon dan bintang, hangat untuk si kecil.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/lebah-kuntum.svg",
+   "jangkar": "tr",
+   "x": 5.6,
+   "y": 3.6,
+   "w": 33.8,
+   "px": [
+    132,
+    108
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "bl",
+    "w": 26,
+    "cermin": true
+   }
+  }
  },
  {
   "id": "mint-awan",
@@ -481,7 +565,24 @@
   "gerak": "awan",
   "musik": "lembut",
   "deskripsi": "Hijau mint segar dengan awan lembut, tenang dan bersih.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/baling-baling.svg",
+   "jangkar": "tr",
+   "x": 6.7,
+   "y": 2.4,
+   "w": 20.0,
+   "px": [
+    78,
+    150
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "tl",
+    "w": 16,
+    "cermin": true
+   }
+  }
  },
  {
   "id": "peony-blush",
@@ -724,7 +825,24 @@
   "gerak": "konfeti",
   "musik": "ceria",
   "deskripsi": "Merah muda stroberi dengan hujan konfeti di sampul layar penuh, ramai dan manis untuk pesta ulang tahun putri kecil.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/stroberi-pita.svg",
+   "jangkar": "tr",
+   "x": 5.1,
+   "y": 3.6,
+   "w": 28.7,
+   "px": [
+    112,
+    104
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "bl",
+    "w": 24
+   },
+   "sampulFotoPenuh": false
+  }
  },
  {
   "id": "roket-piksel",
@@ -757,7 +875,23 @@
   "gerak": "bintang",
   "musik": "ceria",
   "deskripsi": "Biru angkasa dan kuning dengan bingkai bergaya piksel dan roket kecil, seru untuk ulang tahun atau khitan jagoan.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/roket-piksel.svg",
+   "jangkar": "tr",
+   "x": 6.2,
+   "y": 3.6,
+   "w": 25.6,
+   "px": [
+    100,
+    120
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "bl",
+    "w": 22
+   }
+  }
  },
  {
   "id": "kilau-galaksi",
@@ -1294,7 +1428,24 @@
   "interaksi": "none",
   "musik": "khidmat",
   "deskripsi": "Ungu plum gelap dengan bintang tipis dan bingkai rapi, khidmat untuk syukuran wisuda.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "aksen": {
+   "file": "aksen/toga-rumbai.svg",
+   "jangkar": "tr",
+   "x": 5.6,
+   "y": 3.1,
+   "w": 28.7,
+   "px": [
+    112,
+    150
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "bl",
+    "w": 22,
+    "cermin": true
+   }
+  }
  },
  {
   "id": "batu-abu-korporat",
@@ -1328,7 +1479,23 @@
   "interaksi": "none",
   "musik": "khidmat",
   "deskripsi": "Abu batu dan biru baja dengan garis geometris tipis, rapi untuk undangan rapat, peluncuran, atau gathering kantor.",
-  "ucapanPerHalaman": 5
+  "ucapanPerHalaman": 5,
+  "aksen": {
+   "file": "aksen/batu-tumpuk.svg",
+   "jangkar": "tr",
+   "x": 7.7,
+   "y": 5.7,
+   "w": 23.6,
+   "px": [
+    92,
+    112
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "br",
+    "w": 20
+   }
+  }
  },
  {
   "id": "gala-teal-deco",
@@ -1470,7 +1637,23 @@
   "interaksi": "none",
   "musik": "lembut",
   "deskripsi": "Biru laut lembut dengan perahu kertas dan ombak kecil, manis untuk aqiqah putra.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/perahu-kertas.svg",
+   "jangkar": "br",
+   "x": 9.2,
+   "y": 4.7,
+   "w": 25.6,
+   "px": [
+    100,
+    84
+   ],
+   "gantiSudut": false,
+   "penutup": {
+    "jangkar": "br",
+    "w": 22
+   }
+  }
  },
  {
   "id": "layang-layang-hijau-pagi",
@@ -1503,7 +1686,25 @@
   "interaksi": "none",
   "musik": "ceria",
   "deskripsi": "Langit pagi hijau-kuning dengan layang-layang dan awan berarak, riang untuk syukuran khitan.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/layang-wajik.svg",
+   "jangkar": "tr",
+   "x": 5.1,
+   "y": 2.1,
+   "w": 26.7,
+   "px": [
+    104,
+    176
+   ],
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "tl",
+    "w": 22,
+    "cermin": true
+   },
+   "sampulFotoPenuh": false
+  }
  },
  {
   "id": "kebun-kelinci-wortel",
@@ -1536,7 +1737,23 @@
   "interaksi": "none",
   "musik": "ceria",
   "deskripsi": "Kebun sayur dengan kelinci, wortel, dan daun-daun lucu gambar sendiri, untuk ulang tahun anak.",
-  "ucapanPerHalaman": 4
+  "ucapanPerHalaman": 4,
+  "aksen": {
+   "file": "aksen/kelinci-wortel.svg",
+   "jangkar": "tc",
+   "x": 0.0,
+   "y": 12.3,
+   "w": 30.8,
+   "px": [
+    120,
+    100
+   ],
+   "gantiSudut": false,
+   "penutup": {
+    "jangkar": "bc",
+    "w": 26
+   }
+  }
  },
  {
   "id": "pagi-kota-pesisir",
@@ -1720,7 +1937,25 @@
   "musik": "lembut",
   "deskripsi": "Krem pasir dan cokelat susu dengan satu lengkung tenang, sederhana dan lega dibaca.",
   "ucapanPerHalaman": 5,
-  "demoFoto": true
+  "demoFoto": true,
+  "aksen": {
+   "file": "taman-kunang/mutiara/rumput-kanan.svg",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 14.9,
+   "px": [
+    58,
+    300
+   ],
+   "warnai": "aksen",
+   "op": 0.7,
+   "gantiSudut": false,
+   "penutup": {
+    "jangkar": "br",
+    "w": 13
+   }
+  }
  },
  {
   "id": "arang-tipis",
@@ -1756,7 +1991,25 @@
   "musik": "lembut",
   "deskripsi": "Arang gelap dengan garis geometris tipis dan tipografi modern, minimal dan tegas.",
   "ucapanPerHalaman": 5,
-  "demoFoto": true
+  "demoFoto": true,
+  "aksen": {
+   "file": "taman-kunang/mutiara/sulur-kiri-atas.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 37.9,
+   "px": [
+    148,
+    176
+   ],
+   "warnai": "ink",
+   "op": 0.7,
+   "gantiSudut": true,
+   "penutup": {
+    "jangkar": "tl",
+    "w": 30
+   }
+  }
  },
  {
   "id": "sapuan-indigo",

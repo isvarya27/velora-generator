@@ -114,7 +114,8 @@ function render(zip) {
     o.og = '<meta property="og:type" content="website"><meta property="og:title" content="' + esc(d.judulAcara + ' ' + (d.p1.panggil || d.p1.nama) + (d.mode === 'pasangan' ? ' & ' + (d.p2.panggil || d.p2.nama) : '')) + '"><meta property="og:description" content="' + esc(VeloraEngine.tglPanjang(d.sesi[0] && d.sesi[0].tgl) + '. Kami mengundang Anda untuk hadir dan memberikan doa restu.') + '"><meta property="og:image" content="' + esc(b + 'img/og.jpg') + '"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">';
   }
   Object.assign(o, vid);
-  if (tema && tema.adegan && ADG[tema.adegan]) { o.adegan = ADG[tema.adegan]; o.adeganBase = zip ? new URL('adegan/', document.baseURI).href : 'adegan/'; }
+  o.adeganBase = zip ? new URL('adegan/', document.baseURI).href : 'adegan/';
+  if (tema && tema.adegan && ADG[tema.adegan]) o.adegan = ADG[tema.adegan];
   return VeloraEngine.render(d, tema, o);
 }
 

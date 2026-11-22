@@ -1,0 +1,43 @@
+{
+ "sesi": [
+  {
+   "id": "formal",
+   "p1": "s1.jpg",
+   "p2": "s2.jpg",
+   "galeri": [
+    "s3.jpg",
+    "s4.jpg",
+    "s5.jpg",
+    "s6.jpg",
+    "s7.jpg"
+   ],
+   "cocok": "putih emas, akad, siger Sunda, hijab, masjid ornamen, elegan islami, klasik mewah"
+  },
+  {
+   "id": "kasual",
+   "p1": "s8.jpg",
+   "p2": "s9.jpg",
+   "galeri": [
+    "s10.jpg",
+    "s11.jpg",
+    "s12.jpg",
+    "s13.jpg",
+    "s14.jpg"
+   ],
+   "cocok": "biru pastel, prewed outdoor, hijab kasual, hutan pinus, minimalis, segar, modern"
+  },
+  {
+   "id": "adat",
+   "p1": "s15.jpg",
+   "p2": "s16.jpg",
+   "galeri": [
+    "s17.jpg",
+    "s18.jpg",
+    "s19.jpg",
+    "s20.jpg",
+    "s21.jpg"
+   ],
+   "cocok": "adat Sumatra (Batak/Mandailing), ulos, merah-pink-emas, hijab, tradisional, nusantara"
+  }
+ ]
+}

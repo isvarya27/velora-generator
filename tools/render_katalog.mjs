@@ -34,7 +34,7 @@ for (const t of themes) {
   const vid = fs.existsSync(root + '/video/' + t.id + '.mp4');
   const ADG = t.adegan && fs.existsSync(root + '/adegan/' + t.adegan + '.json') ? JSON.parse(fs.readFileSync(root + '/adegan/' + t.adegan + '.json', 'utf8')) : null;
   const V0 = pre => vid ? { video: pre + 'video/' + t.id + '.mp4', videoWebm: pre + 'video/' + t.id + '.webm', videoPoster: pre + 'video/' + t.id + '.jpg' } : {};
-  const V = pre => Object.assign(V0(pre), ADG ? { adegan: ADG, adeganBase: pre + 'adegan/' } : {});
+  const V = pre => Object.assign(V0(pre), { adeganBase: pre + 'adegan/' }, ADG ? { adegan: ADG } : {});
   const html = E.render(d, t, Object.assign(V('../../'), { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' }))
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
