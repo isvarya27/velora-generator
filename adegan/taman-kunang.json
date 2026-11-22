@@ -469,5 +469,1142 @@
    ]
   }
  ],
- "catatan": "kunang (6) menggantikan partikel cahaya; mutiara memakai kilau-mutiara (4). hanyaTint = lapisan khusus tint itu."
+ "catatan": "kunang (6) menggantikan partikel cahaya; mutiara memakai kilau-mutiara (4). hanyaTint = lapisan khusus tint itu.",
+ "bagian": {
+  "_skema": {
+   "versi": 1,
+   "ringkas": "Lapisan ilustrasi per BAGIAN undangan (bukan sampul). Kunci = nama bagian; nilai = larik RUMPUN. Satu rumpun = satu kotak (.ils > .rumpun) berisi 1..n LAPIS (.ly > img) yang bertumpuk tepat di kotak yang sama dan berayun sendiri-sendiri. Ukuran/posisi dalam % LEBAR kotak acuan (ref), termasuk y, supaya skala ikut lebar layar (pakai container query: ref diberi container-type:inline-size lalu 1% = 1cqw). Tampil 390 px = desain; ekspor 2x (lebar <= 600 px).",
+   "bagian": {
+    "global": "seluruh #isi (latar tekstur ubin)",
+    "sampul": "section#cover (di atas .adg sampul)",
+    "pembuka": "section salam/ayat + hitung mundur",
+    "mempelai": "section profil (ref foto = tiap .ph profil p1/p2)",
+    "acara": "section rangkaian acara (ref kartu = tiap .card.sesi)",
+    "live": "siaran langsung",
+    "dresscode": "busana",
+    "kisah": "perjalanan/timeline",
+    "galeri": "galeri foto (hanya bila >= 3 foto)",
+    "kado": "tanda kasih/hadiah",
+    "ucapan": "doa & ucapan (ref form = form#f)",
+    "penutup": "terima kasih (paling bawah, menyambung ke catatan/footer)"
+   },
+   "rumpun": {
+    "slot": "nama slot kosakata bersama semua set: tekstur | sampul-tutup | sudut-a | sudut-b | pemisah | bingkai-belakang | bingkai-depan | bingkai-sudut | kartu-atas | kartu-sulur | kartu-bawah | ikon | galeri-rumpun | ucapan-atas | penutup-adegan",
+    "ref": "kotak acuan: bagian (section; bawaan) | foto (.ph profil) | kartu (.card.sesi, diulang per kartu) | form (form#f) | pembatas (ganti pembatas() garis-berlian) | judul (sisip sebelum h2 bagian) | judul-kartu (sisip sebelum judul di dalam kartu) | isi (#isi, untuk tekstur)",
+    "sisip": "true = BUKAN absolut: elemen <span class=\"pms\"> / <img class=\"ikn\"> disisipkan di alur dokumen pada titik ref (pembatas/judul/judul-kartu), lebar w% dari lebar konten, tengah",
+    "jangkar": "tl | tr | bl | br (sudut ref tempat x/y diukur; x ke dalam dari tepi kiri/kanan, y ke dalam dari tepi atas/bawah). Nilai negatif = keluar dari ref (mis. y:-26 di atas kartu)",
+    "x, y, w": "% lebar ref. Tinggi kotak = w * px[1]/px[0] (semua lapis satu rumpun berukuran px sama)",
+    "wP": "opsional: w untuk tier Premium (lebih kecil), bila beda dari Signature",
+    "z": "-1 = di belakang ref (mis. oval di belakang foto) | 0 = di belakang teks bagian | 2..4 = di depan ref (rumpun menumpuk tepi foto/kartu). Teks/tombol tetap z 1 dan TIDAK boleh tertutup (lihat ruang)",
+    "ganda": "true = render juga salinan cermin di sisi horizontal seberang (tl<->tr, bl<->br): scaleX(-1) pada img, pivot x -> 1-x, amp dibalik, delay digeser",
+    "cermin": "true = kotak ini sendiri dicerminkan (mis. sudut-a hanya di kanan)",
+    "cerminP2": "ref foto: profil ke-2 memakai cermin rumpun ini (komposisi kiri/kanan berpasangan)",
+    "ulang": "ref kartu: true = rumpun diulang di setiap .card.sesi",
+    "ruang": "{atas, bawah} px tampil yang WAJIB ditambahkan engine sebagai padding (ref bagian) atau margin (ref foto/kartu/form) agar ilustrasi tidak menutup teks/tombol",
+    "min": "tier minimal untuk menampilkan rumpun (Premium | Signature; bawaan Premium)",
+    "maks": "opsional: tier maksimal (mis. \"Premium\" = hanya tampil di Premium, diganti varian lain di Signature)",
+    "gerakMin": "tier minimal agar lapis ayun bergerak (bawaan Signature: Premium = diam / masuk sekali, sesuai MEWAH-DESAIN 4.2)",
+    "masuk": "animasi masuk sekali saat bagian terlihat: mekar | naik | pudar (bawaan naik)",
+    "op, opTerang, warnai, ubin": "untuk tekstur/ikon: opasitas (opTerang = tint terang/ivory), warnai = emas|aksen|ink (mask CSS, file hitam), ubin = ukuran ulang px",
+    "hanyaTint": "opsional: larik tint yang memakai rumpun ini",
+    "lapis": "larik lapis (urut belakang -> depan): file ({tint} diganti tintAdegan), px [w,h] berkas, pivot [x,y] 0..1 dari kotak lapis = transform-origin (pangkal tangkai), gerak ayun|diam|napas, amp derajat SETENGAH rentang (+-amp, simetris alternate, maks 2; lapis lebar > 60% ref maks 1), dur detik SIKLUS PENUH (engine: --dur = dur/2 untuk alternate), delay detik (negatif)"
+   },
+   "aturan": [
+    "Bila m.bagian ada: JANGAN render ilsBagian() lama (rumpun sampul yang diulang) maupun empatSudut()/pembatas() generik di bagian yang punya rumpun pengganti.",
+    "Zona aman teks x 12-88 %: ilustrasi absolut di zona ini hanya di pita ruang.atas / ruang.bawah atau di belakang foto.",
+    "Semua img lapis: loading=lazy, decoding=async, alt=\"\" dan wadah aria-hidden=true; pointer-events:none.",
+    "Section ber-rumpun: position:relative; overflow:clip (rumpun boleh keluar dari ref foto/kartu tetapi dipotong di tepi section).",
+    "Anggaran per tint: Signature <= 600 KB, Premium <= 350 KB total lapisan bagian (ukur: lihat catatanBagian)."
+   ]
+  },
+  "global": [
+   {
+    "slot": "tekstur",
+    "ref": "isi",
+    "ubin": 256,
+    "op": 0.07,
+    "opTerang": 0.05,
+    "warnai": "emas",
+    "z": -1,
+    "lapis": [
+     {
+      "file": "taman-kunang/bagian-tekstur-malam.webp",
+      "px": [
+       256,
+       256
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "sampul": [
+   {
+    "slot": "sampul-tutup",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 100,
+    "z": 5,
+    "masuk": "naik",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sampul-tutup-daun.svg",
+      "px": [
+       390,
+       90
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 0.6,
+      "dur": 12.4,
+      "delay": -4.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sampul-tutup-cahaya.svg",
+      "px": [
+       390,
+       90
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -0.6
+     }
+    ]
+   }
+  ],
+  "pembuka": [
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "ganda": true,
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-daun.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -2.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-sulur.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.62,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 2,
+      "dur": 8.4,
+      "delay": -5.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -1.3
+     }
+    ]
+   },
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-pemisah-kunang.svg",
+      "px": [
+       300,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "mempelai": [
+   {
+    "slot": "bingkai-belakang",
+    "ref": "foto",
+    "jangkar": "tl",
+    "x": -9.09,
+    "y": -9.09,
+    "w": 118.18,
+    "z": -1,
+    "cerminP2": true,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-bingkai-oval.svg",
+      "px": [
+       260,
+       320
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "bingkai-depan",
+    "ref": "foto",
+    "jangkar": "bl",
+    "x": -9.09,
+    "y": -24.55,
+    "w": 118.18,
+    "z": 2,
+    "min": "Signature",
+    "cerminP2": true,
+    "masuk": "mekar",
+    "ruang": {
+     "bawah": 58
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-bingkai-semak.svg",
+      "px": [
+       260,
+       120
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1,
+      "dur": 10.8,
+      "delay": -1.6
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-bingkai-bunga.svg",
+      "px": [
+       260,
+       120
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 8.2,
+      "delay": -4.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-bingkai-cahaya.svg",
+      "px": [
+       260,
+       120
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -2.6
+     }
+    ]
+   },
+   {
+    "slot": "bingkai-sudut",
+    "ref": "foto",
+    "jangkar": "tr",
+    "x": -10.0,
+    "y": -5.45,
+    "w": 40.91,
+    "z": 2,
+    "min": "Signature",
+    "cerminP2": true,
+    "masuk": "mekar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-bingkai-sudut.svg",
+      "px": [
+       90,
+       90
+      ],
+      "pivot": [
+       0.95,
+       0.05
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 9.2,
+      "delay": -3.3
+     }
+    ]
+   }
+  ],
+  "acara": [
+   {
+    "slot": "kartu-atas",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "tl",
+    "x": 0,
+    "y": -30.84,
+    "w": 100,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "pudar",
+    "ruang": {
+     "atas": 100
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-kartu-ranting.svg",
+      "px": [
+       334,
+       111
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-kartu-juntai.svg",
+      "px": [
+       334,
+       111
+      ],
+      "pivot": [
+       0.5,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 1,
+      "dur": 9.6,
+      "delay": -2.8
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-kartu-cahaya.svg",
+      "px": [
+       334,
+       111
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -1.9
+     }
+    ]
+   },
+   {
+    "slot": "kartu-bawah",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "bl",
+    "x": 26.05,
+    "y": -10.78,
+    "w": 47.9,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "mekar",
+    "ruang": {
+     "bawah": 40
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-kartu-rumput.svg",
+      "px": [
+       160,
+       50
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.4,
+      "dur": 9.8,
+      "delay": -6.1
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul-kartu",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "urutKartu": 0,
+    "lapis": [
+     {
+      "file": "taman-kunang/ikon/ikon-cincin.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul-kartu",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "urutKartu": 1,
+    "lapis": [
+     {
+      "file": "taman-kunang/ikon/ikon-gelas.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "live": [
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/ikon/ikon-kamera.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "cermin": true,
+    "min": "Signature",
+    "ruang": {
+     "bawah": 64
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-semak.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 10.6,
+      "delay": -3.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-bunga.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.8,
+      "dur": 7.6,
+      "delay": -1.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -2.2
+     }
+    ]
+   }
+  ],
+  "dresscode": [
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-pemisah-kunang.svg",
+      "px": [
+       300,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/ikon/ikon-busana.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "kisah": [
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "min": "Signature",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-daun.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -2.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-sulur.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.62,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 2,
+      "dur": 8.4,
+      "delay": -5.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -1.3
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "br",
+    "x": 0,
+    "y": 0,
+    "w": 11.79,
+    "z": 0,
+    "min": "Signature",
+    "masuk": "mekar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-kisah-rumput.svg",
+      "px": [
+       60,
+       280
+      ],
+      "pivot": [
+       0.6,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 8.8,
+      "delay": -2.2
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-kisah-cahaya.svg",
+      "px": [
+       60,
+       280
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -3.1
+     }
+    ]
+   }
+  ],
+  "galeri": [
+   {
+    "slot": "galeri-rumpun",
+    "ref": "bagian",
+    "jangkar": "br",
+    "x": 0,
+    "y": 7.69,
+    "w": 46.15,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "mekar",
+    "ruang": {
+     "bawah": 84
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-galeri-rumput.svg",
+      "px": [
+       180,
+       140
+      ],
+      "pivot": [
+       0.8,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 8.6,
+      "delay": -1.2
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-galeri-toples.svg",
+      "px": [
+       180,
+       140
+      ],
+      "pivot": [
+       0.47,
+       0.95
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-galeri-cahaya.svg",
+      "px": [
+       180,
+       140
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -0.8
+     }
+    ]
+   }
+  ],
+  "kado": [
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "cermin": true,
+    "min": "Signature",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-daun.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -2.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-sulur.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.62,
+       0
+      ],
+      "gerak": "ayun",
+      "amp": 2,
+      "dur": 8.4,
+      "delay": -5.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-a-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -1.3
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "min": "Signature",
+    "ruang": {
+     "bawah": 64
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-semak.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 10.6,
+      "delay": -3.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-bunga.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.8,
+      "dur": 7.6,
+      "delay": -1.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -2.2
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/ikon/ikon-kado.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "ucapan": [
+   {
+    "slot": "ucapan-atas",
+    "ref": "form",
+    "jangkar": "tl",
+    "x": 0,
+    "y": -28.74,
+    "w": 100,
+    "z": 0,
+    "masuk": "mekar",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-ucapan-ranting.svg",
+      "px": [
+       334,
+       80
+      ],
+      "pivot": [
+       0,
+       0.4
+      ],
+      "gerak": "ayun",
+      "amp": 0.7,
+      "dur": 13.2,
+      "delay": -5.5
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-ucapan-cahaya.svg",
+      "px": [
+       334,
+       80
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -2.0
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "mekar",
+    "ganda": true,
+    "ruang": {
+     "bawah": 72
+    },
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-semak.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 10.6,
+      "delay": -3.1
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-bunga.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.8,
+      "dur": 7.6,
+      "delay": -1.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-sudut-b-cahaya.svg",
+      "px": [
+       160,
+       160
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -2.2
+     }
+    ]
+   }
+  ],
+  "penutup": [
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-pemisah-kunang.svg",
+      "px": [
+       300,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "penutup-adegan",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 100,
+    "z": 0,
+    "masuk": "naik",
+    "ruang": {
+     "bawah": 270
+    },
+    "pudarBawah": "bg3",
+    "lapis": [
+     {
+      "file": "taman-kunang/{tint}/bagian-penutup-pohon.svg",
+      "px": [
+       390,
+       360
+      ],
+      "pivot": [
+       0.08,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 0.5,
+      "dur": 14.2,
+      "delay": -2.4
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-penutup-padang.svg",
+      "px": [
+       390,
+       360
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 0.6,
+      "dur": 10.4,
+      "delay": -6.6
+     },
+     {
+      "file": "taman-kunang/{tint}/bagian-penutup-cahaya.svg",
+      "px": [
+       390,
+       360
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "napas",
+      "amp": 0,
+      "dur": 0,
+      "delay": -1.1
+     }
+    ]
+   }
+  ]
+ },
+ "catatanBagian": "Blok bagian 2026-11-22 (skrip assets/ilustrasi/skrip/bagian_e.py; semua digambar sendiri, SVG). Total berkas bagian per tint (KB): kunang 227.7, mutiara 231.0. kunang = siluet daun 2 nada + kunang berpendar (lapis *-cahaya gerak napas); mutiara = garis perak tipis + kilau mutiara. Galeri: toples kaca berisi kunang/mutiara; penutup: pohon berjuntai + padang malam + bulan sabit (beda dari sampul)."
 }
