@@ -5,6 +5,8 @@ const H = os.homedir(), root = H + '/Workspace/velora/generator', OUT = H + '/Lo
 const ctx = { globalThis: {} }; vm.createContext(ctx); vm.runInContext(fs.readFileSync(root + '/engine.js', 'utf8'), ctx); const E = ctx.globalThis.VeloraEngine;
 const themes = JSON.parse(fs.readFileSync(root + '/themes/themes.json', 'utf8'));
 const FOTO = JSON.parse(fs.readFileSync(root + '/themes/foto-demo.json', 'utf8'));
+const STOK = JSON.parse(fs.readFileSync(root + '/themes/foto-stok.json', 'utf8')).sesi, sesiStok = fd => fd ? STOK.find(s => s.id === ([60, 61].includes(fd.p1) ? 'adat' : fd.p1 === 101 ? 'formal' : 'kasual')) : null;
+
 const KAT = JSON.parse(fs.readFileSync(H + '/Workspace/velora/assets/music/katalog.json', 'utf8'));
 const MAP = JSON.parse(fs.readFileSync(H + '/Workspace/velora/assets/music/tema-lagu.json', 'utf8'));
 const src = fs.readFileSync(root + '/tools/render_katalog.mjs', 'utf8');
@@ -28,6 +30,7 @@ for (const t of themes) {
     if (lg.sumber === 'cc-by') kredit = 'Musik: ' + lg.judul + ' oleh ' + lg.artis + ' (incompetech.com), CC BY 4.0';
   }
   const opt = { audio, kredit, situs: '/', kunci: 'wp-' + t.id + '-' };
+  { const ss = sesiStok(FOTO[t.id]); if (ss) Object.assign(opt, { img: k => k === 'p1' || k === 'p2' ? BASE + 'demo-foto/' + ss[k] : '', galeri: ss.galeri.map(g => BASE + 'demo-foto/' + g), tanpaFotoSampul: true }); }
   fs.cpSync(root + '/adegan', OUT + '/adegan', { recursive: true }); opt.adeganBase = BASE + 'adegan/';
   if (t.adegan && fs.existsSync(root + '/adegan/' + t.adegan + '.json')) { Object.assign(opt, { adegan: JSON.parse(fs.readFileSync(root + '/adegan/' + t.adegan + '.json', 'utf8')), adeganBase: BASE + 'adegan/' }); }
   if (fs.existsSync(root + '/video/' + t.id + '.mp4')) { fs.mkdirSync(OUT + '/video', { recursive: true }); for (const e of ['mp4', 'webm', 'jpg']) if (fs.existsSync(root + '/video/' + t.id + '.' + e)) fs.copyFileSync(root + '/video/' + t.id + '.' + e, OUT + '/video/' + t.id + '.' + e); Object.assign(opt, { video: BASE + 'video/' + t.id + '.mp4', videoWebm: BASE + 'video/' + t.id + '.webm', videoPoster: BASE + 'video/' + t.id + '.jpg' }); }

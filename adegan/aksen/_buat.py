@@ -148,22 +148,22 @@ def lebah():
     for i in range(8):
         a = i * 45 + 10
         cx, cy = fx + 9.5 * math.cos(math.radians(a)), fy + 9.5 * math.sin(math.radians(a))
-        o += rs(ell(cx, cy, 6.2, 3.6, a, 16), W, T, sw=1.3)
+        o += rs(ell(cx, cy, 6.2, 3.6, a, 10), W, T, sw=1.3)
     o += rs(ell(fx, fy, 5, 5, 0, 12), T, G, sw=1.2)
     # lebah
-    bx, by, ang = 104, 36, -18
+    bx, by, ang = 102, 38, -18
     tf = f'rotate({ang} {bx} {by})'
-    o += rs(ell(bx - 3, by - 11, 7, 6.5, -20, 16), S, G, sw=1)
-    o += rs(ell(bx + 5, by - 12, 6, 5.5, 15, 16), S, G, sw=1)
-    o += rs(f'M{bx - 14} {by}L{bx - 19} {by + 1.5}L{bx - 14} {by + 3}Z', G, None, tf=tf, off=0)
-    body = ell(bx, by, 14, 9, 0, 20)
+    o += rs(ell(bx - 4, by - 13, 8, 7.5, -20, 12), S, G, sw=1)
+    o += rs(ell(bx + 5, by - 14, 7, 6.5, 15, 12), S, G, sw=1)
+    o += rs(f'M{bx - 15} {by - 1}L{bx - 21} {by + 1}L{bx - 15} {by + 3}Z', G, None, tf=tf, off=0)
+    body = ell(bx, by, 16, 10.5, 0, 16)
     o += '<defs><clipPath id="b"><path d="' + body + f'" transform="translate(2 2) {tf}"/></clipPath></defs>'
     o += f'<path d="{body}" fill="{T}" transform="translate(2 2) {tf}"/>'
-    o += f'<g clip-path="url(#b)"><path d="M{bx - 6} {by - 12}h4v26h-4zM{bx + 2} {by - 12}h4v26h-4z" fill="{G}" transform="translate(2 2) {tf}"/></g>'
+    o += f'<g clip-path="url(#b)"><path d="M{bx - 7} {by - 12}h4.5v26h-4.5zM{bx + 2} {by - 12}h4.5v26h-4.5z" fill="{G}" transform="translate(2 2) {tf}"/></g>'
     o += f'<path d="{body}" stroke="{G}" stroke-width="1.5" transform="{tf}"/>'
-    o += f'<circle cx="{bx + 9}" cy="{by - 1.5}" r="1.4" fill="{G}" transform="{tf}"/>'
-    o += ln(f'M{bx + 11} {by - 7}Q{bx + 13} {by - 13} {bx + 17} {by - 14}', G, 1, f' transform="{tf}"')
-    o += ln(f'M{bx + 13} {by - 5}Q{bx + 17} {by - 9} {bx + 21} {by - 9}', G, 1, f' transform="{tf}"')
+    o += f'<circle cx="{bx + 11}" cy="{by - 2}" r="1.4" fill="{G}" transform="{tf}"/>'
+    o += ln(f'M{bx + 12} {by - 8}Q{bx + 14} {by - 14} {bx + 18} {by - 15}', G, 1, f' transform="{tf}"')
+    o += ln(f'M{bx + 14} {by - 6}Q{bx + 18} {by - 10} {bx + 22} {by - 10}', G, 1, f' transform="{tf}"')
     svg('lebah-kuntum.svg', 132, 108, o)
 
 
@@ -173,20 +173,15 @@ def baling():
     cx, cy, R = 38, 40, 31
     o = rs(f'M{cx - 2} {cy}L{cx + 2} {cy}L{cx + 13} {cy + 104}L{cx + 9.5} {cy + 104.4}Z', Y, G, sw=1.2)
     cols = [A, M, Y, L]
-    blades = []
+    Tn = [(cx + R * math.cos(math.radians(-35 + i * 90)), cy + R * math.sin(math.radians(-35 + i * 90))) for i in range(4)]
     for i in range(4):
-        t = math.radians(-40 + i * 90)
-        T = (cx + R * math.cos(t), cy + R * math.sin(t))
-        t2 = t + math.radians(90)
-        E = (cx + R * .5 * math.cos(t2), cy + R * .5 * math.sin(t2))
-        t3 = t + math.radians(58)
-        C = (cx + R * 1.02 * math.cos(t3), cy + R * 1.02 * math.sin(t3))
-        F = (cx + R * .26 * math.cos(t2), cy + R * .26 * math.sin(t2))
-        blades.append((T, E, C, F))
-    for i, (T, E, C, F) in enumerate(blades):
-        d = f'M{cx} {cy}L{f(T[0])} {f(T[1])}Q{f(C[0])} {f(C[1])} {f(E[0])} {f(E[1])}Z'
+        T, U = Tn[i], Tn[(i + 1) % 4]
+        Q = ((T[0] + U[0]) / 2 * .9 + cx * .1, (T[1] + U[1]) / 2 * .9 + cy * .1)
+        Cc = ((T[0] + Q[0]) / 2 + (T[0] + Q[0] - 2 * cx) * .12, (T[1] + Q[1]) / 2 + (T[1] + Q[1] - 2 * cy) * .12)
+        d = f'M{cx} {cy}L{f(T[0])} {f(T[1])}Q{f(Cc[0])} {f(Cc[1])} {f(Q[0])} {f(Q[1])}Z'
         o += rs(d, cols[i], G, sw=1.5, gap=(40, 4) if i == 1 else None)
-        o += ln(f'M{f(T[0])} {f(T[1])}L{f(F[0])} {f(F[1])}', G, 1)
+        Fm = (cx + (Q[0] - cx) * .55 + (T[0] - cx) * .12, cy + (Q[1] - cy) * .55 + (T[1] - cy) * .12)
+        o += f'<path d="M{cx} {cy}L{f(Q[0])} {f(Q[1])}L{f(Fm[0])} {f(Fm[1])}Z" fill="{G}" fill-opacity=".28"/>'
     o += f'<circle cx="{cx + 1}" cy="{cy + 1}" r="3.4" fill="{G}"/><circle cx="{cx}" cy="{cy}" r="1" fill="{L}"/>'
     svg('baling-baling.svg', 78, 150, o)
 
@@ -242,26 +237,17 @@ def roket():
     G, W, B, Y, C = '#123A6B', '#FFFFFF', '#1F5FA8', '#F5B935', '#FFF7DF'
     cols, rows = 20, 24
     grid = [[None] * cols for _ in range(rows)]
-    ox, oy = 6.2, 15.6   # ekor (sel)
-    a = math.radians(-50)
-    ux, uy = math.cos(a), math.sin(a)
-    vx, vy = -uy, ux
-    L = 15.5
+    K0 = 22  # sumbu: kolom+baris = K0
     for r in range(rows):
         for c in range(cols):
-            x, y = c + .5 - ox, r + .5 - oy
-            u = x * ux + y * uy; v = x * vx + y * vy
-            hw = None
-            if 2.2 <= u <= L - 4.5: hw = 2.5
-            elif L - 4.5 < u <= L: hw = 2.5 * math.sqrt(max(0, (L - u) / 4.5))
-            fin = 0 <= u <= 5.5 and abs(v) <= 2.5 + 2.2 * (5.5 - u) / 5.5 and abs(v) > 1.6
-            if hw is not None and abs(v) <= hw:
-                grid[r][c] = 'W'
-                if (u - (L - 7)) ** 2 + v ** 2 <= 1.8: grid[r][c] = 'B'
-            elif fin and u >= .2:
-                grid[r][c] = 'F'
-            elif -4.2 <= u < 2.2 and abs(v) <= 1.5 * (u + 4.2) / 6.4 + .2:
-                grid[r][c] = 'y' if abs(v) < .7 * (u + 4.2) / 6.4 + .15 and u > -2.5 else 'Y'
+            u = c - r; v = c + r - K0
+            av = abs(v)
+            if -7 <= u <= 6 and av <= 3: grid[r][c] = 'W'
+            elif 6 < u <= 12 and av <= 3 - (u - 6) // 2: grid[r][c] = 'W'
+            elif -10 <= u < -4 and 3 < av <= 3 + (-4 - u) // 2 + 1: grid[r][c] = 'F'
+            elif -15 <= u < -7 and av <= 2 - (-8 - u) // 3:
+                grid[r][c] = 'y' if av <= 1 - (-8 - u) // 3 else 'Y'
+            if grid[r][c] == 'W' and 1 <= u <= 4 and av <= 1: grid[r][c] = 'B'
     out = [[None] * cols for _ in range(rows)]
     for r in range(rows):
         for c in range(cols):
@@ -278,7 +264,7 @@ def roket():
             elif k == 'Y': out[r][c] = Y
             elif k == 'y': out[r][c] = C
     # asap: kotak berbingkai, mengecil ke kiri bawah
-    for (c0, r0, s) in [(2, 17, 3), (0, 20, 3), (3, 21, 2)]:
+    for (c0, r0, s) in [(0, 16, 3), (5, 20, 3), (1, 21, 2)]:
         for r in range(r0, r0 + s):
             for c in range(c0, c0 + s):
                 if 0 <= r < rows and 0 <= c < cols and out[r][c] is None:
@@ -368,13 +354,13 @@ def kelinci():
     o += f'<circle cx="43" cy="41" r="1.5" fill="{G}"/>'
     # wortel di depan dada
     o += rs(f'M30 59C27 58 33 54 38 57L44 61C47 63 45 66 42 66C38 72 30 84 26 88C26 82 31 66 30 59Z', O, G, sw=1.3,
-            tf='rotate(-6 36 70)')
-    o += ln('M33 66l3 1M30 74l3 1', G, 1, ' transform="rotate(-6 36 70)"')
-    for d in ('M34 57C30 50 26 48 22 48', 'M35 56C34 49 32 45 29 42', 'M37 57C39 51 41 48 44 47'):
+            tf='translate(-2 5) rotate(-6 36 70)')
+    o += ln('M33 66l3 1M30 74l3 1', G, 1, ' transform="translate(-2 5) rotate(-6 36 70)"')
+    for d in ('M32 62C28 56 24 54 20 54', 'M33 61C32 54 30 50 27 47', 'M35 62C36 56 37 53 40 51'):
         o += ln(d, D, 2.2)
     # kaki depan & cakar
     o += rs(ell(50, 90.5, 10, 3.4, 0, 14), W, G, sw=1.3)
-    o += rs(ell(44, 66, 5, 3.6, -30, 12), W, G, sw=1.3)
+    o += rs(ell(42, 72, 5, 3.6, -30, 12), W, G, sw=1.3)
     svg('kelinci-wortel.svg', 120, 100, o)
 
 

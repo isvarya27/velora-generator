@@ -25,6 +25,7 @@ const contoh = {
     p1: { nama: 'Raka Velora', panggil: 'Raka', keterangan: 'Ulang tahun ke-7' }, p2: {}, sesi: [sesi('Pesta Ulang Tahun', '2027-05-02', '15:00', '18:00')] }
 };
 const modeDari = a => ['aqiqah', 'khitan'].includes(a) ? 'anak' : ['ultah-anak', 'ultah', 'wisuda', 'formal'].includes(a) ? 'tunggal' : 'pasangan';
+const STOK = JSON.parse(fs.readFileSync(root + '/themes/foto-stok.json', 'utf8')).sesi, sesiStok = fd => fd ? STOK.find(s => s.id === ([60, 61].includes(fd.p1) ? 'adat' : fd.p1 === 101 ? 'formal' : 'kasual')) : null;
 for (const t of themes) {
   const a = t.acara[0], d = JSON.parse(JSON.stringify(contoh[modeDari(a)]));
   if (a === 'wisuda') { d.judulAcara = 'Syukuran Wisuda'; d.salam = 'Assalamu\'alaikum'; d.pengantar = 'Dengan rasa syukur, kami mengundang Anda pada syukuran kelulusan:'; d.p1 = { nama: 'Raka Velora, S.T.', panggil: 'Raka', keterangan: 'Wisuda Sarjana Teknik' }; d.sesi[0].nama = 'Syukuran Wisuda'; }
@@ -35,7 +36,7 @@ for (const t of themes) {
   const ADG = t.adegan && fs.existsSync(root + '/adegan/' + t.adegan + '.json') ? JSON.parse(fs.readFileSync(root + '/adegan/' + t.adegan + '.json', 'utf8')) : null;
   const V0 = pre => vid ? { video: pre + 'video/' + t.id + '.mp4', videoWebm: pre + 'video/' + t.id + '.webm', videoPoster: pre + 'video/' + t.id + '.jpg' } : {};
   const V = pre => Object.assign(V0(pre), { adeganBase: pre + 'adegan/' }, ADG ? { adegan: ADG } : {});
-  const html = E.render(d, t, Object.assign(V('../../'), { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' }))
+  const html = E.render(d, t, Object.assign(V('../../'), (ss => ss ? { img: k => k === 'p1' || k === 'p2' ? '../../demo-foto/' + ss[k] : '', galeri: ss.galeri.map(g => '../../demo-foto/' + g), tanpaFotoSampul: true } : {})(sesiStok(FOTO[t.id])), { audio: l ? '../../' + l.file : '', kredit: l ? 'Musik: ' + l.judul + ' oleh ' + l.artis + ' (incompetech.com), CC BY 4.0' : '', situs: '../../', kunci: t.id + '-' }))
     .replace('src="img/velora-logo-white.svg"', 'src="../../img/velora-logo-white.svg"');
   fs.mkdirSync(root + '/katalog/' + t.id, { recursive: true }); fs.writeFileSync(root + '/katalog/' + t.id + '/index.html', html);
   // versi Pakai Foto (bila ada pilihan foto dari designer)
