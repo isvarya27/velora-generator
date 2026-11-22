@@ -104,7 +104,9 @@
   "deskripsi": "Hitam pekat berbingkai garis art deco emas dan kilau halus, untuk resepsi malam yang megah.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "beludru-bingkai",
+  "tintAdegan": "onyx"
  },
  {
   "id": "zamrud-bangsawan",
@@ -1067,7 +1069,9 @@
   "deskripsi": "Biru navy tua dan emas dengan lengkung arsitektural dan garis geometris tegas, mewah untuk resepsi malam.",
   "ucapanPerHalaman": 8,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "beludru-bingkai",
+  "tintAdegan": "navy"
  },
  {
   "id": "sabit-zamrud-lentera",
@@ -1901,7 +1905,9 @@
   "musik": "megah",
   "deskripsi": "Burgundi seperti beludru dengan bingkai art deco emas, hangat dan elegan untuk resepsi malam.",
   "ucapanPerHalaman": 8,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "beludru-bingkai",
+  "tintAdegan": "burgundi"
  },
  {
   "id": "pasir-hangat",
