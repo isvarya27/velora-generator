@@ -1007,7 +1007,7 @@
     "w": 38.46,
     "z": 0,
     "masuk": "mekar",
-    "min": "Signature",
+    "min": "Premium",
     "ruang": {
      "bawah": 70
     },
@@ -1045,7 +1045,8 @@
       "dur": 9.6,
       "delay": -6.8
      }
-    ]
+    ],
+    "gerakMin": "Signature"
    },
    {
     "slot": "ikon",

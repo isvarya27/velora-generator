@@ -517,6 +517,9 @@
       "dur": 0,
       "delay": 0
      }
+    ],
+    "kecualiTint": [
+     "festival"
     ]
    },
    {
@@ -1008,7 +1011,7 @@
     "w": 38.46,
     "z": 0,
     "masuk": "mekar",
-    "min": "Signature",
+    "min": "Premium",
     "ruang": {
      "bawah": 70
     },
@@ -1043,7 +1046,8 @@
       "dur": 9.2,
       "delay": -6.1
      }
-    ]
+    ],
+    "gerakMin": "Signature"
    },
    {
     "slot": "ikon",

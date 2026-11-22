@@ -926,7 +926,7 @@
     "ruang": {
      "atas": 96
     },
-    "min": "Signature",
+    "min": "Premium",
     "hanyaTint": [
      "biru-debu"
     ],
@@ -961,7 +961,8 @@
       "dur": 8.4,
       "delay": -5.1
      }
-    ]
+    ],
+    "gerakMin": "Signature"
    },
    {
     "slot": "sudut-b",

@@ -925,7 +925,7 @@
     "wP": 33.33,
     "z": 0,
     "masuk": "mekar",
-    "min": "Signature",
+    "min": "Premium",
     "ruang": {
      "atas": 96
     },
@@ -960,7 +960,8 @@
       "dur": 8.6,
       "delay": -5.1
      }
-    ]
+    ],
+    "gerakMin": "Signature"
    },
    {
     "slot": "sudut-b",
