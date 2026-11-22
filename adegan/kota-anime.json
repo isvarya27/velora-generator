@@ -1,0 +1,1241 @@
+{
+ "id": "kota-anime",
+ "nama": "Langit & Kota Anime",
+ "gaya": "cel datar orisinal digambar sendiri (isi rata + 1 nada bayangan keras), tanpa tokoh/tulisan",
+ "tint": [
+  "musim-panas",
+  "pesisir",
+  "festival"
+ ],
+ "basis": "generator/adegan/",
+ "kanvas": [
+  390,
+  844
+ ],
+ "lapisan": [
+  {
+   "file": "kota-anime/{tint}/kota-jauh.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    200
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "op": 0.5,
+   "tanpaVideo": true,
+   "tanpaFoto": true
+  },
+  {
+   "file": "kota-anime/{tint}/awan-kanan-atas.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 2.37,
+   "w": 35.9,
+   "px": [
+    140,
+    90
+   ],
+   "z": 1,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "apung",
+   "dur": 10,
+   "delay": -4,
+   "amp": 4,
+   "hanyaTint": [
+    "musim-panas",
+    "pesisir"
+   ]
+  },
+  {
+   "file": "kota-anime/{tint}/awan-kiri-atas.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    130
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "apung",
+   "dur": 12,
+   "delay": -2,
+   "amp": 5,
+   "hanyaTint": [
+    "musim-panas",
+    "pesisir"
+   ]
+  },
+  {
+   "file": "kota-anime/{tint}/tiang-kabel.webp",
+   "jangkar": "tr",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    420
+   ],
+   "z": 2,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "diam",
+   "dur": 0,
+   "delay": 0,
+   "amp": 0,
+   "hanyaTint": [
+    "musim-panas",
+    "pesisir"
+   ],
+   "catatanKotak": "kabel hanya di y < 140; tiang hanya x > 332 (pita kiri teks bebas)"
+  },
+  {
+   "file": "kota-anime/{tint}/lampion-untai.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 100.0,
+   "px": [
+    390,
+    130
+   ],
+   "z": 3,
+   "pivot": [
+    0.5,
+    0
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -3,
+   "amp": 1.5,
+   "hanyaTint": [
+    "festival"
+   ]
+  },
+  {
+   "file": "kota-anime/{tint}/bunga-kiri-bawah.webp",
+   "jangkar": "bl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    160
+   ],
+   "z": 3,
+   "pivot": [
+    0,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 10,
+   "delay": -6,
+   "amp": 1.5,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "kota-anime/{tint}/pagar-kanan-bawah.webp",
+   "jangkar": "br",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    170
+   ],
+   "z": 3,
+   "pivot": [
+    1,
+    1
+   ],
+   "gerak": "ayun",
+   "dur": 12,
+   "delay": -8,
+   "amp": 1,
+   "gerakMin": "Signature",
+   "masuk": "mekar"
+  },
+  {
+   "file": "kota-anime/pesawat-kertas.svg",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 7.11,
+   "w": 9.23,
+   "px": [
+    36,
+    24
+   ],
+   "z": 4,
+   "pivot": [
+    0.5,
+    0.5
+   ],
+   "gerak": "melintas",
+   "dur": 24,
+   "delay": -6,
+   "amp": 10,
+   "rasio": 1.5,
+   "op": 0.3,
+   "warnai": "ink",
+   "min": "Signature",
+   "tanpaFoto": true
+  },
+  {
+   "file": "kota-anime/{tint}/tirai-kiri.webp",
+   "jangkar": "tl",
+   "x": 0.0,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    0,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "musim-panas"
+   ]
+  },
+  {
+   "file": "kota-anime/{tint}/tirai-kanan.webp",
+   "jangkar": "tl",
+   "x": 48.72,
+   "y": 0.0,
+   "w": 51.28,
+   "px": [
+    200,
+    844
+   ],
+   "z": 40,
+   "pivot": [
+    1,
+    0.5
+   ],
+   "gerak": "buka",
+   "dur": 1.2,
+   "delay": 0,
+   "amp": 0,
+   "min": "Signature",
+   "hanyaTint": [
+    "musim-panas"
+   ]
+  }
+ ],
+ "catatan": "musim-panas (S, full): kota-jauh & pesawat dilewati bila berfoto; tirai langit hanya musim-panas. tiang-kabel/awan-kanan-atas hanya tint terang; lampion-untai hanya festival. Pita kiri x<58 di y 25-80% bebas.",
+ "bagian": {
+  "_skema": {
+   "versi": 1,
+   "ringkas": "Lapisan ilustrasi per BAGIAN undangan (bukan sampul). Kunci = nama bagian; nilai = larik RUMPUN. Satu rumpun = satu kotak (.ils > .rumpun) berisi 1..n LAPIS (.ly > img) yang bertumpuk tepat di kotak yang sama dan berayun sendiri-sendiri. Ukuran/posisi dalam % LEBAR kotak acuan (ref), termasuk y, supaya skala ikut lebar layar (pakai container query: ref diberi container-type:inline-size lalu 1% = 1cqw). Tampil 390 px = desain; ekspor 2x (lebar <= 600 px).",
+   "bagian": {
+    "global": "seluruh #isi (latar tekstur ubin)",
+    "sampul": "section#cover (di atas .adg sampul)",
+    "pembuka": "section salam/ayat + hitung mundur",
+    "mempelai": "section profil (ref foto = tiap .ph profil p1/p2)",
+    "acara": "section rangkaian acara (ref kartu = tiap .card.sesi)",
+    "live": "siaran langsung",
+    "dresscode": "busana",
+    "kisah": "perjalanan/timeline",
+    "galeri": "galeri foto (hanya bila >= 3 foto)",
+    "kado": "tanda kasih/hadiah",
+    "ucapan": "doa & ucapan (ref form = form#f)",
+    "penutup": "terima kasih (paling bawah, menyambung ke catatan/footer)"
+   },
+   "rumpun": {
+    "slot": "nama slot kosakata bersama semua set: tekstur | sampul-tutup | sudut-a | sudut-b | pemisah | bingkai-belakang | bingkai-depan | bingkai-sudut | kartu-atas | kartu-sulur | kartu-bawah | ikon | galeri-rumpun | ucapan-atas | penutup-adegan",
+    "ref": "kotak acuan: bagian (section; bawaan) | foto (.ph profil) | kartu (.card.sesi, diulang per kartu) | form (form#f) | pembatas (ganti pembatas() garis-berlian) | judul (sisip sebelum h2 bagian) | judul-kartu (sisip sebelum judul di dalam kartu) | isi (#isi, untuk tekstur)",
+    "sisip": "true = BUKAN absolut: elemen <span class=\"pms\"> / <img class=\"ikn\"> disisipkan di alur dokumen pada titik ref (pembatas/judul/judul-kartu), lebar w% dari lebar konten, tengah",
+    "jangkar": "tl | tr | bl | br (sudut ref tempat x/y diukur; x ke dalam dari tepi kiri/kanan, y ke dalam dari tepi atas/bawah). Nilai negatif = keluar dari ref (mis. y:-26 di atas kartu)",
+    "x, y, w": "% lebar ref. Tinggi kotak = w * px[1]/px[0] (semua lapis satu rumpun berukuran px sama)",
+    "wP": "opsional: w untuk tier Premium (lebih kecil), bila beda dari Signature",
+    "z": "-1 = di belakang ref (mis. oval di belakang foto) | 0 = di belakang teks bagian | 2..4 = di depan ref (rumpun menumpuk tepi foto/kartu). Teks/tombol tetap z 1 dan TIDAK boleh tertutup (lihat ruang)",
+    "ganda": "true = render juga salinan cermin di sisi horizontal seberang (tl<->tr, bl<->br): scaleX(-1) pada img, pivot x -> 1-x, amp dibalik, delay digeser",
+    "cermin": "true = kotak ini sendiri dicerminkan (mis. sudut-a hanya di kanan)",
+    "cerminP2": "ref foto: profil ke-2 memakai cermin rumpun ini (komposisi kiri/kanan berpasangan)",
+    "ulang": "ref kartu: true = rumpun diulang di setiap .card.sesi",
+    "ruang": "{atas, bawah} px tampil yang WAJIB ditambahkan engine sebagai padding (ref bagian) atau margin (ref foto/kartu/form) agar ilustrasi tidak menutup teks/tombol",
+    "min": "tier minimal untuk menampilkan rumpun (Premium | Signature; bawaan Premium)",
+    "maks": "opsional: tier maksimal (mis. \"Premium\" = hanya tampil di Premium, diganti varian lain di Signature)",
+    "gerakMin": "tier minimal agar lapis ayun bergerak (bawaan Signature: Premium = diam / masuk sekali, sesuai MEWAH-DESAIN 4.2)",
+    "masuk": "animasi masuk sekali saat bagian terlihat: mekar | naik | pudar (bawaan naik)",
+    "op, opTerang, warnai, ubin": "untuk tekstur/ikon: opasitas (opTerang = tint terang/ivory), warnai = emas|aksen|ink (mask CSS, file hitam), ubin = ukuran ulang px",
+    "hanyaTint": "opsional: larik tint yang memakai rumpun ini",
+    "lapis": "larik lapis (urut belakang -> depan): file ({tint} diganti tintAdegan), px [w,h] berkas, pivot [x,y] 0..1 dari kotak lapis = transform-origin (pangkal tangkai), gerak ayun|diam|napas, amp derajat SETENGAH rentang (+-amp, simetris alternate, maks 2; lapis lebar > 60% ref maks 1), dur detik SIKLUS PENUH (engine: --dur = dur/2 untuk alternate), delay detik (negatif)"
+   },
+   "aturan": [
+    "Bila m.bagian ada: JANGAN render ilsBagian() lama (rumpun sampul yang diulang) maupun empatSudut()/pembatas() generik di bagian yang punya rumpun pengganti.",
+    "Zona aman teks x 12-88 %: ilustrasi absolut di zona ini hanya di pita ruang.atas / ruang.bawah atau di belakang foto.",
+    "Semua img lapis: loading=lazy, decoding=async, alt=\"\" dan wadah aria-hidden=true; pointer-events:none.",
+    "Section ber-rumpun: position:relative; overflow:clip (rumpun boleh keluar dari ref foto/kartu tetapi dipotong di tepi section).",
+    "Anggaran per tint: Signature <= 600 KB, Premium <= 350 KB total lapisan bagian (ukur: lihat catatanBagian)."
+   ]
+  },
+  "global": [
+   {
+    "slot": "tekstur",
+    "ref": "isi",
+    "ubin": 256,
+    "op": 0.05,
+    "opTerang": 0.04,
+    "warnai": "aksen",
+    "z": -1,
+    "lapis": [
+     {
+      "file": "kota-anime/bagian-tekstur-butir.webp",
+      "px": [
+       256,
+       256
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "sampul": [
+   {
+    "slot": "sampul-tutup",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 100,
+    "z": 5,
+    "masuk": "naik",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sampul-tutup-awan.webp",
+      "px": [
+       600,
+       138
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sampul-tutup-daun.webp",
+      "px": [
+       600,
+       138
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 0.8,
+      "dur": 12.4,
+      "delay": -3.9
+     }
+    ]
+   }
+  ],
+  "pembuka": [
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "pudar",
+    "ganda": true,
+    "min": "Signature",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-awan.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-kabel.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.6,
+       0.1
+      ],
+      "gerak": "ayun",
+      "amp": 1,
+      "dur": 10.4,
+      "delay": -2.6
+     }
+    ]
+   },
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "pudar",
+    "maks": "Premium",
+    "ruang": {
+     "atas": 80
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-awan.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-kabel.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.6,
+       0.1
+      ],
+      "gerak": "ayun",
+      "amp": 1,
+      "dur": 10.4,
+      "delay": -2.6
+     }
+    ]
+   },
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-pemisah-kabel.webp",
+      "px": [
+       600,
+       112
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "mempelai": [
+   {
+    "slot": "bingkai-belakang",
+    "ref": "foto",
+    "jangkar": "tl",
+    "x": -9.09,
+    "y": -9.09,
+    "w": 118.18,
+    "z": -1,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-bingkai-jendela.webp",
+      "px": [
+       520,
+       640
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "bingkai-depan",
+    "ref": "foto",
+    "jangkar": "bl",
+    "x": -15.45,
+    "y": -18.18,
+    "w": 68.18,
+    "z": 2,
+    "min": "Signature",
+    "cerminP2": true,
+    "masuk": "mekar",
+    "ruang": {
+     "bawah": 44
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-bingkai-depan-daun.webp",
+      "px": [
+       340,
+       380
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.4,
+      "dur": 9.8,
+      "delay": -2.2
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-bingkai-depan-bunga.webp",
+      "px": [
+       340,
+       380
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.0,
+      "dur": 8.6,
+      "delay": -4.4
+     }
+    ]
+   },
+   {
+    "slot": "bingkai-sudut",
+    "ref": "foto",
+    "jangkar": "tr",
+    "x": -18.18,
+    "y": -13.64,
+    "w": 40.91,
+    "z": 2,
+    "min": "Signature",
+    "cerminP2": true,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-bingkai-sudut.webp",
+      "px": [
+       180,
+       180
+      ],
+      "pivot": [
+       0.6,
+       0.3
+      ],
+      "gerak": "ayun",
+      "amp": 1.5,
+      "dur": 9.4,
+      "delay": -1.4
+     }
+    ]
+   }
+  ],
+  "acara": [
+   {
+    "slot": "kartu-atas",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "tl",
+    "x": 1,
+    "y": -27.88,
+    "w": 98,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "naik",
+    "ruang": {
+     "atas": 100
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-kartu-atas-kanopi.webp",
+      "px": [
+       600,
+       200
+      ],
+      "pivot": [
+       0.5,
+       0.6
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "kartu-atas",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "tl",
+    "x": 20,
+    "y": -6,
+    "w": 60,
+    "z": 2,
+    "maks": "Premium",
+    "masuk": "pudar",
+    "ruang": {
+     "atas": 24
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-pemisah-kabel.webp",
+      "px": [
+       600,
+       112
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "kartu-sulur",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "br",
+    "x": -9,
+    "y": -6,
+    "w": 30,
+    "z": 3,
+    "min": "Signature",
+    "masuk": "naik",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-kartu-sulur.webp",
+      "px": [
+       300,
+       200
+      ],
+      "pivot": [
+       0.03,
+       0.95
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 8.4,
+      "delay": -3.6
+     }
+    ]
+   },
+   {
+    "slot": "kartu-bawah",
+    "ref": "kartu",
+    "ulang": true,
+    "jangkar": "bl",
+    "x": 15,
+    "y": -14,
+    "w": 70,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "pudar",
+    "ruang": {
+     "bawah": 34
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-kartu-bawah.webp",
+      "px": [
+       600,
+       146
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul-kartu",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "urutKartu": 0,
+    "lapis": [
+     {
+      "file": "kota-anime/ikon/ikon-cincin.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul-kartu",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "urutKartu": 1,
+    "lapis": [
+     {
+      "file": "kota-anime/ikon/ikon-gelas.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "live": [
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/ikon/ikon-kamera.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 38.46,
+    "z": 0,
+    "masuk": "mekar",
+    "cermin": true,
+    "min": "Signature",
+    "ruang": {
+     "bawah": 70
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-rumput.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -3.3
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-kosmos.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 9.2,
+      "delay": -6.1
+     }
+    ]
+   }
+  ],
+  "dresscode": [
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-pemisah-kabel.webp",
+      "px": [
+       600,
+       112
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/ikon/ikon-busana.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "kisah": [
+   {
+    "slot": "sudut-a",
+    "ref": "bagian",
+    "jangkar": "tl",
+    "x": 0,
+    "y": 0,
+    "w": 41.03,
+    "wP": 33.33,
+    "z": 0,
+    "masuk": "pudar",
+    "cermin": true,
+    "min": "Signature",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-awan.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0,
+       0
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-a-kabel.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.6,
+       0.1
+      ],
+      "gerak": "ayun",
+      "amp": 1,
+      "dur": 10.4,
+      "delay": -2.6
+     }
+    ]
+   }
+  ],
+  "galeri": [
+   {
+    "slot": "galeri-rumpun",
+    "ref": "bagian",
+    "jangkar": "br",
+    "x": 0,
+    "y": 0,
+    "w": 46.15,
+    "z": 2,
+    "min": "Signature",
+    "masuk": "mekar",
+    "ruang": {
+     "bawah": 70
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-galeri-tiang.webp",
+      "px": [
+       360,
+       280
+      ],
+      "pivot": [
+       0.8,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-galeri-bunga.webp",
+      "px": [
+       360,
+       280
+      ],
+      "pivot": [
+       0.6,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 8.8,
+      "delay": -1.9
+     }
+    ]
+   }
+  ],
+  "kado": [
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 38.46,
+    "z": 0,
+    "masuk": "mekar",
+    "min": "Signature",
+    "ruang": {
+     "bawah": 70
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-rumput.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -3.3
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-kosmos.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 9.2,
+      "delay": -6.1
+     }
+    ]
+   },
+   {
+    "slot": "ikon",
+    "ref": "judul",
+    "sisip": true,
+    "w": 12.0,
+    "warnai": "emas",
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/ikon/ikon-kado.svg",
+      "px": [
+       56,
+       56
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   }
+  ],
+  "ucapan": [
+   {
+    "slot": "ucapan-atas",
+    "ref": "form",
+    "jangkar": "tl",
+    "x": 0,
+    "y": -28.74,
+    "w": 100,
+    "z": 0,
+    "masuk": "mekar",
+    "ruang": {
+     "atas": 96
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-ucapan-tali.webp",
+      "px": [
+       600,
+       164
+      ],
+      "pivot": [
+       0.5,
+       0.1
+      ],
+      "gerak": "ayun",
+      "amp": 0.7,
+      "dur": 13.2,
+      "delay": -5.1
+     }
+    ]
+   },
+   {
+    "slot": "sudut-b",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 38.46,
+    "z": 0,
+    "masuk": "mekar",
+    "ganda": true,
+    "ruang": {
+     "bawah": 72
+    },
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-rumput.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.3,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.2,
+      "dur": 11.2,
+      "delay": -3.3
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-sudut-b-kosmos.webp",
+      "px": [
+       320,
+       320
+      ],
+      "pivot": [
+       0.2,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 1.6,
+      "dur": 9.2,
+      "delay": -6.1
+     }
+    ]
+   }
+  ],
+  "penutup": [
+   {
+    "slot": "pemisah",
+    "ref": "pembatas",
+    "sisip": true,
+    "w": 76.92,
+    "masuk": "pudar",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-pemisah-kabel.webp",
+      "px": [
+       600,
+       112
+      ],
+      "pivot": [
+       0.5,
+       0.5
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     }
+    ]
+   },
+   {
+    "slot": "penutup-adegan",
+    "ref": "bagian",
+    "jangkar": "bl",
+    "x": 0,
+    "y": 0,
+    "w": 100,
+    "z": 0,
+    "masuk": "naik",
+    "ruang": {
+     "bawah": 270
+    },
+    "pudarBawah": "bg3",
+    "lapis": [
+     {
+      "file": "kota-anime/{tint}/bagian-penutup-latar.webp",
+      "px": [
+       600,
+       554
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-penutup-bukit.webp",
+      "px": [
+       600,
+       554
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "diam",
+      "amp": 0,
+      "dur": 0,
+      "delay": 0
+     },
+     {
+      "file": "kota-anime/{tint}/bagian-penutup-bunga.webp",
+      "px": [
+       600,
+       554
+      ],
+      "pivot": [
+       0.5,
+       1
+      ],
+      "gerak": "ayun",
+      "amp": 0.8,
+      "dur": 11.4,
+      "delay": -2.4
+     }
+    ]
+   }
+  ]
+ },
+ "catatanBagian": "Blok bagian 2026-11-22 (skrip assets/ilustrasi/skrip/set_j_kota_anime.py + man_j.py). Total berkas bagian per tint (KB, semua slot Signature): musim-panas 250.3, pesisir 249.6, festival 375.2. pesisir & festival Premium: hanya slot P/S (sampul-tutup, sudut-a kecil, pemisah, bingkai-jendela, ikon, ucapan, penutup). Ciri set J: awan cumulus cel, kabel listrik + burung, kosmos/ipomoea, kanopi toko polos; festival: lampion kertas polos + kota malam berjendela emas."
+}

@@ -69,7 +69,9 @@
   "deskripsi": "Langit biru cerah dengan awan bergaya cel-shaded yang berarak, untuk kisah cinta yang terasa ringan dan berani.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "kota-anime",
+  "tintAdegan": "musim-panas"
  },
  {
   "id": "malam-emas-deco",
@@ -657,7 +659,9 @@
   "deskripsi": "Sampul berupa amplop champagne bersegel yang terbuka saat diketuk, lalu undangan tergelincir keluar dengan rapi.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "amplop-kelopak",
+  "tintAdegan": "champagne"
  },
  {
   "id": "tebar-kelopak-lavender",
@@ -693,7 +697,9 @@
   "deskripsi": "Ketuk di mana saja untuk menebar kelopak lavender di atas bingkai polaroid kenangan berdua.",
   "ucapanPerHalaman": 6,
   "demoFoto": true,
-  "video": true
+  "video": true,
+  "adegan": "amplop-kelopak",
+  "tintAdegan": "lavender"
  },
  {
   "id": "mega-hijau-kencana",
@@ -1004,7 +1010,9 @@
   "musik": "romantis",
   "deskripsi": "Malam festival musim panas dengan lampion bercahaya di tepi sungai siluet kota, hangat seperti adegan animasi orisinal.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "kota-anime",
+  "tintAdegan": "festival"
  },
  {
   "id": "botani-cat-minyak",
@@ -1803,7 +1811,9 @@
   "musik": "ceria",
   "deskripsi": "Pagi cerah di kota pesisir siluet, laut berkilau dan awan cel-shaded, segar seperti adegan film animasi.",
   "ucapanPerHalaman": 6,
-  "demoFoto": true
+  "demoFoto": true,
+  "adegan": "kota-anime",
+  "tintAdegan": "pesisir"
  },
  {
   "id": "taman-malam-kunang",
